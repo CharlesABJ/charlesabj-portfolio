@@ -1,0 +1,20 @@
+.ToolsZone {
+  display: grid;
+  gap: $eightypx;
+  margin-right: auto;
+  h3 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: $fourteenpx;
+
+    svg {
+      font-size: $twentypx;
+    }
+  }
+  .tools {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $sixtypx $twelvepx;
+  }
+}

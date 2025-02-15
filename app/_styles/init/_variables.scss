@@ -1,0 +1,135 @@
+// ========================
+// CORRESPONDANCES PX - REM
+// ========================
+
+//px to rem
+$onepx: 0.063rem;
+$twopx: 0.125rem;
+$threepx: 0.188rem;
+$fourpx: 0.25rem;
+$fivepx: 0.313rem;
+$sixpx: 0.375rem;
+$sevenpx: 0.438rem;
+$eightpx: 0.5rem;
+$ninepx: 0.563rem;
+$tenpx: 0.625rem;
+$elevenpx: 0.688rem;
+$twelvepx: 0.75rem;
+$thirteenpx: 0.813rem;
+$fourteenpx: 0.875rem;
+$fifteenpx: 0.938rem;
+$sixteenpx: 1rem;
+$seventeenpx: 1.063rem;
+$eighteenpx: 1.125rem;
+$nineteenpx: 1.188rem;
+$twentypx: 1.25rem;
+$twenty-onepx: 1.313rem;
+$twenty-twopx: 1.375rem;
+$twenty-threepx: 1.438rem;
+$twenty-fourpx: 1.5rem;
+$twenty-fivepx: 1.563rem;
+$twenty-sixpx: 1.625rem;
+$twenty-sevenpx: 1.688rem;
+$twenty-eightpx: 1.75rem;
+$twenty-ninepx: 1.813rem;
+$thirtypx: 1.875rem;
+$thirty-onepx: 1.938rem;
+$thirty-twopx: 2rem;
+$thirty-threepx: 2.063rem;
+$thirty-fourpx: 2.125rem;
+$thirty-fivepx: 2.188rem;
+$thirty-sixpx: 2.25rem;
+$thirty-sevenpx: 2.313rem;
+$thirty-eightpx: 2.375rem;
+$thirty-ninepx: 2.438rem;
+$fourtypx: 2.5rem;
+$fiftypx: 3.125rem;
+$sixtypx: 3.75rem;
+$sixty-fivepx: 4.063rem;
+$seventypx: 4.375rem;
+$seventy-fivepx: 4.688rem;
+$eightypx: 5rem;
+$ninetypx: 5.625rem;
+$hundredpx: 6.25rem;
+
+// ========================
+// COULEURS
+// ========================
+/* Définition des variables CSS pour le mode clair */
+:root {
+  --couleur-fond: #fff;
+  --couleur-fond2: #f9f9f9;
+  --couleur-fond-header: #fff;
+  --couleur-fond-canvas-snake: #9bba59;
+  --couleur-fond-selections: #000000bc;
+  --couleur-texte-selections: #fff;
+  --couleur-texte: #2d2e32;
+  --couleur-texte-hover: #2c2c2cc5;
+  --couleur-span: #0e6899;
+  --couleur-span-hover: rgb(44, 121, 160);
+  --couleur-nav: #6c6c6c;
+  --couleur-nav-hover: #606060;
+  --couleur-hover: #d1d1d1;
+  --couleur-image-hover: #ffffff69;
+  --couleur-nav-active: #4d4d4d;
+  --couleur-h3: #2d2e32;
+  --couleur-scroll-to-top-button: #fff;
+  --couleur-scroll-to-top-button-active: #fcfcfc;
+  --couleur-box-shadow: #0000001a;
+  --couleur-border: #2d2e32;
+  --couleur-p: #2d2e32db;
+  --couleur-background-button: #e6e6e6c2;
+  --couleur-background-button-active: #fff;
+}
+
+/* Définition des variables CSS pour le mode sombre */
+.dark-mode {
+  --couleur-fond: #1d1d1d;
+  --couleur-fond2: #1a1a1a;
+  --couleur-fond-header: #1e1e1e;
+  --couleur-fond-canvas-snake: #9bba59;
+  --couleur-fond-selections: #ffffffa8;
+  --couleur-texte-selections: #000;
+  --couleur-texte: #f6f6f6;
+  --couleur-texte-hover: #8c8c8cc5;
+  --couleur-span: #f19766;
+  --couleur-span-hover: #f9c5a1;
+  --couleur-nav: #a6a6a6;
+  --couleur-nav-hover: #606060;
+  --couleur-hover: #2b2b2bce;
+  --couleur-image-hover: #ffffffde;
+  --couleur-nav-active: #dcdcdc;
+  --couleur-h3: #f6f6f6;
+  --couleur-scroll-to-top-button: #2e2e2e;
+  --couleur-scroll-to-top-button-active: #2a2a2a;
+  --couleur-box-shadow: #00000035;
+  --couleur-border: #4e5255;
+  --couleur-p: #d0d0d0db;
+  --couleur-background-button: #1d1d1d;
+  --couleur-background-button-active: #2b2b2bce;
+}
+
+// ========================
+// TYPOGRAPHIE
+// ========================
+
+// Font Family
+$font-base: "Roboto", sans-serif;
+$font-secondary: "Poppins", sans-serif;
+
+// Font Weight
+$weight-black: 900;
+$weight-bold: 700;
+$weight-semi-bold: 600;
+$weight-medium: 500;
+$weight-regular: 400;
+$weight-light: 300;
+$weight-thin: 100;
+
+$classic-section-margin: calc($hundredpx + $thirtypx)
+  calc($fiftypx + $fifteenpx) $eightypx;
+
+$tablet-section-margin: calc($hundredpx + $thirtypx) calc($fiftypx + $fifteenpx)
+  $eightypx;
+
+$mobile-section-margin: $hundredpx $twenty-fivepx $eightypx;

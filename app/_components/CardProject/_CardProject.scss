@@ -1,0 +1,91 @@
+.CardProject {
+  position: relative;
+  padding: $fifteenpx;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px var(--couleur-box-shadow);
+  height: calc(5 * $hundredpx + $ninetypx);
+  background: var(--couleur-fond);
+  .cover {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: calc(3 * $hundredpx + $eightypx);
+    border-radius: 25px;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1), transparent);
+      background-size: 100% 55%; // 100% de la largeur et 55% de la hauteur
+      background-repeat: no-repeat;
+      background-position: bottom;
+      z-index: 1;
+      transition: 0.3s ease-out;
+    }
+    img {
+      height: unset; // Donner à l'image sa hauteur naturelle
+      transform: translateY(0);
+      transition: 15s ease;
+    }
+    &:hover {
+      img {
+        transform: translateY(calc(-100% + calc(3 * $hundredpx + $eightypx)));
+      }
+    }
+  }
+  .content {
+    display: grid;
+    gap: $thirtypx;
+    .description {
+      margin-top: 2rem;
+      .title {
+      }
+      .mission {
+        @include classic-limited-text(1);
+      }
+      .see-more {
+        margin-top: $fivepx;
+        text-decoration: underline;
+        color: var(--couleur-p);
+        cursor: pointer;
+        transition: 0.3s ease all;
+        svg {
+          margin-left: $tenpx;
+          transition: 0.3s ease;
+        }
+        &:hover {
+          color: var(--couleur-span);
+        }
+        &:active {
+          svg {
+            transform: scale(0.9) translateX($sevenpx);
+          }
+        }
+      }
+    }
+    .technos-used {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $tenpx;
+      justify-content: flex-end;
+      .techno {
+        padding: 0 $twelvepx;
+        border: 1px solid var(--couleur-span);
+        border-radius: 30px;
+        font-weight: 300;
+        font-size: $fourteenpx;
+        color: var(--couleur-span);
+        user-select: none;
+        transition: 0.3s ease;
+
+        &:hover {
+          background-color: var(--couleur-span);
+          color: var(--couleur-fond);
+        }
+      }
+    }
+  }
+}

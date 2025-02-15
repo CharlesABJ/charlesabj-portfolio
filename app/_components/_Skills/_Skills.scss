@@ -1,0 +1,63 @@
+.Skills {
+  background: var(--couleur-fond);
+  .devLanguages-and-tools {
+    @include classic-grid(2);
+    & {
+      gap: calc(2 * $eightypx);
+    }
+    .DevLanguagesZone,
+    .ToolsZone {
+      width: 60%;
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .Skills {
+    .devLanguages-and-tools {
+      @include classic-grid(1);
+      & {
+        gap: $hundredpx;
+      }
+      .DevLanguagesZone,
+      .ToolsZone {
+        width: 60%;
+        margin: auto;
+
+        gap: $fourtypx;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .Skills {
+    .devLanguages-and-tools {
+      margin-top: $fourtypx;
+      .DevLanguagesZone,
+      .ToolsZone {
+        width: 100%;
+        h3 {
+          gap: $tenpx;
+          svg {
+            font-size: $eighteenpx;
+          }
+        }
+        ul {
+          width: 90%;
+          margin: auto;
+          gap: $thirty-sixpx $fivepx;
+          li {
+            .title {
+              font-size: $twelvepx;
+            }
+            img {
+              width: calc($fourtypx + $twopx);
+              height: calc($fourtypx + $twopx);
+            }
+          }
+        }
+      }
+    }
+  }
+}

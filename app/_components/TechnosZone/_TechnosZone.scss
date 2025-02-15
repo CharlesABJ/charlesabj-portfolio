@@ -1,0 +1,41 @@
+.TechnosZone {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  gap: $seventeenpx;
+  padding-block: $tenpx;
+  .techno {
+    position: relative;
+    width: calc($sixtypx + $twopx);
+    height: calc($sixtypx + $twopx);
+    background: #f9f9f9;
+    padding: $fivepx;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--couleur-box-shadow);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s;
+    animation: infinite-scale 3s infinite;
+    .seo-only {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: -3.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: transparent;
+      padding: 2rem;
+      font-size: 2rem;
+    }
+    img {
+      object-fit: contain;
+    }
+
+    &:hover {
+      background: var(--couleur-image-hover);
+      box-shadow: 0 0 15px #00000030;
+      transform: scale(1.01);
+    }
+  }
+}

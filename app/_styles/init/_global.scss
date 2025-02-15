@@ -1,0 +1,202 @@
+::selection {
+  background-color: var(--couleur-fond-selections);
+  color: var(--couleur-texte-selections);
+}
+
+// span::selection {
+//   background-color: var(--couleur-span);
+//   color: var(--couleur-fond);
+// }
+
+.loading {
+  background: #fff;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 2;
+
+  div,
+  span {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: calc(4 * $hundredpx);
+    width: calc(4 * $hundredpx);
+    border-radius: 50%;
+    background: transparent;
+    border: $sixteenpx solid var(--couleur-span);
+    z-index: 3;
+  }
+}
+
+.hidden-for-tablet {
+  @media screen and (max-width: 1250px) {
+    display: none !important;
+  }
+}
+
+.displayed-for-tablet {
+  display: none !important;
+  @media screen and (max-width: 1250px) {
+    display: block !important;
+  }
+}
+
+.hidden-by-nav-open {
+  display: none !important;
+}
+
+.displayed-by-nav-open {
+  display: block !important;
+}
+
+html {
+  scroll-padding-top: $eightypx; // Taille du header
+  @media screen and (max-width: 1250px) {
+    scroll-padding-top: 0;
+  }
+}
+body {
+  @include classic-body;
+  & {
+    background: var(--couleur-fond);
+  }
+  &:has(.ModalProject) {
+    overflow: hidden;
+  }
+  &:has(.website-broken) {
+    animation: website-broken 2s;
+    header {
+      animation: website-broken 2s;
+    }
+  }
+  &:has(.not-found.page404) {
+    header,
+    footer {
+      display: none;
+    }
+  }
+}
+
+h1 {
+  @include classic-h1;
+}
+
+h2 {
+  @include classic-h2;
+}
+h3 {
+  @include classic-h3;
+}
+
+span {
+  color: var(--couleur-span);
+}
+
+section {
+  padding: $classic-section-margin;
+  @media screen and (max-width: 1250px) {
+    padding: $tablet-section-margin;
+  }
+
+  @media screen and (max-width: 678px) {
+    padding: $mobile-section-margin;
+  }
+}
+section {
+  overflow: hidden;
+
+  .container {
+    max-width: 1500px;
+    margin: auto;
+    > h2 {
+      text-align: center;
+    }
+    > p {
+      @include alternative-font-size;
+      & {
+        text-align: center;
+        color: var(--couleur-nav);
+      }
+    }
+    > div {
+      margin-top: $hundredpx;
+      @media screen and (max-width: 1250px) {
+        margin-top: $fiftypx;
+      }
+
+      @media screen and (max-width: 678px) {
+        margin-top: $thirtypx;
+      }
+    }
+  }
+}
+
+section,
+header,
+footer {
+  transition: 0.3s background-color ease !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+// =====================================
+// MEDIAS STYLE // ( Style des médias )
+// =====================================
+.media:not(:has(iframe)) {
+  @include classic-shadow;
+}
+iframe {
+  @include classic-shadow;
+}
+
+.media,
+iframe {
+  @include classic-media;
+  &.cover {
+    @include classic-media("cover");
+  }
+  &.contain {
+    @include classic-media("contain");
+  }
+  &.portrait {
+    @include classic-media("portrait");
+  }
+}
+
+main.merci {
+  height: 100vh;
+  padding-inline: $fiftypx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $thirty-fivepx;
+  h1,
+  h2 {
+    line-height: 50px;
+  }
+  @media screen and (max-width: 1250px) {
+  }
+  @media screen and (max-width: 678px) {
+    padding-inline: $thirtypx;
+  }
+
+  .paper-plane {
+    max-height: calc(3.5 * $hundredpx);
+    @media screen and (max-width: 1250px) {
+      width: calc(3 * $hundredpx);
+    }
+    @media screen and (max-width: 678px) {
+      width: calc(2 * $hundredpx);
+    }
+  }
+}
+
+span.merci {
+  margin-top: $twenty-fivepx;
+}

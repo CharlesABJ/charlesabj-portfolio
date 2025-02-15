@@ -1,0 +1,19 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    // Désactive les avertissements pour l'utilisation de `<img>` au lieu de `<Image />`
+    "@next/next/no-img-element": "off",
+
+    // Permet les caractères non échappés comme `'`
+    "react/no-unescaped-entities": "off",
+
+    // Change les erreurs TypeScript inutilisées en avertissements
+    "@typescript-eslint/no-unused-vars": "warn",
+
+    // Autorise temporairement l'utilisation de `any`
+    "@typescript-eslint/no-explicit-any": "warn",
+
+    // Désactive les avertissements de dépendances manquantes dans `useEffect`
+    "react-hooks/exhaustive-deps": "off"
+  }
+}

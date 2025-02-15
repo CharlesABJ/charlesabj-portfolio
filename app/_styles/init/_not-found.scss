@@ -1,0 +1,234 @@
+.not-found.page404 {
+  .secret-zone {
+    display: flex;
+    overflow: hidden;
+  }
+  .container {
+    position: relative;
+    margin: auto;
+    min-height: 100vh;
+    padding: $hundredpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1 {
+      .element404 {
+        position: absolute;
+        font-size: calc(2 * $sixteenpx);
+        font-family: $font-secondary;
+        font-weight: 200;
+        bottom: 120%;
+        left: 55%;
+        border: 1px solid var(--couleur-span);
+        padding: $tenpx $twentypx;
+        box-shadow: 0 0 20px 0px var(--couleur-span);
+        cursor: default;
+        user-select: none;
+        animation: floating 3s infinite;
+        &:hover {
+          animation-play-state: paused;
+        }
+      }
+    }
+    .troll {
+      margin-block: $fiftypx;
+      font-size: x-large;
+      font-family: $font-secondary;
+      font-weight: 200;
+      line-height: 1.2;
+      i {
+        font-size: 3rem;
+        font-style: unset;
+        cursor: default;
+        user-select: none;
+      }
+    }
+    .buttons-zone {
+      display: flex;
+
+      gap: $twentypx;
+      button {
+        width: calc($hundredpx + $fourtypx + $fivepx);
+        padding: $twentypx;
+        border-radius: $fiftypx;
+        color: var(--couleur-scroll-to-top-button);
+        font-weight: $weight-bold;
+        cursor: pointer;
+        transition: 0.3s;
+        span {
+          color: var(--couleur-scroll-to-top-button);
+          font-size: small;
+          font-weight: $weight-light;
+        }
+        &.no {
+          position: relative;
+          background-color: var(--couleur-texte);
+          filter: grayscale(50%);
+          cursor: url("/images/smiley.jpeg"), pointer;
+          i {
+            position: absolute;
+            font-style: normal;
+            opacity: 0;
+            &.i-one {
+              left: 0;
+              top: 0;
+              transition-delay: 0.1s;
+            }
+            &.i-two {
+              right: 10%;
+              top: 0;
+              transition-delay: 0.2s;
+            }
+            &.i-three {
+              left: 15%;
+              bottom: -10%;
+              transition-delay: 0.3s;
+            }
+            &.i-four {
+              right: 15%;
+              bottom: 0;
+              transition-delay: 0.4s;
+            }
+            &.i-five {
+              left: 35%;
+              top: -14%;
+              transition-delay: 0.5s;
+            }
+          }
+          &:hover {
+            i {
+              opacity: 1;
+            }
+          }
+        }
+        &.yes {
+          background-color: var(--couleur-span);
+          &::selection {
+            background-color: var(--couleur-fond);
+            color: var(--couleur-span);
+          }
+          &:hover {
+            transform: scale(1.02);
+          }
+          &:active {
+            transform: scale(0.98);
+            filter: brightness(1.1);
+          }
+        }
+      }
+    }
+    .redirect {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: $hundredpx;
+      margin-top: $hundredpx;
+      font-family: $font-secondary;
+      font-weight: $weight-regular;
+      color: var(--couleur-nav);
+      font-size: large;
+      i {
+        font-size: 2rem;
+        font-style: unset;
+        cursor: default;
+      }
+    }
+    &.secret-mode-active {
+      min-height: 0;
+      overflow: hidden;
+      animation: dispertion 2s forwards;
+    }
+    &.secret-mode {
+      width: 100vw;
+      transition: 1s ease-in-out;
+
+      .troll-content {
+        margin-bottom: $fiftypx;
+        font-size: large;
+        line-height: 1.2;
+      }
+      &.hidden {
+        opacity: 0;
+        width: 0;
+        padding: 0;
+        visibility: hidden;
+        animation: dispertion-left 2s forwards;
+      }
+    }
+    &.game {
+      margin: unset;
+      background-color: var(--couleur-fond-canvas-snake);
+      width: 0;
+      padding: 0;
+      visibility: hidden;
+      transition: 1s ease-in-out;
+      ::selection {
+        background-color: #fff;
+        color: var(--couleur-fond-canvas-snake);
+      }
+      &.visible {
+        width: 100vw;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .not-found.page404 {
+    .container {
+      padding: $thirty-twopx $sixteenpx;
+      h1 {
+        > span {
+          display: block;
+        }
+        .element404 {
+          font-size: $twentypx;
+          padding: $tenpx $fifteenpx;
+          bottom: 100%;
+          left: 60%;
+        }
+      }
+      .troll {
+        margin-block: $twentypx;
+        font-size: large;
+        span {
+          display: inline-block;
+        }
+        i {
+          font-size: 2rem;
+          display: block;
+        }
+      }
+      .buttons-zone {
+        flex-direction: column-reverse;
+        align-items: center;
+        button {
+          padding: $tenpx;
+          span {
+            font-size: x-small;
+          }
+          &.no {
+            transform: scale(0.85);
+          }
+        }
+      }
+      .redirect {
+        bottom: $thirty-twopx;
+        font-size: $fifteenpx;
+
+        i {
+          font-size: $fifteenpx;
+        }
+      }
+      &.secret-mode {
+        .troll-content {
+          font-size: 0.9rem;
+          margin-top: $tenpx;
+        }
+      }
+    }
+  }
+}

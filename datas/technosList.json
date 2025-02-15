@@ -1,0 +1,54 @@
+[
+  {
+    "techno_id": "1",
+   "title": "HTML",
+    "src": "/images/icons/html.svg"
+  },
+  {
+    "techno_id": "2",
+   "title": "CSS",
+    "src": "/images/icons/css.svg"
+  },
+  {
+    "techno_id": "3",
+    "title": "JavaScript",
+    "src": "/images/icons/javascript.svg"
+  }, 
+
+  {
+    "techno_id": "5",
+    "title": "WordPress",
+    "src": "/images/icons/wordpress.svg"
+  }, 
+  {
+    "techno_id": "7",
+    "title": "Next.js",
+    "src": "/images/icons/next.svg"
+  },
+  {
+    "techno_id": "6",
+    "title": "SASS",
+    "src": "/images/icons/sass.svg"
+  },
+  {
+    "techno_id": "4",
+    "title": "React",
+    "src": "/images/icons/react.svg"
+  },
+  {
+    "techno_id": "8",
+    "title": "Node.js",
+    "src": "/images/icons/nodejs.svg"
+  },
+{
+  "techno_id": "9",
+  "title": "PHP",
+  "src": "/images/icons/php.svg"
+},
+{
+  "techno_id": "10",
+  "title": "Flutter",
+  "src": "/images/icons/flutter.svg"
+}
+
+]

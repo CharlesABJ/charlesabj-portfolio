@@ -1,0 +1,20 @@
+.DevLanguagesZone {
+  display: grid;
+  gap: $eightypx;
+  margin-left: auto;
+  h3 {
+    display: flex;
+    justify-content: center;
+    gap: $fourteenpx;
+    align-items: center;
+
+    svg {
+      font-size: $twenty-fivepx;
+    }
+  }
+  .dev-languages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $sixtypx $twelvepx;
+  }
+}

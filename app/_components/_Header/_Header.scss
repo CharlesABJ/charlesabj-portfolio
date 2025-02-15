@@ -1,0 +1,186 @@
+header.Header {
+  @include flex-center($justify: space-between);
+  @include classic-shadow;
+  & {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $eightypx;
+    background: var(--couleur-fond-header);
+    padding-inline: 65px;
+    z-index: 2;
+  }
+  .logo {
+    height: 60%;
+    cursor: pointer;
+    transition: 1.3s;
+    display: block;
+    border: 1px solid var(--couleur-fond-header);
+    border-radius: 50%;
+
+    &:active {
+      transform: rotate(-1turn);
+      transition: padding-block 0.3s; // Mettre la transition sur padding-block permet de faire la rotation sans maintenir le clic
+    }
+    &.active {
+      border: 1px solid var(--couleur-span);
+      transition: border 0.3s;
+    }
+  }
+  nav {
+    @include flex-center($justify: space-between);
+    & {
+      gap: 3vw;
+    }
+    ul {
+      display: flex;
+      gap: 3vw;
+      li {
+        a,
+        span {
+          @include classic-header-nav-font-size;
+          & {
+            transition: 0.3s ease;
+            color: var(--couleur-nav-active);
+          }
+          &:hover {
+            color: var(--couleur-span-hover);
+            opacity: 0.85;
+          }
+          &.active {
+            color: var(--couleur-span);
+            opacity: 1;
+            transition: none;
+            svg {
+              fill: var(--couleur-span);
+            }
+          }
+        }
+      }
+    }
+    .dark-mode-toggle {
+      padding: $fivepx $sevenpx;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color, color, transform 0.3s ease;
+      &:hover {
+        background: var(--couleur-fond2);
+        transform: scale(0.9);
+        color: var(--couleur-span);
+      }
+      &:active {
+        animation: rotate 0.7s forwards;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  header.Header {
+    height: calc($eightypx + 0.15vw);
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  header.Header {
+    left: 50%;
+    transform: translate(-50%, -7%);
+    top: unset;
+    bottom: 7%;
+    width: 90%;
+    height: $hundredpx;
+    padding-inline: $thirty-fivepx;
+    border-radius: $thirtypx;
+    box-shadow: 0 2px 10px var(--couleur-box-shadow);
+
+    nav {
+      &.nav-is-closed {
+        margin-left: auto;
+        margin-right: $fiftypx;
+      }
+      &.nav-is-open {
+        .responsive-nav {
+          display: flex !important;
+          padding-left: $tenpx;
+          gap: 0;
+          li {
+            a {
+              font-size: $thirty-twopx;
+              color: var(--couleur-texte);
+              padding-inline: $fourtypx;
+              border-right: 1px solid var(--couleur-hover);
+              svg {
+                transition: 0.3s ease;
+              }
+              &:hover {
+                color: var(--couleur-span);
+              }
+              // &:active {
+              //   svg {
+              //     transform: scale(0.9);
+              //   }
+              // }
+            }
+          }
+        }
+      }
+    }
+    .nav-toggle {
+      padding: $tenpx;
+      border-radius: 30%;
+      transition: background-color, color, transform 0.3s ease;
+      &.fa-xmark {
+        font-size: $twentypx;
+      }
+      &:hover {
+        background: var(--couleur-fond2);
+        transform: scale(0.9);
+        color: var(--couleur-span);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 678px) {
+  header.Header {
+    height: calc($fiftypx + $threepx);
+    padding-inline: $twenty-fivepx;
+    bottom: 5%;
+
+    nav {
+      &.nav-is-closed {
+        margin-right: $twentypx;
+      }
+      &.nav-is-open {
+        .responsive-nav {
+          gap: $thirty-fivepx;
+          li {
+            line-height: 1;
+            a {
+              font-size: $eighteenpx;
+              border-right: none;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+    .nav-toggle {
+      &.fa-xmark {
+        font-size: $fourteenpx;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1249px) {
+  header.Header {
+    .logo {
+      display: block !important;
+    }
+    .responsive-nav {
+      display: none !important;
+    }
+  }
+}

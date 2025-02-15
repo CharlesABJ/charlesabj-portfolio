@@ -1,0 +1,181 @@
+.Canvas {
+  .instruction {
+    margin-bottom: 1rem;
+  }
+  .SnakeCanvas {
+    border: 2px solid #000;
+    max-width: 90%;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    z-index: 2500;
+  }
+
+  .responsive-arrows {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: calc(4 * 40px + 2 * 1rem);
+    margin: 2rem auto;
+
+    .arrow {
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      color: green;
+      margin: auto;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background-color: #f0f0f0;
+      }
+      &:active {
+        background-color: #e0e0e0;
+      }
+      &.arrow-up {
+        grid-column: 2;
+        grid-row: 1;
+      }
+      &.arrow-left {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      &.arrow-right {
+        grid-column: 3;
+        grid-row: 2;
+      }
+      &.arrow-down {
+        grid-column: 2;
+        grid-row: 3;
+      }
+    }
+  }
+  .modal-game-result {
+    position: fixed;
+    background-color: #fff;
+    color: var(--couleur-fond-canvas-snake);
+    width: 50%;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    box-shadow: 0 0 20px 0px var(--couleur-box-shadow);
+
+    .message {
+      font-size: larger;
+      width: 65%;
+      line-height: 1.5;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+    .buttons-zone {
+      position: absolute;
+      bottom: calc(3 * $sixteenpx);
+      .restart {
+        padding: 10px 20px;
+        background-color: var(--couleur-fond-canvas-snake);
+        color: #fff !important;
+        &:hover {
+          transform: scale(1.02);
+        }
+        &:active {
+          background-color: #7e9a43;
+          transform: scale(0.98);
+        }
+      }
+      .left {
+        background: grayscale($color: red);
+        color: #fff !important;
+      }
+    }
+    .redirection {
+      position: absolute;
+      bottom: calc(3 * $sixteenpx);
+      left: 50%;
+      transform: translateX(-50%);
+      border: 1px solid var(--couleur-fond-canvas-snake);
+      background: #fff;
+      padding: 0.1rem 1rem;
+      border-radius: 4px;
+      width: max-content;
+      overflow: hidden;
+      cursor: pointer;
+      animation: clignote 1s infinite;
+      &::selection {
+        background: var(--couleur-fond-canvas-snake) !important;
+        color: #fff !important;
+      }
+      @keyframes clignote {
+        0% {
+          color: inherit;
+        }
+        50% {
+          color: #9bba592e;
+        }
+        100% {
+          color: inherit;
+        }
+      }
+    }
+  }
+  .score {
+    margin: 0 auto $sixteenpx;
+    color: #ffffffa3;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $sixteenpx;
+    .number {
+      display: flex;
+      color: #fff;
+      font-size: 2.25rem;
+      font-weight: 700;
+      .win {
+        color: gold;
+        text-shadow: 0 0 5px gold;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .Canvas {
+    .responsive-arrows {
+      display: grid;
+    }
+    .modal-game-result {
+      width: 85%;
+      height: calc(3 * $hundredpx);
+      padding-inline: $sixteenpx;
+      .message {
+        width: unset;
+        max-width: 100%;
+      }
+      .buttons-zone {
+        position: unset;
+      }
+    }
+  }
+}

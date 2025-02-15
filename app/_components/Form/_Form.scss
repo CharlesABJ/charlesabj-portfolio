@@ -1,0 +1,71 @@
+.Form {
+  margin-left: $thirtypx;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  div {
+    margin-top: $thirty-fivepx;
+    position: relative;
+    label {
+      cursor: pointer;
+      background: var(--couleur-fond);
+      padding: 3px 6px;
+      position: absolute;
+      top: -10px;
+      left: 15px;
+      font-size: small;
+      transition: background-color 0.3s;
+    }
+    input,
+    textarea {
+      background: var(--couleur-fond);
+      border-radius: 30px;
+      border: var(--couleur-nav) solid 1px;
+      outline-color: var(--couleur-nav);
+      color: var(--couleur-texte);
+      padding: 20px;
+      width: 100%;
+      transition: background-color 0.3s;
+      font-family: $font-secondary;
+      &:-webkit-autofill {
+        // Pour les navigateurs qui remplissent automatiquement les champs avec une couleur de fond
+        -webkit-box-shadow: 0 0 0 1000px var(--couleur-fond) inset; // On rajoute inset pour que la couleur de fond soit bien appliquée
+        -webkit-text-fill-color: var(--couleur-texte);
+      }
+    }
+    textarea {
+      height: calc(2 * $hundredpx + $thirtypx);
+      resize: none;
+    }
+  }
+  .confirm {
+    display: none;
+  }
+  .submit {
+    border: none;
+    text-align: left;
+    font-weight: 600;
+    font-family: poppins, "sans-serif";
+    margin-top: 20px;
+    transition: 0.3s;
+    font-size: small;
+    cursor: pointer;
+    svg {
+      transform: rotate(-45deg);
+      margin-left: 10px;
+      transition: 0.3s;
+    }
+    &:hover {
+      transition: 0.3s;
+      color: var(--couleur-span);
+      svg path {
+        color: var(--couleur-span);
+      }
+    }
+    &:active {
+      svg {
+        transform: rotate(0);
+      }
+    }
+  }
+}

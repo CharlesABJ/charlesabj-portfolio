@@ -1,0 +1,20 @@
+.ScrollToTop {
+  cursor: pointer;
+  position: fixed;
+  right: 65px;
+  bottom: 7%;
+  background: var(--couleur-scroll-to-top-button);
+  color: var(--couleur-nav);
+  box-shadow: 0 2px 4px var(--couleur-box-shadow);
+  padding: $fivepx $tenpx;
+  border-radius: 3px;
+  transition: background-color 0.3s, transform 0.3s, background-color 0.3s,
+    background-color 0.3s;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    background-color: var(--couleur-scroll-to-top-button-active);
+    transform: scale(0.95);
+  }
+}

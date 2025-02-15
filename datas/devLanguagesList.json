@@ -1,0 +1,52 @@
+[
+  {
+    "devLanguage_id": "f1a3d07b",
+    "title": "WordPress",
+    "subtitle": "PHP, ACF, WooCommerce, Thème de A à Z, SEO, Elementor, Gestion des utilisateurs",
+    "src": "/images/icons/wordpress.svg"
+  },
+  {
+    "devLanguage_id": "f1a3907b",
+    "title": "JavaScript",
+    "subtitle": "Manipulation du DOM, Canvas, Programmation asynchrone, appels aux API, Gestion des données utilisateurs via des formulaires",
+    "src": "/images/icons/javascript.svg"
+  },
+  {
+    "devLanguage_id": "f1a3d03b",
+    "title": "TypeScript",
+    "subtitle": "Typage statique, Interfaces, Gestion des erreurs à la compilation, Intégration avec React",
+    "src": "/images/icons/typescript.svg"
+  },
+  {
+    "devLanguage_id": "746d8c52",
+    "title": "React",
+    "subtitle": "NextJS, Redux-Toolkit, Hooks, Context, React-Router-Dom, Gestion des erreurs, Appels aux API",
+    "src": "/images/icons/react.svg"
+  },
+  {
+    "devLanguage_id": "1b68f98a",
+    "title": "Node.js",
+    "subtitle": "Green IT, Express, Middleware, API-RESTful, Bases de données, Modèles de vue",
+    "src": "/images/icons/node.svg"
+  },
+
+  {
+    "devLanguage_id": "5d9zd874",
+    "title": "Flutter",
+    "subtitle": "Développement mobile, Dart, Navigation, State management",
+    "subtitle2": "Développement mobile, Widgets, State management, Navigation, Appels aux API, Gestion des erreurs",
+    "src": "/images/icons/flutter.svg"
+  },
+  {
+    "devLanguage_id": "5d9ed875",
+    "title": "HTML5",
+    "subtitle": "Web sémantique, Formulaires intéractif, Intégration multimédia, Adaptabilité, SEO",
+    "src": "/images/icons/html.svg"
+  },
+  {
+    "devLanguage_id": "e2b7189d",
+    "title": "CSS3",
+    "subtitle": " Mobile-first, Pixel perfect, Responsive design",
+    "src": "/images/icons/css.svg"
+  }
+]

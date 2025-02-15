@@ -1,0 +1,37 @@
+// Fichier d'entrée des styles de l'application
+
+// (1) Importation des fichiers d'initialisation du projet
+@import "./init/_fonts";
+@import "./init/_variables";
+@import "./init/_reset";
+@import "./init/_mixins";
+@import "./init/_animations";
+@import "./init/_global";
+@import "./init/_not-found";
+
+// Signature Sequane
+@import "./init/_signature";
+
+// Header et Footer
+@import "../_components/_Header/_Header";
+@import "../_components/_Footer/_Footer";
+
+// (2) Importation des fichiers de composants
+/* Les sections de la page */
+@import "../_components/_Home/_Home";
+@import "../_components/_About/_About";
+@import "../_components/_Portfolio/_Portfolio";
+@import "../_components/_Skills/_Skills";
+@import "../_components/_Recommendations/_Recommendations";
+@import "../_components/_Contact/_Contact";
+
+/* Les composants globaux */
+@import "../_components/TechnosZone/_TechnosZone";
+@import "../_components/ToolsZone/_ToolsZone";
+@import "../_components/DevLanguagesZone/_DevLanguagesZone";
+@import "../_components/Skill/_Skill";
+@import "../_components/Form/_Form";
+@import "../_components/ScrollToTop/_ScrollToTop";
+@import "../_components/CardProject/_CardProject";
+@import "../_components/ModalProject/_ModalProject";
+@import "../_components/Canvas/_Canvas";

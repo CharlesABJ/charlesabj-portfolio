@@ -1,0 +1,195 @@
+// Petit effet de rebondissement (Page Accueil Tracklock / Icones du bas)
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+  }
+
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes infinite-scale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes changing-color {
+  0% {
+    color: #0e6899;
+  }
+
+  50% {
+    color: #f19766;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: scale(1.65) rotate(0);
+  }
+
+  100% {
+    transform: scale(0.8) rotate(1turn);
+  }
+}
+
+.char {
+  animation: colorChange 1s linear infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    color: black;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: black;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(0.22turn);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes run {
+  0% {
+    transform: translateX(-30vw);
+  }
+
+  100% {
+    transform: translateX(150vw);
+  }
+}
+
+@keyframes website-broken {
+  0%,
+  100% {
+    transform: rotate(0deg) translate(0, 0) skew(0deg, 0deg) scale(1);
+  }
+  10% {
+    transform: rotate(5deg) translate(5px, -20px) skew(1deg, -1deg) scale(1.05);
+  }
+  20% {
+    transform: rotate(-8deg) translate(-10px, 15px) skew(-2deg, 2deg)
+      scale(0.98);
+  }
+  30% {
+    transform: rotate(12deg) translate(20px, -30px) skew(3deg, -3deg)
+      scale(1.08);
+  }
+  40% {
+    transform: rotate(-15deg) translate(-15px, 20px) skew(-4deg, 4deg) scale(1);
+  }
+  50% {
+    transform: rotate(10deg) translate(0px, -10px) skew(5deg, -5deg) scale(1.1);
+  }
+  60% {
+    transform: rotate(-12deg) translate(25px, 10px) skew(-3deg, 3deg)
+      scale(0.95);
+  }
+  70% {
+    transform: rotate(8deg) translate(-20px, -20px) skew(2deg, -2deg)
+      scale(1.07);
+  }
+  80% {
+    transform: rotate(-5deg) translate(15px, 25px) skew(-1deg, 1deg) scale(1);
+  }
+  90% {
+    transform: rotate(-360deg) translate(0, 0) skew(0deg, 0deg) scale(1);
+  }
+  100% {
+    transform: rotate(0deg) translate(0, 0) skew(0deg, 0deg) scale(1);
+  }
+}
+
+@keyframes loupe-moving {
+  0% {
+    left: -20%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate($fourtypx, 0);
+  }
+  40% {
+    transform: translate($fourtypx, -$fourtypx);
+  }
+}
+
+@keyframes dispertion {
+  0% {
+    height: 100vh;
+  }
+  100% {
+    padding-block: 0;
+    height: 0;
+    display: none;
+  }
+}
+
+@keyframes dispertion-left {
+  0% {
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes car-moove {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    transform: translate((calc(-50% + $hundredpx)), -50%);
+  }
+  50% {
+    transform: translate((calc(-50% + $hundredpx)), (calc(-50% - $hundredpx)));
+  }
+  75% {
+    transform: translate(-50%, (calc(-50% - $hundredpx)));
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}

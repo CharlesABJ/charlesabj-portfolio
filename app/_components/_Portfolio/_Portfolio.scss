@@ -1,0 +1,261 @@
+.Portfolio {
+  background: var(--couleur-fond2);
+  .container {
+    &.secret-mode-game-active {
+      .projects-zone {
+        .cards-zone,
+        .select-projects-zone {
+          display: none;
+        }
+      }
+    }
+
+    .secret-mode-game {
+      position: relative;
+      border-radius: $twopx;
+      border-radius: $fivepx;
+      border: $fourtypx solid var(--couleur-texte);
+      height: calc(100vh - $fourtypx * 4);
+      min-height: calc(4 * $hundredpx);
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      line-height: 1.4;
+
+      .car {
+        position: absolute;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .buttons-zone {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+
+        gap: $twentypx;
+        button {
+          width: calc($hundredpx + $fourtypx + $fivepx);
+          border-radius: $fiftypx;
+          color: var(--couleur-scroll-to-top-button);
+          cursor: pointer;
+          transition: 0.3s;
+
+          &:hover {
+            transform: scale(1.03);
+          }
+          &:active {
+            transform: scale(0.98);
+            filter: brightness(0.8);
+          }
+          &.no {
+            padding: $tenpx $twentypx;
+            background-color: var(--couleur-texte);
+          }
+          &.yes {
+            height: $fourtypx;
+            width: $fourtypx;
+            background-color: var(--couleur-span);
+            position: relative;
+            &::before {
+              position: absolute;
+              content: "";
+              background-color: var(--couleur-fond);
+              height: 40%;
+              width: 40%;
+              left: calc(50% + 10%);
+              top: 50%;
+              transform: translate(-50%, -50%);
+              clip-path: polygon(0% 0%, 80% 50%, 0% 100%);
+            }
+          }
+        }
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        background-color: var(--couleur-texte);
+        height: $eightypx;
+        width: $thirtypx;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: calc(100% + $eightypx);
+        background-color: var(--couleur-texte);
+        height: $sevenpx;
+        width: calc(2 * $hundredpx);
+      }
+    }
+  }
+  .projects-zone {
+    position: relative;
+
+    .cards-zone {
+      @include classic-grid(2);
+      & {
+        width: 92%;
+        margin-inline: auto;
+        grid-gap: $thirtypx;
+      }
+    }
+    .select-projects-zone {
+      display: none;
+    }
+  }
+  .car-toogle {
+    display: block;
+    width: calc($hundredpx + $tenpx);
+    margin-top: $fiftypx;
+    animation: run 20s linear infinite;
+    cursor: pointer;
+    transition: 1s opacity ease;
+    &:hover {
+      // animation-play-state: paused;
+    }
+    &.car-hidden {
+      // opacity: 0;
+      // pointer-events: none;
+      // user-select: none;
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .Portfolio {
+    .projects-zone {
+      .cards-zone {
+        grid-template-columns: 1fr;
+        .CardProject {
+          display: none;
+          &.project-selected {
+            display: unset;
+            height: calc(6 * $hundredpx + $fiftypx);
+            .cover {
+              height: calc(4 * $hundredpx + $fiftypx);
+              img {
+                transition: 15s ease;
+              }
+              &:hover {
+                img {
+                  transform: translateY(
+                    calc(-100% + calc(4 * $hundredpx + $fiftypx))
+                  );
+                }
+              }
+            }
+            .content {
+              gap: $sixteenpx;
+            }
+          }
+        }
+      }
+      .select-projects-zone {
+        display: flex;
+        gap: $tenpx;
+        width: max-content;
+        margin: $fourtypx auto;
+        .select {
+          border: 1px solid var(--couleur-fond);
+          background-color: var(--couleur-background-button);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: $fourtypx;
+          height: $fourtypx;
+          border-radius: 50%;
+          box-shadow: 0 2px 10px var(--couleur-box-shadow);
+          cursor: pointer;
+          transition: all 0.3s;
+          user-select: none;
+          &.select-active {
+            background-color: var(--couleur-background-button-active);
+            transition: all 0.3s;
+            color: var(--couleur-span);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .Portfolio {
+    .projects-zone {
+      .cards-zone {
+        width: 100%;
+        .CardProject {
+          &.project-selected {
+            min-height: calc(3 * $hundredpx + $eightypx + $sevenpx);
+            height: max-content;
+            .cover {
+              height: calc(2 * $hundredpx + $sevenpx);
+              img {
+                transform: translateY(0);
+              }
+              &:hover {
+                img {
+                  transform: translateY(
+                    calc(-100% + calc(2 * $hundredpx + $sevenpx))
+                  );
+                }
+              }
+            }
+            .content {
+              gap: $thirtypx;
+              .description {
+                margin-top: $sixteenpx;
+                .mission {
+                  -webkit-line-clamp: 2;
+                  margin-bottom: $twentypx;
+                }
+              }
+              .technos-used {
+                .techno {
+                  font-size: $sevenpx;
+                  line-height: 2.5;
+                }
+              }
+            }
+          }
+        }
+      }
+      .select-projects-zone {
+        margin: $thirtypx auto;
+        gap: $tenpx;
+
+        .select {
+          width: $thirtypx;
+          height: $thirtypx;
+          font-size: $tenpx;
+        }
+      }
+    }
+  }
+}
+
+@keyframes zoomEffect {
+  from {
+    transform: scale(1); /* État initial sans zoom */
+    padding: 0; /* Sans padding */
+  }
+  to {
+    transform: scale(1.2); /* Zoom léger */
+    padding: 20px; /* Ajout de padding pendant le zoom */
+  }
+}
+
+.secret-mode-game-zoom {
+  animation: zoomEffect 0.5s ease-in-out forwards;
+}

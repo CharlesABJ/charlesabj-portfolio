@@ -1,0 +1,58 @@
+.Skill {
+  @include flex-center;
+  & {
+    position: relative;
+    cursor: pointer;
+    flex-direction: column;
+    gap: $fourtypx;
+  }
+  &:hover {
+    img {
+      animation: bounce 1s;
+    }
+  }
+  img {
+    display: block;
+    object-fit: contain;
+    width: calc($fiftypx + $fivepx);
+    height: calc($fiftypx + $fivepx);
+    animation: infinite-scale 3s infinite;
+  }
+  .title {
+    color: var(--couleur-p);
+    font-family: $font-secondary;
+    font-weight: $weight-bold;
+  }
+  .subtitle {
+    background-color: var(--couleur-nav-active);
+    color: var(--couleur-fond);
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: $elevenpx;
+    width: 102%;
+    line-height: 14px;
+    display: none;
+    &::selection {
+      background-color: var(--couleur-texte-selections);
+      color: var(--couleur-texte);
+    }
+  }
+  &.showDetails {
+    .subtitle {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .Skill {
+    .subtitle {
+      font-size: 0.6rem;
+    }
+  }
+}

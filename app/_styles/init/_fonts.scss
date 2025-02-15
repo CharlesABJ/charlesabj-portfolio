@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// /* Poppins */
+
+// @font-face {
+//   font-family: "Poppins";
+//   src: url("../../../public/fonts/Poppins/Poppins-Black.ttf") format("truetype");
+//   font-weight: 900;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "Poppins";
+//   src: url("../../../public/fonts/Poppins/Poppins-BlackItalic.ttf")
+//     format("truetype");
+//   font-weight: 900;
+//   font-style: italic;
+// }
+
+// @font-face {
+//   font-family: "Poppins";
+//   src: url("../../../public/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "Poppins";
+//   src: url("../../../public/fonts/Poppins/Poppins-BoldItalic.ttf")
+//     format("truetype");
+//   font-weight: 700;
+//   font-style: italic;
+// }
+
+// @font-face {
+//   font-family: "Poppins";
+//   src: url("../../../public/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+//   font-weight: $weight-light;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "Poppins";
+//   src: url("../../../public/fonts/Poppins/Poppins-LightItalic.ttf")
+//     format("truetype");
+//   font-weight: $weight-light;
+//   font-style: italic;
+// }
+
+// @font-face {
+//   font-family: "Poppins";
+//   src: url("../../../public/fonts/Poppins/Poppins-Medium.ttf")
+//     format("truetype");
+//   font-weight: $weight-medium;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "Poppins";
+//   src: url("../../../public/fonts/Poppins/Poppins-MediumItalic.ttf")
+//     format("truetype");
+//   font-weight: $weight-medium;
+//   font-style: italic;
+// }
+
+// @font-face {
+//   font-family: "Poppins";
+//   src: url("../../../public/fonts/Poppins/Poppins-Regular.ttf")
+//     format("truetype");
+//   font-weight: $weight-regular;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "Poppins";
+//   src: url("../../../public/fonts/Poppins/Poppins-SemiBold.ttf")
+//     format("truetype");
+//   font-weight: $weight-semibold;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "Poppins";
+//   src: url("../../../public/fonts/Poppins/Poppins-SemiBoldItalic.ttf")
+//     format("truetype");
+//   font-weight: $weight-semibold;
+//   font-style: italic;
+// }
+
+// @font-face {
+//   font-family: "Poppins";
+//   src: url("../../../public/fonts/Poppins/Poppins-Thin.ttf") format("truetype");
+//   font-weight: $weight-thin;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "Poppins";
+//   src: url("../../../public/fonts/Poppins/Poppins-ThinItalic.ttf")
+//     format("truetype");
+//   font-weight: $weight-thin;
+//   font-style: italic;
+// }
+
+// /* Lora */
+
+// @font-face {
+//   font-family: "Lora";
+//   src: url("../../../public/fonts/Lora/Lora-Italic-VariableFont_wght.ttf")
+//     format("truetype");
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "Lora";
+//   src: url("../../../public/fonts/Lora/Lora-VariableFont_wght.ttf")
+//     format("truetype");
+//   font-weight: 700;
+//   font-style: italic;
+// }
+
+// Fonts pour logo SEQUANE du FOOTER
+@font-face {
+  font-family: "Monologue-Sequane";
+  src: url("../../../public/fonts/Sequane/Monologue-Sequane.woff2")
+      format("woff2"),
+    url("../../../public/fonts/Sequane/Monologue-Sequane.woff") format("woff"),
+    url("../../../public/fonts/Sequane/Monologue-Sequane.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
