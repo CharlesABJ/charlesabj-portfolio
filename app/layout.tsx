@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import "./_styles/App.scss";
-import Header from "./_components/_Header/Header";
-import Footer from "./_components/_Footer/Footer";
-import { ThemeContextProvider } from "./_contexts/ThemeContext";
+import "@/_styles/App.scss";
+import Header from "@/_components/_Header/Header";
+import Footer from "@/_components/_Footer/Footer";
+import { ThemeContextProvider } from "@/_contexts/ThemeContext";
 
 export const metadata: Metadata = {
 
@@ -25,11 +25,12 @@ export default function RootLayout({
   return (
 
     <html lang="fr">
-
       <body>
         <ThemeContextProvider>
           <Header />
-          {children}
+          <main>
+            {children}
+          </main>
           <Footer />
         </ThemeContextProvider>
       </body>

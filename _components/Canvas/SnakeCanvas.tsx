@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import devLanguages from '@/datas/devLanguagesList.json';
+import devLanguages from '../../datas/devLanguagesList.json';
 
 interface SnakeCanvasProps {
     dataSnakeCanvas: {
@@ -29,6 +29,7 @@ function SnakeCanvas({ dataSnakeCanvas }: SnakeCanvasProps) {
     const [score, setScore] = useState(0);
 
     const router = useRouter();
+
 
     const messages = {
         win: [
@@ -65,7 +66,9 @@ function SnakeCanvas({ dataSnakeCanvas }: SnakeCanvasProps) {
     };
     useEffect(() => {
 
+
         loadNewFoodImage();
+
     }, []); // On recharge l'image de la nourriture à chaque fois que la nourriture change
 
     // Gestion des évenenements au clic sur les flèches

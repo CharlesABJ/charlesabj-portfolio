@@ -124,11 +124,9 @@
 // Fonts pour logo SEQUANE du FOOTER
 @font-face {
   font-family: "Monologue-Sequane";
-  src: url("../../../public/fonts/Sequane/Monologue-Sequane.woff2")
-      format("woff2"),
-    url("../../../public/fonts/Sequane/Monologue-Sequane.woff") format("woff"),
-    url("../../../public/fonts/Sequane/Monologue-Sequane.ttf")
-      format("truetype");
+  src: url("../../public/fonts/Sequane/Monologue-Sequane.woff2") format("woff2"),
+    url("../../public/fonts/Sequane/Monologue-Sequane.woff") format("woff"),
+    url("../../public/fonts/Sequane/Monologue-Sequane.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

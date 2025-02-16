@@ -3,7 +3,7 @@ import { faFacebookMessenger, faGithub, faLinkedin } from '@fortawesome/free-bra
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
-import { useThemeContext } from '@/app/_contexts/ThemeContext';
+import { useThemeContext } from '@/_contexts/ThemeContext';
 
 function Footer() {
     const { theme } = useThemeContext();

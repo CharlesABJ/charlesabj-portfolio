@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Importation des datas des langages de programmation
-import datas from "../../../datas/devLanguagesList.json";
+import datas from "../../datas/devLanguagesList.json";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import Skill from '../Skill/Skill';

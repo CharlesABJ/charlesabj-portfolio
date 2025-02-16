@@ -1,26 +1,24 @@
 "use client";
 import { useState } from 'react';
-import SnakeCanvas from './_components/Canvas/SnakeCanvas';
+import SnakeCanvas from '../_components/Canvas/SnakeCanvas';
 import datasTools from "../datas/toolsList.json";
 import datasLanguages from "../datas/devLanguagesList.json";
-import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 function NotFound404() {
     const [buttonIsNo, setButtonIsNo] = useState(false);
     const [buttonIsYes, setButtonIsYes] = useState(false);
     const [startGame, setStartGame] = useState(false);
     const nbOfSkillsToolsAndLanguages: number = datasTools.length + datasLanguages.length;
-    const url = window.location.href.split('/').pop(); // pop() permet de récupérer le dernier élément d'un tableau
-
-    const router = useRouter();
+    const url = usePathname().slice(1);
 
 
     const redirection = () => {
         localStorage.removeItem('Mode secret 404');
         setTimeout(() => {
-            router.push('/');
-        }, 2000)
-    }
+            window.location.href = '/';
+        }, 2000);
+    };
 
     const handleNo = () => {
         setButtonIsNo(true);

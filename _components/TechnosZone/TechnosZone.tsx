@@ -4,7 +4,7 @@ import Image from 'next/image';
 // import useFetch from '@/app/_hooks/useFetch';
 
 // Importation des datas des technos
-import datas from "../../../datas/technosList.json";
+import datas from "../../datas/technosList.json";
 
 
 function TechnosZone() {

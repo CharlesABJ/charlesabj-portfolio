@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faToolbox } from '@fortawesome/free-solid-svg-icons';
 
 // Importation des datas des outils de programmation
-import datas from "../../../datas/toolsList.json";
+import datas from "../../datas/toolsList.json";
 
 // Importation des composants
 import Skill from '../Skill/Skill';

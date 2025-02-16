@@ -1,5 +1,5 @@
 "use client"
-import { useThemeContext } from '@/app/_contexts/ThemeContext';
+import { useThemeContext } from '@/_contexts/ThemeContext';
 import { faBarsStaggered, faMoon, faSun, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
@@ -40,6 +40,7 @@ function Header() {
 
     // Changer le thème
     const handleChangeMode = () => {
+        if (typeof window === "undefined") return;
         if (theme === "light-mode") {
             localStorage.setItem('theme', "dark-mode");
             document.body.classList.add("dark-mode");
@@ -58,7 +59,10 @@ function Header() {
 
     // Mettre le lien de navigation actif en surbrillance
     useEffect(() => {
+
         const handleScroll = () => {
+            if (typeof window === "undefined") return;
+
             const logo = document.querySelector('.logo');
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('nav ul li a');
@@ -81,7 +85,6 @@ function Header() {
                         if (sectionId === 'home') {
                             logo?.classList.add('active');
                         }
-
                         if (sectionId === 'recommendations') {
                             skills?.classList.add('active');
                         }

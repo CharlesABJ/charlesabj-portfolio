@@ -1,12 +1,11 @@
 "use client";
-import { useEffect } from "react";
-import About from "./_components/_About/About";
-import Contact from "./_components/_Contact/Contact";
-import Home from "./_components/_Home/Home";
-import Portfolio from "./_components/_Portfolio/Portfolio";
-import Recommendations from "./_components/_Recommendations/Recommendations";
-import Skills from "./_components/_Skills/Skills";
-import { useThemeContext } from "./_contexts/ThemeContext";
+import About from "../_components/_About/About";
+import Contact from "../_components/_Contact/Contact";
+import Home from "../_components/_Home/Home";
+import Portfolio from "../_components/_Portfolio/Portfolio";
+import Recommendations from "../_components/_Recommendations/Recommendations";
+import Skills from "../_components/_Skills/Skills";
+import { useThemeContext } from "../_contexts/ThemeContext";
 
 export default function App() {
   // Home
@@ -23,16 +22,7 @@ export default function App() {
   // Skills
 
   // Contact
-  useEffect(() => {
-    console.log(`
-    ████████████████████████████████████████████████████████████████████████████████████████████████
-  
-    Coucou ! Si vous regardez par là, c'est que vous êtes une certainement personne très cool. 
-    N'hésitez pas à me contacter !
 
-    ████████████████████████████████████████████████████████████████████████████████████████████████
-    `);
-  })
   const { theme } = useThemeContext();
 
   if (!theme) {
@@ -44,13 +34,13 @@ export default function App() {
   }
 
   return (
-    <main>
+    <>
       <Home dataHome={{ avatarSrc: theme === "dark-mode" ? darkAvatar : lightAvatar }} />
       <About dataAbout={{ illustrationSrc: illustrationSrc, illustrationSrc2: illustrationSrc2 }} />
       <Portfolio />
       <Skills />
       <Recommendations />
       <Contact />
-    </main>
+    </>
   );
 }

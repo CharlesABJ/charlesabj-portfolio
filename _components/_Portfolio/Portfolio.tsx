@@ -3,11 +3,11 @@
 import React, { useState } from 'react';
 
 // Importation des datas des projets
-import datas from "../../../datas/projectsList.json";
+import datas from "../../datas/projectsList.json";
 import CardProject from '../CardProject/CardProject';
 import ModalProject from '../ModalProject/ModalProject';
 import Image from 'next/image';
-import { useThemeContext } from '@/app/_contexts/ThemeContext';
+import { useThemeContext } from '@/_contexts/ThemeContext';
 
 interface ProjectType {
     project_id: number;
@@ -25,9 +25,14 @@ interface ProjectType {
 }
 
 function Portfolio() {
+
     const [displayCar, setDisplayCar] = useState(true);
     const [brokenWebsite, setBrokenWebsite] = useState(false);
+
+
     const handleBrokenWebsite = () => {
+        if (typeof window === "undefined") return;
+
         if (displayCar) {
             setBrokenWebsite(true);
             setTimeout(() => {
