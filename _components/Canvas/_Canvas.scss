@@ -40,6 +40,7 @@
       border-radius: 5px;
       color: green;
       margin: auto;
+      font-size: 1.3rem;
       cursor: pointer;
       transition: 0.3s;
       &:hover {
@@ -120,6 +121,7 @@
       padding: 0.1rem 1rem;
       border-radius: 4px;
       width: max-content;
+      max-width: 80%;
       overflow: hidden;
       cursor: pointer;
       animation: clignote 1s infinite;
