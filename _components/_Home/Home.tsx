@@ -65,7 +65,7 @@ function Home({ dataHome }: HomeProps) {
                                     className={`hand ${shake ? 'shake' : ''} `}
                                     role="img"
                                     aria-label="hand">
-                                    👋🏽
+                                    <i>👋🏽</i>
 
                                 </span>
                                 {titleHandIsActive && (

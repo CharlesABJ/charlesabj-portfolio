@@ -237,7 +237,7 @@ function SnakeCanvas({ dataSnakeCanvas }: SnakeCanvasProps) {
     if (score >= dataSnakeCanvas.scoreToWin && gameOver) {
         setTimeout(() => {
             homeRedirectionAfterWin()
-        }, 7000);
+        }, 4500);
     }
 
     return (

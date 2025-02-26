@@ -14,24 +14,32 @@
         flex-direction: column;
         .specification {
           position: relative;
+          width: max-content;
           // text-shadow: 1px 1px 1px var(--couleur-texte);
           // animation: changing-color 40s infinite;
           color: var(--couleur-texte);
           .hand {
-            position: absolute;
-            bottom: 0;
+            position: relative;
+            display: block;
+            i {
+              font-style: normal;
+              position: absolute;
+              bottom: 0;
 
-            right: -10px;
-            // transition: 0.3s ease;
-            transition: transform 1.3s;
-            user-select: none;
-            cursor: pointer;
+              right: -10px;
+              // transition: 0.3s ease;
+              transition: transform 1.3s;
+              user-select: none;
+              cursor: pointer;
 
-            @media screen and (min-width: 1670px) {
-              right: $twentypx;
+              @media screen and (min-width: 1670px) {
+                right: $twentypx;
+              }
             }
             &.shake {
-              animation: shake 0.5s;
+              i {
+                animation: shake 0.5s;
+              }
             }
           }
           .hand-title {
@@ -39,6 +47,9 @@
             padding: $fivepx;
             width: max-content;
             position: absolute;
+            left: 100%;
+            bottom: 45%;
+            z-index: 1;
             font-size: small;
             color: var(--couleur-fond2);
             font-weight: $weight-medium;
@@ -132,9 +143,12 @@
       .presentation {
         width: 100%;
         text-align: center;
+
         h1 {
           margin: auto;
           .specification {
+            margin: auto;
+
             .hand {
               right: 0;
             }
@@ -189,10 +203,11 @@
 
           .specification {
             .hand {
-              right: $thirty-fivepx;
+              position: unset;
             }
             .hand-title {
               left: 50%;
+              bottom: 200%;
             }
           }
         }
