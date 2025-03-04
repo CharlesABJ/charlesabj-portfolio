@@ -52,7 +52,7 @@ function Footer() {
                 </li>
             </ul>
 
-            <p className='copyright'>© 2023 • Make with ❤️ By CharlesABJ </p>
+            <p className='copyright'>© 2023 – 2025 • Make with ❤️ By CharlesABJ </p>
 
             <ScrollToTop />
         </footer>
