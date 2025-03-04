@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "https://charlesabj.vercel.app",
+      "destination": "https://charlesabj.com",
+      "permanent": true
+    }
+  ]
+}
