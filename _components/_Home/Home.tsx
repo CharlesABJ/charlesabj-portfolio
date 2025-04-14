@@ -62,7 +62,7 @@ function Home({ dataHome }: HomeProps) {
                                 <span
                                     onClick={handleShake}
                                     title={clickCount < 10 ? "Salut !" : "Ça suffit !! \nContactez-moi 😠"}
-                                    className={`hand ${shake ? 'shake' : ''} `}
+                                    className={`hand ${shake ? 'shake' : ''} ${titleHandIsActive ? 'title-is-active' : ''} `}
                                     role="img"
                                     aria-label="hand">
                                     <i>👋🏽</i>

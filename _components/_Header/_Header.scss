@@ -25,7 +25,7 @@ header.Header {
     }
     &.active {
       border: 1px solid var(--couleur-span);
-      transition: border 0.3s;
+      // transition: border 0.3s;
     }
   }
   nav {

@@ -21,6 +21,9 @@
           .hand {
             position: relative;
             display: block;
+            &.title-is-active {
+              pointer-events: none;
+            }
             i {
               font-style: normal;
               position: absolute;
