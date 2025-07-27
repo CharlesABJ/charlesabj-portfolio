@@ -1,3 +1,4 @@
+import { useThemeContext } from '@/_contexts/ThemeContext';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
@@ -5,16 +6,23 @@ import React from 'react';
 
 interface PropsCardProject {
     dataCardProject: {
+        project_id: number;
+        inProgress?: boolean;
+        themeColor?: {
+            light: string;
+            dark: string;
+        };
         title: string;
         year: number;
         coverSrc: string;
         pictures: string;
-        lightHouseSrc: string;
+        lightHouseSrc?: string;
+        lightHouseSrcDark?: string;
         missionResume: string;
         mission: string;
         strongPoints: string[];
         technosUsed: string[];
-        gitHubLink: string;
+        gitHubLink?: string;
         websiteLink?: string;
         isProjectSelected?: boolean;
     };
@@ -22,15 +30,47 @@ interface PropsCardProject {
 }
 
 function CardProject({ dataCardProject, onModalOpen }: PropsCardProject) {
+    const themeContext = useThemeContext();
+    const isDarkMode = themeContext.theme === 'dark-mode';
     return (
-        <li className={`CardProject ${dataCardProject.isProjectSelected ? "project-selected" : ""}`}>
+        <li key={dataCardProject.project_id}
+            className={`CardProject ${dataCardProject.isProjectSelected ? "project-selected" : ""} id-${dataCardProject.project_id} ${dataCardProject.inProgress ? "in-progress" : ""}`}
+            style={{
+                '--project-color': isDarkMode
+                    ? dataCardProject.themeColor?.dark
+                    : dataCardProject.themeColor?.light
+            } as React.CSSProperties}
+        >
+
             {dataCardProject.websiteLink ? (
                 <a href={dataCardProject.websiteLink} target="_blank" className="cover">
+                    {dataCardProject.inProgress && (
+                        <div style={{
+                            "--project-progress-color": dataCardProject.themeColor?.light
+
+                        } as React.CSSProperties}
+                            className="button-in-progress" >
+                            <div className="container-zone">
+                                En cours
+                            </div>
+                        </div>
+                    )}
                     <div className="overlay"></div>
                     <Image src={dataCardProject.coverSrc} width={580} height={400} alt={dataCardProject.title} />
                 </a>
             ) : (
                 <div className="cover">
+                    {dataCardProject.inProgress && (
+                        <div style={{
+                            "--project-progress-color": dataCardProject.themeColor?.light
+
+                        } as React.CSSProperties}
+                            className="button-in-progress">
+                            <div className="container-zone">
+                                En cours
+                            </div>
+                        </div>
+                    )}
                     <div className="overlay"></div>
                     <Image src={dataCardProject.coverSrc} width={580} height={400} alt={dataCardProject.title} />
                 </div>

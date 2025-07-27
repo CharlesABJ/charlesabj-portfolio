@@ -3,11 +3,13 @@ import { useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faFacebookMessenger } from '@fortawesome/free-brands-svg-icons';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 // Importation des  composants :
 import TechnosZone from '../TechnosZone/TechnosZone';
+import useMachineWritter from '@/_hooks/useMachineWritter';
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 
 interface HomeProps {
     dataHome: {
@@ -21,6 +23,13 @@ function Home({ dataHome }: HomeProps) {
     const [titleHandIsActive, setTitleHandIsActive] = useState(false);
     const [wink, setWink] = useState(false);
     const router = useRouter();
+
+    // Spécifications :
+    const specifications = useMachineWritter(clickCount < 12 ? ["Front-End"] : ["Front-End", "WordPress", "React"]);
+
+
+
+
     const handleShake = () => {
         setClickCount(clickCount + 1);
 
@@ -58,24 +67,22 @@ function Home({ dataHome }: HomeProps) {
                 <div className="presentation-and-avatar">
                     <div className="presentation">
                         <h1>Développeur
-                            <span className='specification'>Front-End &nbsp;&nbsp;&nbsp;&nbsp;
-                                <span
-                                    onClick={handleShake}
+                            <span className='specification'>
+                                {specifications}&nbsp;
+                                <i onClick={handleShake}
                                     title={clickCount < 10 ? "Salut !" : "Ça suffit !! \nContactez-moi 😠"}
                                     className={`hand ${shake ? 'shake' : ''} ${titleHandIsActive ? 'title-is-active' : ''} `}
                                     role="img"
-                                    aria-label="hand">
-                                    <i>👋🏽</i>
-
-                                </span>
-                                {titleHandIsActive && (
+                                    aria-label="hand">👋🏽</i>
+                                {titleHandIsActive && clickCount < 13 && (
                                     <span className='hand-title'
                                         dangerouslySetInnerHTML={{
-                                            __html:
-                                                clickCount >= 2 && clickCount <= 4
-                                                    ? "Doucement ! <br /> C'est juste un clic !!"
-                                                    : clickCount > 4 && clickCount <= 7
-                                                        ? "..."
+                                            __html: clickCount >= 2 && clickCount <= 4
+                                                ? "Doucement ! <br /> C'est juste un clic !!"
+                                                : clickCount > 4 && clickCount <= 7
+                                                    ? "..."
+                                                    : clickCount === 12
+                                                        ? "D'accord vous avez gagné <br /> Contactez-moi maintenant !"
                                                         : "Ça suffit !! <br /> Contactez-moi 😠"
                                         }}
                                     />
@@ -83,8 +90,13 @@ function Home({ dataHome }: HomeProps) {
                             </span>
                         </h1>
                         <p className='description'>
-                            Bienvenue sur ma page ! Je suis Charles ABJ. <br />
-                            Passionné depuis toujours par la création, je suis un développeur constamment animé par le désir de concrétiser et partager des réalisations avec le monde !
+                            {/* Bienvenue sur ma page ! Je suis Charles ABJ. <br />
+                            Passionné depuis toujours par la création, je suis un développeur constamment animé par le désir de concrétiser et partager des réalisations avec le monde ! */}
+                            Bienvenue sur ma page ! Je suis Charles ABJ.<br />
+                            Développeur React & WordPress passionné par la création <br />
+                            sous toutes ses formes.
+                            <br /><br />
+                            Ce qui m’anime ? Donner vie à des idées, les transformer en projets concrets et les partager avec le monde !
                         </p>
 
                         <ul className="social-networks">
@@ -114,7 +126,17 @@ function Home({ dataHome }: HomeProps) {
                                     <FontAwesomeIcon icon={faFacebookMessenger} />
                                 </a>
                             </li>
+                            <li >
+                                <a title="Mon CV"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                    className="contact"
+                                    href="https://www.linkedin.com/in/charlesabj-78753b182/details/experience/">
+                                    <FontAwesomeIcon icon={faFilePdf} />
+                                </a>
+                            </li>
                         </ul>
+
                     </div>
                     <div className="avatar">
                         <span className={`loupe ${wink ? "hand-is-shaked" : ""}`}></span>

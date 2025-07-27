@@ -30,6 +30,11 @@
   }
 }
 
+body.dark-mode {
+  .lighthouse-score {
+    filter: brightness(0.88);
+  }
+}
 .hidden-for-tablet {
   @media screen and (max-width: 1250px) {
     display: none !important;
@@ -199,4 +204,57 @@ main.merci {
 
 span.merci {
   margin-top: $twenty-fivepx;
+}
+
+.in-progress {
+  .button-in-progress {
+    background: color-mix(in srgb, var(--project-progress-color), #fff 30%);
+    overflow: hidden;
+    content: "En cours";
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: max-content;
+    height: max-content;
+    border: 1px solid
+      color-mix(in srgb, var(--project-progress-color), #fff 70%);
+    border-radius: 10px;
+    font-size: medium;
+    box-shadow: 0 2px 10px var(--couleur-box-shadow);
+    animation: in-progress 7s infinite;
+    pointer-events: none;
+    user-select: none;
+    z-index: 1;
+
+    .container-zone {
+      position: relative;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: $fivepx $tenpx;
+
+      //  &::before {
+      //   content: "";
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   width: $thirtypx;
+      //   height: 100%;
+      //   background-color: #ffffff;
+      //   opacity: 0.3;
+      //   backdrop-filter: blur(5px);
+      //   animation: progress-slide 0.7s linear infinite;
+      // }
+    }
+  }
+
+  @keyframes progress-slide {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 100%;
+    }
+  }
 }

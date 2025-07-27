@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 interface AboutProps {
     dataAbout: {
         illustrationSrc: string;
@@ -27,7 +27,7 @@ function About({ dataAbout }: AboutProps) {
         const nbOfMillisecondsInAYear = nbOfSecondsInAYear * 1000; // On multiplie par 1000 pour obtenir le nombre de millisecondes
         const today = new Date(); // On obtient la date actuelle
         const birthDate = new Date(Y, M - 1, D); // On obtient la date de naissance
-        let age = (today.getTime() - birthDate.getTime()) / nbOfMillisecondsInAYear;  // On soustrait la date de naissance à la date actuelle et on divise par le nombre de millisecondes dans une année
+        let age = (today.getTime() - birthDate.getTime()) / nbOfMillisecondsInAYear;  // On soustrait la date de naissance à la date actuelle et on divise par le nombre de millisecondes dans une année (getTime() permet de convertir les dates en milliseconde
         age = Math.floor(age); // On arrondit à l'entier inférieur
         return age;
     };
@@ -44,6 +44,21 @@ function About({ dataAbout }: AboutProps) {
         }
     }
 
+    const [grettings, setGrettings] = useState("Bonjour");
+
+    useEffect(() => {
+
+        const currentDate = new Date();
+        const currentHour = currentDate.getHours();
+        if (currentHour < 18) {
+            setGrettings("Bonjour");
+        } else {
+            setGrettings("Bonsoir");
+        }
+
+
+    }, [])
+
     return (
         <section id="about" className="About">
             <div className="container">
@@ -56,14 +71,14 @@ function About({ dataAbout }: AboutProps) {
                     <div className="presentation">
                         <h3>Un Développeur Front-End</h3>
                         <p>
-                            Bonjour à vous qui lisez cette description !<br />
+                            {grettings} à vous qui lisez cette description !<br />
                             Je m'appelle <span><strong>Charles ABJ,</strong></span> j'ai
                             <span
                                 className="age"
                                 title="le 3 novembre 2000😁🎂">
                                 <strong>{` ${calculateAge(2000, 11, 3)} ans `}</strong>
                             </span>
-                            et je suis Développeur <span><strong>Front-End.</strong></span>
+                            et je suis Développeur <span title="et WordPress aussi :P "><strong>Front-End.</strong></span>
                         </p>
                         <div>
                             <p>
@@ -85,7 +100,7 @@ function About({ dataAbout }: AboutProps) {
                             <summary onClick={handleSeeMore}>{seeMore}</summary>
 
                             <div>
-                                Je suis actuellement{/* <span>à la recherche d'une alternance</span> en tant que&nbsp; */} en alternance chez
+                                Je suis actuellement{/* <span>à la recherche d'une alternance</span> en tant que&nbsp; */} en apprentissage chez
                                 <div className="signature">
                                     <p>
                                         <a href="https://sequane.fr" target="_blank">

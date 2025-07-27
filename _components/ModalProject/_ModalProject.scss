@@ -20,7 +20,7 @@
   .modal {
     position: absolute;
     width: 90vw;
-    height: 75%;
+    height: 77%;
     max-height: calc(10 * $eightypx);
     background: var(--couleur-fond);
     border-radius: 5px;
@@ -90,7 +90,7 @@
         color: var(--couleur-nav);
         .title {
           font-family: $font-base;
-          color: var(--couleur-span);
+          color: var(--project-color);
           font-size: $thirty-fivepx;
           margin-top: $sixteenpx;
         }
@@ -102,6 +102,7 @@
           margin-top: $fourteenpx;
           span {
             font-weight: $weight-medium;
+            color: var(--project-color);
           }
         }
         .mission {
@@ -122,15 +123,15 @@
           margin-block: $sixteenpx $thirty-twopx;
           .techno {
             padding: 0 $twelvepx;
-            border: 1px solid var(--couleur-span);
+            border: 1px solid var(--project-color);
             border-radius: 30px;
             font-weight: 300;
             font-size: $fourteenpx;
-            color: var(--couleur-span);
+            color: var(--project-color);
             user-select: none;
             transition: 0.3s ease all;
             &:hover {
-              background-color: var(--couleur-span);
+              background-color: var(--project-color);
               color: var(--couleur-fond);
             }
           }
@@ -138,36 +139,101 @@
 
         .links {
           display: flex;
-          justify-content: space-around;
+          &.has-two-links {
+            // justify-content: center;
+          }
           a {
-            display: inline-block;
-            padding: 7px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 7px 15px;
             margin-right: 20px;
             text-align: center;
             text-decoration: none;
             transition: 0.3s;
             font-size: $eighteenpx;
-            width: 70%;
-            border-radius: 50px;
-            background-color: var(--couleur-fond2);
-            color: var(--couleur-texte);
+            max-width: 300px;
+            min-width: 30%;
+            border-width: 1px;
+            width: max-content;
+            border-radius: 15px;
+            background-color: var(--project-color);
+            color: var(--couleur-fond);
+            transition: 0.3s;
+            &:active {
+              transform: scale(0.98);
+            }
+            &.github-link {
+              background: inherit;
+              border-style: dashed;
+              border-color: var(--project-color);
+              color: var(--project-color);
+              border-radius: 15px;
+              &::after {
+                position: absolute;
+                content: "";
+                top: -1px;
+                left: -1px;
+                width: 100%;
+                height: 100%;
+                border: 1px solid var(--project-color);
+                border-radius: 15px;
+                opacity: 0;
+                transition: 0.3s ease-in-out;
+              }
+              &:hover {
+                &::after {
+                  opacity: 1;
+                }
+              }
+            }
             svg {
               margin-left: $fivepx;
             }
             &:hover {
-              color: var(--couleur-span);
             }
           }
         }
       }
       .pictures-and-lighthouse-score {
-        margin-top: $hundredpx;
+        margin-top: $seventypx;
         text-align: center;
         padding-right: 10%;
         .pictures,
         .lighthouse-score {
           width: 80%;
           margin: auto;
+        }
+      }
+      .contact-link {
+        display: block;
+        border: 1px solid var(--noir);
+        border-radius: 50px;
+        margin: $thirtypx auto;
+        transition: 0.3s;
+        .text-content {
+          width: max-content;
+          display: block;
+          text-align: center;
+          background: var(--noir);
+          color: var(--blanc);
+          font-weight: $weight-bold;
+          font-size: $twentypx;
+          padding: $twentypx $thirty-twopx;
+          border-radius: 50px;
+          transition: 0.3s;
+        }
+        &:hover {
+          .text-content {
+            transform: translateY(-5px);
+          }
+        }
+        &:active {
+          transform: scale(0.98);
+          .text-content {
+            transform: translateY(0);
+          }
         }
       }
     }

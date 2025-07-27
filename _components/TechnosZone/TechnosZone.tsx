@@ -11,7 +11,7 @@ function TechnosZone() {
     return (
         <ul className="TechnosZone">
 
-            {datas.slice(0, 6).map((e) => (
+            {datas.slice(0, 7).map((e) => (
                 <li className='techno' key={e.techno_id} title={e.title}>
                     <span className='seo-only'>{e.title}</span>
                     <Image src={e.src} alt={e.title} width={60} height={60} />

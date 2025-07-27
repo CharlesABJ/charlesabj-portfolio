@@ -2,7 +2,7 @@
   {
     "devLanguage_id": "f1a3d07b",
     "title": "WordPress",
-    "subtitle": "PHP, ACF, WooCommerce, Thème de A à Z, SEO, Elementor, Gestion des utilisateurs",
+    "subtitle": "PHP, ACF, WooCommerce, AJAX, Thème de A à Z, SEO, Elementor, Gestion des utilisateurs, Migration de sites web",
     "src": "/images/icons/wordpress.svg"
   },
   {
@@ -20,7 +20,7 @@
   {
     "devLanguage_id": "746d8c52",
     "title": "React",
-    "subtitle": "NextJS, Redux-Toolkit, Hooks, Context, React-Router-Dom, Gestion des erreurs, Appels aux API",
+    "subtitle": "NextJS, Redux-Toolkit, Next-Auth, Hooks, Context, React-Router-Dom, Gestion des erreurs, Appels aux API",
     "src": "/images/icons/react.svg"
   },
   {
@@ -46,7 +46,7 @@
   {
     "devLanguage_id": "e2b7189d",
     "title": "CSS3",
-    "subtitle": " Mobile-first, Pixel perfect, Responsive design",
+    "subtitle": " Mobile-first, SASS, Pixel perfect, Responsive design, Bootstrap, Flexbox, Grid, Animation CSS",
     "src": "/images/icons/css.svg"
   }
 ]

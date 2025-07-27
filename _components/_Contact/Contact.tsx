@@ -38,7 +38,7 @@ function Contact() {
                                 </li>
                                 <li>
                                     <a
-                                        title="Pour la France 🇫🇷: +33 6 30 08 65 92 👋"
+                                        // title="Pour la France 🇫🇷: +33 6 30 08 65 92 👋"
                                         href="tel:+41763694154"
                                         target="_blank"
                                         rel="noopener noreferrer"

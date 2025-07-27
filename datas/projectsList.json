@@ -1,49 +1,44 @@
 [
   {
     "project_id": 1,
-    "title": "Kasa",
-    "year": 2024,
-    "coverSrc": "/images/projects/kasa/cover/test.jpg",
-    "pictures": "/images/projects/kasa/pictures/kasa-pictures.svg",
-    "lightHouseSrcLight": "/images/projects/kasa/lighthouse-scores/light/kasa-lighthouse.png",
-    "lightHouseSrcDark": "/images/projects/kasa/lighthouse-scores/dark/kasa-lighthouse-dark.png",
-    "missionResume": "Développer une application web de location immobilière en utilisant React...",
-    "mission": "Développer une application web de location immobilière en utilisant React, tout en respectant les contraintes techniques spécifiées. Mettre en place des animations CSS pour améliorer l'expérience utilisateur.",
+    "inProgress": false,
+    "themeColor": {
+      "light": "#0164FC",
+      "dark": "#6DAEFF"
+    },
+    "title": "Booki",
+    "year": 2022,
+    "coverSrc": "/images/projects/booki/cover/booki-cover.jpg",
+    "pictures": "/images/projects/booki/pictures/booki-pictures.svg",
+    "lightHouseSrcLight": "/images/projects/booki/lighthouse-scores/light/booki-lighthouse.png",
+    "lightHouseSrcDark": "/images/projects/booki/lighthouse-scores/dark/booki-lighthouse-dark.png",
+    "missionResume": "Intégration d'une maquette pour une agence de voyage en HTML/CSS natif...",
+    "mission": "Intégration d'une maquette pour une agence de voyage en HTML/CSS natif. L'objectif était de créer une interface web responsive et attrayante, en respectant les spécifications et les contraintes techniques.",
+    "cinematicResume": "Mon premier vrai projet encadré : l’intégration complète d’une maquette d’agence de voyage en <strong>HTML/CSS natif</strong>.<br>L’objectif était de livrer une interface <strong>responsive</strong> et <strong>pixel perfect</strong>, fidèle à la maquette Figma et conforme aux standards professionnels.",
     "strongPoints": [
-      "Développement complet de l'application web : J'ai été chargé de démarrer le projet React et de développer l'ensemble de l'application, y compris les composants React, les routes avec React Router, en respectant les maquettes Figma responsives. J'ai suivi les contraintes techniques de l'entreprise pour garantir un code de qualité.",
-      "Animations CSS pour une expérience utilisateur améliorée : J'ai mis en œuvre des animations CSS, notamment pour l'ouverture/fermeture du composant Collapse, offrant ainsi une expérience interactive et attrayante aux utilisateurs du site."
+      "Intégration responsive : J'ai réussi à mettre en œuvre une interface responsive en HTML et CSS pour la page d'accueil de l'agence de voyage Booki. Le site est maintenant accessible sur différents appareils, y compris les ordinateurs de bureau, les tablettes et les smartphones.",
+      "Respect des spécifications et contraintes techniques : J'ai suivi attentivement les maquettes fournies par l'UI designer et intégré l'interface du site en accord avec les spécifications et contraintes techniques énoncées par la CTO.",
+      "Versionnement efficace avec Git et GitHub : J'ai utilisé Git et GitHub pour versionner mon projet tout au long de son développement, garantissant ainsi une gestion efficace des modifications et une collaboration transparente avec l'équipe de Booki."
     ],
-    "technosUsed": ["React", "React Router", "Carousel", "Mobile First"],
-    "gitHubLink": "https://github.com/CharlesABJ/kasa-vite",
-    "websiteLink": "https://kasa-wine.vercel.app/"
+    "technosUsed": ["HTML", "CSS", "Pixel perfect", "Figma"],
+    "gitHubLink": "https://github.com/CharlesABJ/Booki",
+    "websiteLink": "https://charlesabj.github.io/booki"
   },
   {
     "project_id": 2,
-    "title": "Mon Vieux Grimoire",
-    "year": 2023,
-    "coverSrc": "/images/projects/mon-vieux-grimoire/cover/mon-vieux-grimoire.webp",
-    "pictures": "/images/projects/mon-vieux-grimoire/pictures/mon-vieux-grimoire-pictures.svg",
-    "lightHouseSrcLight": "/images/projects/mon-vieux-grimoire/lighthouse-scores/light/mon-vieux-grimoire-lighthouse.png",
-    "lightHouseSrcDark": "/images/projects/mon-vieux-grimoire/lighthouse-scores/dark/mon-vieux-grimoire-lighthouse-dark.png",
-    "missionResume": "Développement du back-end d'un site de notation de livres avec NodeJS...",
-    "mission": "Développement du back-end d'un site de notation de livres avec NodeJS à partir d'Express, le site permet aux utilisateurs d’ajouter un nouveau livre et de mettre une note visible par le public.",
-    "strongPoints": [
-      "Sécurité renforcée : J'ai réussi à sécuriser le site en mettant en place un système d'authentification robuste, et en cryptant certaines données pour assurer la confidentialité et l'intégrité des informations sensibles.",
-      "API CRUD conforme aux spécifications : J'ai créé une API en suivant attentivement les spécifications techniques, assurant ainsi une mise en œuvre précise des fonctionnalités requises pour le projet.",
-      "Respect des bonnes pratiques Green Code : J'ai optimisé les performances en tenant compte de la taille des images, ce qui a amélioré l'expérience utilisateur tout en minimisant l'impact environnemental du site."
-    ],
-    "technosUsed": ["Green IT", "Express.js", "MongoDB", "RESTful API"],
-    "gitHubLink": "https://github.com/CharlesABJ/mon-vieux-grimoire"
-  },
-  {
-    "project_id": 3,
+    "inProgress": false,
     "title": "Nina Carducci",
+    "themeColor": {
+      "light": "#E5965F",
+      "dark": "#F5C7A3"
+    },
     "year": 2023,
-    "coverSrc": "/images/projects/nina-carducci/cover/nina-carducci.jpg",
+    "coverSrc": "/images/projects/nina-carducci/cover/nina-carducci-cover.jpg",
     "pictures": "/images/projects/nina-carducci/pictures/nina-carducci-pictures.svg",
     "lightHouseSrcLight": "/images/projects/nina-carducci/lighthouse-scores/light/nina-carducci-lighthouse.png",
     "lightHouseSrcDark": "/images/projects/nina-carducci/lighthouse-scores/dark/nina-carducci-lighthouse-dark.png",
     "missionResume": "Débugger et optimiser le site web d'une photographe en Vanilla JS...",
+    "cinematicResume": "Projet d’optimisation autour d’un portfolio de photographe existant : <strong>debug</strong>, <strong>amélioration des performances</strong>, et <strong>accessibilité renforcée</strong> étaient au cœur de la mission.<br>Réalisé en <strong>JavaScript vanilla</strong>, avec une attention particulière portée au <strong>SEO</strong> et au respect des bonnes pratiques techniques.",
     "mission": "Débugger et optimiser le site web d'une photographe en Vanilla JS, tout en respectant les contraintes techniques spécifiées. Mise en place des animations CSS pour améliorer l'expérience utilisateur.  Rédaction du cahier de recette.",
     "strongPoints": [
       "Débogage et Optimisation des performances : J'ai réussi à débugger le site grâce aux Chrome DevTools et à améliorer considérablement sa vitesse de chargement en redimensionnant les images et en corrigeant les erreurs signalées par l'outil Lighthouse.",
@@ -55,22 +50,426 @@
     "websiteLink": "https://charlesabj.github.io/nina-carducci"
   },
   {
-    "project_id": 4,
-    "title": "Booki",
-    "year": 2022,
-    "coverSrc": "/images/projects/booki/cover/booki.jpg",
-    "pictures": "/images/projects/booki/pictures/booki-pictures.svg",
-    "lightHouseSrcLight": "/images/projects/booki/lighthouse-scores/light/booki-lighthouse.png",
-    "lightHouseSrcDark": "/images/projects/booki/lighthouse-scores/dark/booki-lighthouse-dark.png",
-    "missionResume": "Intégration d'une maquette pour une agence de voyage en HTML/CSS natif...",
-    "mission": "Intégration d'une maquette pour une agence de voyage en HTML/CSS natif. L'objectif était de créer une interface web responsive et attrayante, en respectant les spécifications et les contraintes techniques.",
+    "project_id": 3,
+    "inProgress": false,
+    "title": "Mon Vieux Grimoire",
+    "themeColor": {
+      "light": "#2C1810",
+      "dark": "#A88A7B"
+    },
+    "year": 2023,
+    "coverSrc": "/images/projects/mon-vieux-grimoire/cover/mon-vieux-grimoire-cover.webp",
+    "pictures": "/images/projects/mon-vieux-grimoire/pictures/mon-vieux-grimoire-pictures.svg",
+    "lightHouseSrcLight": "/images/projects/mon-vieux-grimoire/lighthouse-scores/light/mon-vieux-grimoire-lighthouse.png",
+    "lightHouseSrcDark": "/images/projects/mon-vieux-grimoire/lighthouse-scores/dark/mon-vieux-grimoire-lighthouse-dark.png",
+    "missionResume": "Développement du back-end d'un site de notation de livres avec NodeJS...",
+    "cinematicResume": "Développement back-end d’un site de notation de livres avec <strong>Node.js</strong> et <strong>Express</strong> : création d’une <strong>API CRUD sécurisée</strong>, système d’authentification, et <strong>optimisation écoresponsable</strong> des performances.<br>Le projet respecte les bonnes pratiques du <strong>Green Code</strong> et met l’accent sur la <strong>sécurité</strong> et l’accessibilité des données.",
+    "mission": "Développement du back-end d'un site de notation de livres avec NodeJS à partir d'Express, le site permet aux utilisateurs d’ajouter un nouveau livre et de mettre une note visible par le public.",
     "strongPoints": [
-      "Intégration responsive : J'ai réussi à mettre en œuvre une interface responsive en HTML et CSS pour la page d'accueil de l'agence de voyage Booki. Le site est maintenant accessible sur différents appareils, y compris les ordinateurs de bureau, les tablettes et les smartphones.",
-      "Respect des spécifications et contraintes techniques : J'ai suivi attentivement les maquettes fournies par l'UI designer et intégré l'interface du site en accord avec les spécifications et contraintes techniques énoncées par la CTO.",
-      "Versionnement efficace avec Git et GitHub : J'ai utilisé Git et GitHub pour versionner mon projet tout au long de son développement, garantissant ainsi une gestion efficace des modifications et une collaboration transparente avec l'équipe de Booki."
+      "Sécurité renforcée : J'ai réussi à sécuriser le site en mettant en place un système d'authentification, et en cryptant certaines données pour assurer la confidentialité et l'intégrité des informations sensibles.",
+      "API CRUD conforme aux spécifications : J'ai créé une API en suivant attentivement les spécifications techniques, assurant ainsi une mise en œuvre précise des fonctionnalités requises pour le projet.",
+      "Respect des bonnes pratiques Green Code : J'ai optimisé les performances en tenant compte de la taille des images, ce qui a amélioré l'expérience utilisateur tout en minimisant l'impact environnemental du site."
     ],
-    "technosUsed": ["HTML", "CSS", "Pixel perfect", "Figma"],
-    "gitHubLink": "https://github.com/CharlesABJ/Booki",
-    "websiteLink": "https://charlesabj.github.io/booki"
+    "technosUsed": ["Green IT", "Express.js", "MongoDB", "RESTful API"],
+    "gitHubLink": "https://github.com/CharlesABJ/mon-vieux-grimoire"
+  },
+  {
+    "project_id": 4,
+    "inProgress": false,
+    "title": "Enilea",
+    "themeColor": {
+      "light": "#009FB9",
+      "dark": "#5CD2E4"
+    },
+    "year": 2023,
+    "coverSrc": "/images/projects/enilea/cover/enilea-cover.jpg",
+    "pictures": "/images/projects/enilea/pictures/enilea-pictures.svg",
+    "lightHouseSrcLight": "/images/projects/enilea/lighthouse-scores/light/enilea-lighthouse.png",
+    "lightHouseSrcDark": "/images/projects/enilea/lighthouse-scores/dark/enilea-lighthouse-dark.png",
+    "missionResume": "Refonte complète du site vitrine d’ENILEA sous WordPress, avec un thème sur mesure en PHP et une architecture orientée expérience utilisateur...",
+    "cinematicResume": "Premier projet professionnel réalisé en alternance : refonte complète du site vitrine d’<strong>ENILEA</strong> avec un thème <strong>WordPress sur mesure</strong> développé en <strong>PHP</strong>.<br>Structure <strong>responsive</strong>, <strong>accessible</strong> et <strong>optimisée SEO</strong>, avec une gestion de contenu fluide grâce à des <strong>blocs flexibles ACF</strong>.",
+    "mission": "Refonte globale du site vitrine d’ENILEA, établissement public d’enseignement supérieur spécialisé dans l’agroalimentaire et les métiers de l’eau. L’objectif : concevoir une plateforme claire, moderne et orientée pédagogie, en valorisant les formations, la vie étudiante, les projets R&D et les valeurs de l’école. Réalisé en WordPress avec ACF, le site allie flexibilité, ergonomie et accessibilité, pour répondre aux besoins d’un public varié (étudiants, parents, entreprises, institutions).",
+    "strongPoints": [
+      "Architecture intuitive et fluide : L’arborescence du site a été entièrement repensée pour guider efficacement l’internaute vers les informations clés : formations, diplômes, campus, partenariats, actualités… Le menu structuré et les liens contextuels facilitent l’orientation.",
+      "Développement WordPress sur-mesure : Intégration d’un thème custom en PHP, enrichi via Advanced Custom Fields (ACF) pour une édition de contenu souple et adaptée aux besoins évolutifs de l’école. Le back-office est clair, maintenable, et pensé pour les équipes non techniques.",
+      "Identité visuelle modernisée : Le design conjugue sobriété institutionnelle et fraîcheur dynamique. Couleurs structurantes (bleu, turquoise, jaune), pictogrammes explicites, typographies contemporaines : un équilibre entre rigueur académique et accessibilité jeunesse.",
+      "Optimisation SEO, responsive et accessibilité : Le site est entièrement responsive, accessible à tous les supports, et optimisé pour le référencement naturel (balises structurées, Schema.org, performances Lighthouse)."
+    ],
+    "technosUsed": ["WordPress", "PHP", "ACF", "Responsive"],
+    "gitHubLink": "",
+    "websiteLink": "https://enilea.fr"
+  },
+  {
+    "project_id": 5,
+    "inProgress": false,
+    "themeColor": {
+      "light": "#FF6060",
+      "dark": "#FFA8A8"
+    },
+    "title": "Kasa",
+    "year": 2024,
+    "coverSrc": "/images/projects/kasa/cover/test.jpg",
+    "pictures": "/images/projects/kasa/pictures/kasa-pictures.svg",
+    "lightHouseSrcLight": "/images/projects/kasa/lighthouse-scores/light/kasa-lighthouse.png",
+    "lightHouseSrcDark": "/images/projects/kasa/lighthouse-scores/dark/kasa-lighthouse-dark.png",
+    "missionResume": "Développer une application web de location immobilière en utilisant React...",
+    "cinematicResume": "Projet réalisé à partir d’une maquette Figma : développement d’une interface de location immobilière en <strong>React</strong>, avec <strong>navigation dynamique</strong> via <strong>React Router</strong> et <strong>animations CSS</strong> pour enrichir l’expérience utilisateur.<br>Un projet centré sur la structuration front-end, le routage et la qualité du rendu responsive.",
+    "mission": "Développer une application web de location immobilière en utilisant React, tout en respectant les contraintes techniques spécifiées. Mettre en place des animations CSS pour améliorer l'expérience utilisateur.",
+    "strongPoints": [
+      "Développement complet de l'application web : J'ai été chargé de démarrer le projet React et de développer l'ensemble de l'application, y compris les composants React, les routes avec React Router, en respectant les maquettes Figma responsives. J'ai suivi les contraintes techniques de l'entreprise pour garantir un code de qualité.",
+      "Animations CSS pour une expérience utilisateur améliorée : J'ai mis en œuvre des animations CSS, notamment pour l'ouverture/fermeture du composant Collapse, offrant ainsi une expérience interactive et attrayante aux utilisateurs du site."
+    ],
+    "technosUsed": ["React", "React Router", "Carousel", "Mobile First"],
+    "gitHubLink": "https://github.com/CharlesABJ/kasa-vite",
+    "websiteLink": "https://kasa-wine.vercel.app/"
+  },
+  {
+    "project_id": 6,
+    "inProgress": false,
+    "title": "Trackloc Services",
+    "themeColor": {
+      "light": "#2E3A2B",
+      "dark": "#A2B8A1"
+    },
+    "year": 2024,
+    "coverSrc": "/images/projects/trackloc-services/cover/trackloc-services-cover.jpg",
+    "pictures": "/images/projects/trackloc-services/pictures/trackloc-services-pictures.svg",
+    "lightHouseSrcLight": "/images/projects/trackloc-services/lighthouse-scores/light/trackloc-services-lighthouse.png",
+    "lightHouseSrcDark": "/images/projects/trackloc-services/lighthouse-scores/dark/trackloc-services-lighthouse-dark.png",
+    "missionResume": "Création d’un site vitrine WordPress pour une entreprise de location d’engins spécialisés en milieux sensibles...",
+    "cinematicResume": "Site vitrine sur mesure pour une entreprise de location d’engins spécialisés : conception en <strong>WordPress</strong> avec un thème <strong.>PHP personnalisé créé de A à Z</strong.<br> L'interface est <strong>responsive</strong>, <strong>administrable</strong> grâce aux blocs flexibles ACF, et pensée pour un usage professionnel.",
+    "mission": "Concevoir un site vitrine professionnel et fonctionnel pour Trackloc Services, entreprise spécialisée dans la location de matériels techniques pour les travaux publics, forestiers et écologiques. Le site devait présenter clairement leur parc de machines, leur expertise terrain, et inciter à la prise de contact, tout en conservant une interface sobre, robuste et lisible. Réalisé sous WordPress avec ACF et une personnalisation poussée en PHP, le site s’adapte aux usages terrain et offre une expérience fluide sur tous supports.",
+    "strongPoints": [
+      "Structuration claire et orientée terrain : Chaque catégorie de matériel (pelles marais, broyeurs, dumpers…) bénéficie d’une fiche dédiée avec visuels, caractéristiques techniques, et cas d’usage. La navigation a été pensée pour aller droit au but, sans fioriture.",
+      "Développement WordPress personnalisé : Thème développé en PHP sur mesure avec ACF, permettant au client d’ajouter ou modifier facilement les machines, les services ou les informations clés depuis un back-office intuitif.",
+      "Design sobre et professionnel : L’interface mêle lisibilité, pictogrammes techniques, et hiérarchisation visuelle efficace. Pas de démonstration esthétique inutile, mais un habillage aligné avec la rigueur et la technicité de l’entreprise.",
+      "Accessibilité optimale sur tous supports : Le site est responsive, rapide, compatible mobile/tablette et conçu pour être consulté aussi bien en bureau que sur un chantier. L’ergonomie a été priorisée pour un public professionnel exigeant."
+    ],
+    "technosUsed": ["WordPress", "PHP", "ACF", "Responsive", "Administrable"],
+    "gitHubLink": "",
+    "websiteLink": "https://tracklocservices.fr"
+  },
+  {
+    "project_id": 7,
+    "inProgress": false,
+    "title": "Préval",
+    "themeColor": {
+      "light": "#239491",
+      "dark": "#7FD4D1"
+    },
+    "year": 2024,
+    "coverSrc": "/images/projects/preval/cover/preval-cover.jpg",
+    "pictures": "/images/projects/preval/pictures/preval-pictures.svg",
+    "lightHouseSrcLight": "/images/projects/preval/lighthouse-scores/light/preval-lighthouse.png",
+    "lightHouseSrcDark": "/images/projects/preval/lighthouse-scores/dark/preval-lighthouse-dark.png",
+    "missionResume": "Refonte stratégique et technique du site de Préval Haut-Doubs pour moderniser son image et faciliter la sensibilisation à l’écologie locale...",
+    "cinematicResume": "Premier projet e-commerce réalisé pour un acteur public engagé dans l’écologie locale : refonte complète du site de <strong>Préval Haut-Doubs</strong>.<br>Mise en place d’une <strong>boutique WooCommerce</strong> et d’un <strong>système de réservation personnalisé</strong> pour les kits de couches lavables, avec champs dynamiques, engagements légaux et signature numérique.",
+    "mission": "Refonte complète du site de Préval Haut-Doubs, syndicat mixte chargé de la gestion des déchets et de la sensibilisation à l’environnement sur le territoire de Pontarlier. L’objectif : structurer les informations autour de leurs missions, améliorer la lisibilité des services (compostage, tri, ateliers, etc.), favoriser la prise de contact et encourager la participation citoyenne. Le site a été développé sous WordPress avec ACF, dans une approche orientée UX et éducation à l’écocitoyenneté.",
+    "strongPoints": [
+      "Organisation de contenu pédagogique : Le site a été pensé comme un outil éducatif et communautaire, permettant aux usagers de s’informer simplement sur les pratiques écoresponsables (tri des déchets, composteurs, ateliers, achats durables…).",
+      "Développement WordPress structuré : Création d’un thème personnalisé en PHP avec Advanced Custom Fields pour permettre aux équipes de Préval de gérer facilement les actualités, événements, pages pratiques et offres de vente.",
+      "Design accessible et engageant : L’identité visuelle allie sobriété institutionnelle et approche conviviale, avec des pictogrammes illustratifs, des couleurs naturelles et des typographies lisibles. L’UX a été soignée pour toutes les générations.",
+      "Écosystème digital cohérent : Le site est connecté à leurs réseaux sociaux (Facebook, YouTube, Instagram), et pensé pour intégrer des campagnes pédagogiques. Il est compatible avec tous les supports, avec des performances solides et une logique SEO intégrée."
+    ],
+    "technosUsed": ["WooCommerce", "PHP", "ACF", "Champs dynamiques"],
+    "gitHubLink": "",
+    "websiteLink": "https://preval.fr"
+  },
+  {
+    "project_id": 8,
+    "inProgress": false,
+    "title": "République du Saugeais",
+    "themeColor": {
+      "light": "#00953C",
+      "dark": "#7ED9A1"
+    },
+    "year": 2024,
+    "coverSrc": "/images/projects/republique-saugeais/cover/republique-saugeais-cover.jpg",
+    "pictures": "/images/projects/republique-saugeais/pictures/republique-saugeais-pictures.svg",
+    "lightHouseSrcLight": "/images/projects/republique-saugeais/lighthouse-scores/light/republique-saugeais-lighthouse.png",
+    "lightHouseSrcDark": "/images/projects/republique-saugeais/lighthouse-scores/dark/republique-saugeais-lighthouse-dark.png",
+    "missionResume": "Conception d’un site patrimonial pour valoriser l’histoire, la culture et les événements de la République libre du Saugeais...",
+    "cinematicResume": "Création du site officiel de la <strong>République du Saugeais</strong>, entité symbolique du Haut-Doubs.<br>Développé sous <strong>WordPress</strong> avec un thème <strong>PHP sur mesure</strong> et des <strong>blocs ACF</strong>, le site est <strong>responsive</strong>, <strong>administrable</strong> et accessible sur tous les supports. J’ai également contribué à la <strong>gestion de projet</strong> tout au long du développement.",
+    "mission": "Réalisation d’un site web institutionnel et culturel pour la République du Saugeais, micronation symbolique ancrée dans le Haut-Doubs. L’objectif était de moderniser la vitrine numérique de cette entité atypique tout en respectant son patrimoine, son folklore et son histoire singulière. Le site devait permettre de présenter l’histoire, les événements, les symboles de la République, et faciliter la prise de contact pour les curieux, les journalistes ou les visiteurs.",
+    "strongPoints": [
+      "Valorisation du patrimoine local : Chaque page a été pensée comme une mise en récit de l’histoire du Saugeais – de la présidente à vie aux traditions populaires – avec une attention particulière portée aux textes, aux archives visuelles et aux anecdotes.",
+      "Site administrable et évolutif : Le site a été conçu sous WordPress avec un thème personnalisé en PHP, intégrant ACF pour permettre la gestion autonome des actualités, des événements, des visites, ou des documents officiels.",
+      "Design entre tradition et modernité : Le graphisme marie sobriété et charme local : palette végétale, typographies élégantes, motifs inspirés du territoire, le tout au service d’une identité à la fois sérieuse et pleine de poésie.",
+      "Accessibilité tous publics : Responsive, rapide, compatible sur tous supports (ordinateur, tablette, mobile), le site permet de faire rayonner la République libre du Saugeais bien au-delà de ses frontières symboliques."
+    ],
+    "technosUsed": [
+      "WordPress",
+      "Administrable",
+      "PHP",
+      "ACF",
+      "Gestion de projet"
+    ],
+    "gitHubLink": "",
+    "websiteLink": "https://republique-saugeais.fr"
+  },
+  {
+    "project_id": 9,
+    "inProgress": false,
+    "title": "Séquane",
+    "themeColor": {
+      "light": "#15120F",
+      "dark": "#8F877C"
+    },
+    "year": 2024,
+    "coverSrc": "/images/projects/sequane/cover/sequane-cover.jpg",
+    "pictures": "/images/projects/sequane/pictures/sequane-pictures.svg",
+    "lightHouseSrcLight": "/images/projects/sequane/lighthouse-scores/light/sequane-lighthouse.png",
+    "lightHouseSrcDark": "/images/projects/sequane/lighthouse-scores/dark/sequane-lighthouse-dark.png",
+    "missionResume": "Refonte complète du site Sequane.fr avec un dark mode natif, une navigation moderne et un back-office 100 % personnalisable...",
+    "cinematicResume": "Refonte complète du site de <strong>Sequane</strong>, mon entreprise d’alternance.<br>Passage de l’ancien site (sous Planet Work) à un thème <strong>WordPress</strong> sur mesure en <strong>PHP</strong>, entièrement <strong>administrable</strong> via <strong>ACF</strong>, avec <strong>dark mode natif</strong> et <strong>formulaire de contact dynamique</strong> pensé pour l’UX.",
+    "mission": "Refonte intégrale du site Sequane.fr, agence spécialisée dans les solutions Planet Work, avec pour mission de moderniser l’interface, d’optimiser l’ergonomie, et d’implémenter des fonctionnalités dynamiques à forte valeur ajoutée. J’ai conçu un thème WordPress sur mesure en PHP, structuré avec ACF pour une administration simple et flexible, et intégré un dark mode natif pour une expérience utilisateur contemporaine. Le formulaire de contact a également été repensé pour être entièrement dynamique et UX-friendly.",
+    "strongPoints": [
+      "Thème WordPress personnalisé de A à Z : Développement complet d’un thème sur mesure, sans constructeur, avec une architecture propre, scalable et facilement maintenable. Utilisation d’ACF pour chaque bloc de contenu.",
+      "Dark mode intégré nativement : Mise en place d’un mode sombre fluide, respectant les préférences système de l’utilisateur et sauvegardé en localStorage pour une UX cohérente sur l’ensemble du site.",
+      "Formulaire dynamique avancé : Création d’un formulaire de contact ergonomique, validé côté client, accessible, esthétique, avec une gestion asynchrone (AJAX) pour éviter les rechargements et améliorer l’expérience utilisateur.",
+      "Responsive, rapide, SEO-ready : Le site a été optimisé pour le mobile, le SEO (balises, structure HTML5, Schema.org) et les performances générales (Lazy Load, compression des assets, gestion fine des polices)."
+    ],
+    "technosUsed": [
+      "WordPress",
+      "PHP",
+      "ACF",
+      "Dark mode",
+      "Formulaire dynamique"
+    ],
+    "gitHubLink": "",
+    "websiteLink": "https://sequane.fr"
+  },
+  {
+    "project_id": 10,
+    "inProgress": false,
+    "title": "Forme Toi Au Bois",
+    "themeColor": {
+      "light": "#C2CC25",
+      "dark": "#E5F576"
+    },
+    "year": 2024,
+    "coverSrc": "/images/projects/forme-toi-au-bois/cover/forme-toi-au-bois-cover.jpg",
+    "pictures": "/images/projects/forme-toi-au-bois/pictures/forme-toi-au-bois-pictures.svg",
+    "lightHouseSrcLight": "/images/projects/forme-toi-au-bois/lighthouse-scores/light/forme-toi-au-bois-lighthouse.png",
+    "lightHouseSrcDark": "/images/projects/forme-toi-au-bois/lighthouse-scores/dark/forme-toi-au-bois-lighthouse-dark.png",
+    "missionResume": "Création d’un site vitrine impactant pour valoriser le Bac Pro Technicien de Scierie auprès des jeunes, des familles et des professionnels...",
+    "cinematicResume": "Site vitrine immersif pour promouvoir le <strong>Bac Pro Technicien de Scierie</strong> auprès des jeunes et des prescripteurs.<br>Développement sous <strong>WordPress</strong> avec un thème <strong>PHP sur mesure</strong>, <strong>blocs ACF</strong>, <strong>témoignages vidéo</strong> et une interface <strong>responsive</strong> pensée pour l’orientation, l’impact et la prise de contact.",
+    "mission": "Concevoir une plateforme informative et attrayante autour de la formation Bac Pro Technicien de Scierie. L’objectif était de valoriser un métier d’avenir en lien avec la transition écologique et de répondre aux enjeux d’orientation des jeunes. Le site forme-toi-au-bois.fr a été développé sous WordPress avec un thème sur mesure, intégrant des contenus multimédias, des témoignages vidéos, un programme clair, des débouchés concrets et une UX pensée pour faciliter le passage à l’action (prise de contact, inscription, découverte).",
+    "strongPoints": [
+      "Site immersif et orienté orientation : Interface pensée pour capter l’attention d’un public jeune avec un ton motivant, une hiérarchie visuelle claire et un parcours utilisateur fluide menant de l’information à l’inscription.",
+      "Développement WordPress sur mesure : Thème custom développé en PHP avec ACF, permettant une administration souple du contenu (témoignages, programme, débouchés, fiches techniques…).",
+      "Identité visuelle forte et cohérente : Utilisation de couleurs naturelles, pictogrammes illustratifs et slogans inspirants, déclinés sur tous les supports de communication (site, dépliants, roll-up, TikTok…).",
+      "Accessibilité et impact : Le site est responsive, rapide, et conçu pour être utilisé en milieu scolaire, lors de salons ou en ligne. Il contribue à moderniser l’image du secteur bois et à renforcer l’attractivité de la filière."
+    ],
+    "technosUsed": ["One-page", "WordPress", "PHP", "ACF", "Administrable"],
+    "gitHubLink": "",
+    "websiteLink": "https://forme-toi-au-bois.fr"
+  },
+  {
+    "project_id": 11,
+    "inProgress": true,
+    "themeColor": {
+      "light": "#F97015",
+      "dark": "#FFB97A"
+    },
+    "title": "Central Délices",
+    "year": 2025,
+    "coverSrc": "/images/projects/central-delices/cover/central-delices-cover.jpg",
+    "pictures": "/images/projects/central-delices/pictures/central-delices-pictures.svg",
+    "lightHouseSrcLight": "/images/projects/central-delices/lighthouse-scores/light/central-lighthouse.png",
+    "lightHouseSrcDark": "/images/projects/central-delices/lighthouse-scores/dark/central-lighthouse-dark.png",
+    "missionResume": "Création complète d’unec micro-marque de beignets africains faits maison, avec site vitrine, branding, communication et mise en place du service de vente en local.",
+    "cinematicResufme": "Création d’un site vitrine chaleureux pour <strong>Central Délices</strong>, une micro-entreprise lancée avec ma petite sœur de 13 ans.<br>Développé sous <strong>WordPress</strong>, le site met en valeur des <strong>beignets africains faits maison</strong>, vendus en local à Vallorbe.<br>Un projet simple, humain et gourmand, né d’une envie partagée de faire découvrir nos recettes en s’amusant.",
+    "cinematicResume": "Création d’un site vitrine pour <strong>Central Délices</strong>, une petite aventure lancée avec ma petite sœur, dans l’esprit des ventes de gâteaux faits maison qu’on retrouve souvent à l’école ou en porte-à-porte.<br>Le site est développé sous <strong>WordPress</strong> et est entièrement administrable. C'est un projet <strong>simple</strong>, <strong>joyeux</strong> et <strong>sincère</strong>, pensé comme une première vitrine pour partager des recettes et faire découvrir notre univers gourmand !<br>Il met en lumière des <strong>beignets africains</strong> et autres douceurs artisanales, préparés à la maison et proposés en local à <strong>Vallorbe</strong>.",
+    "mission": "Central Délices est un projet de micro-entreprise mêlant artisanat, branding et distribution locale. J’ai géré le projet de A à Z : identité visuelle, rédaction de contenu, création du site sous WordPress, stratégie de vente, packaging, mise en ligne et gestion des commandes. L’enjeu était de créer un univers chaleureux, professionnel et accessible, tout en répondant aux contraintes concrètes de la vente de produits alimentaires en local.",
+    "strongPoints": [
+      "Gestion de projet de bout en bout : De l'idée au site en ligne, j’ai orchestré toutes les étapes de création de Central.",
+      "Développement sous WordPress : Installation, configuration du thème, optimisation responsive, mise en ligne et hébergement.",
+      "Identité visuelle & branding : Création du logo, des pictogrammes, favicon, flyers, cartes, et rédaction des pages avec une voix humaine et différenciante.",
+      "Stratégie de distribution locale : Organisation des points de livraison, communication sur les réseaux, mise en place des formulaires de commande, rédaction orientée UX."
+    ],
+    "technosUsed": [
+      "Gestion de projet",
+      "WordPress",
+      "JavaScript",
+      "UI Design"
+    ],
+    "gitHubLink": "https://github.com/CharlesABJ/central",
+    "websiteLink": ""
+  },
+  {
+    "project_id": 12,
+    "inProgress": false,
+    "title": "O-doo",
+    "themeColor": {
+      "light": "#035F55",
+      "dark": "#5FBDB3"
+    },
+    "year": 2025,
+    "coverSrc": "/images/projects/o-doo/cover/o-doo-cover.jpg",
+    "pictures": "/images/projects/o-doo/pictures/o-doo-pictures.svg",
+    "lightHouseSrcLight": "/images/projects/o-doo/lighthouse-scores/light/o-doo-lighthouse.png",
+    "lightHouseSrcDark": "/images/projects/odoo/lighthouse-scores/dark/odoo-lighthouse-dark.png",
+    "missionResume": "Création d’un site éditorial immersif pour valoriser le magazine des commerçants et artisans du Grand Pontarlier...",
+    "cinematicResume": "Refonte du site <strong>O-doo</strong>, magazine local des commerçants et artisans du Grand Pontarlier.<br>Passage d’<strong>Elementor</strong> à un thème <strong>WordPress sur mesure</strong> en <strong>PHP</strong>, entièrement <strong>administrable</strong> via <strong>ACF</strong> pour faciliter la mise à jour du magazine et des contenus tous les 6 mois.",
+    "mission": "Concevoir un site vitrine pour O-doo, le magazine dédié aux commerçants et artisans du Grand Pontarlier, dans une esthétique immersive et locale. Le site devait présenter le dernier numéro du magazine en ligne, faciliter la réservation d’emplacements publicitaires, et offrir un formulaire de contact fluide. Le design graphique a été pensé en cohérence avec la charte visuelle du magazine papier, intégrant une direction artistique inspirée de la nature jurassienne.",
+    "strongPoints": [
+      "Site éditorial immersif : Intégration du magazine complet en ligne via une liseuse interactive, accessible directement depuis la page d’accueil. L’interface offre une expérience fluide et intuitive pour la lecture numérique.",
+      "Formulaire dynamique et UX-friendly : Développement d’un formulaire clair, ergonomique et responsif pour faciliter la prise de contact ou la réservation d’un emplacement publicitaire. Mise en place de champs structurés et validation des données.",
+      "Design local et identitaire : Le visuel du site reprend les codes graphiques de la nature jurassienne (lynx, végétation, animaux du territoire), créant une continuité entre le magazine papier et son interface numérique.",
+      "Accessibilité et responsive design : Le site est adapté à tous les supports (desktop, tablette, mobile) avec une structure légère, rapide et respectueuse des standards d’accessibilité."
+    ],
+    "technosUsed": ["Refonte", "WordPress", "PHP", "ACF", "Pixel perfect"],
+    "gitHubLink": "",
+    "websiteLink": "https://o-doo.fr"
+  },
+  {
+    "project_id": 13,
+    "themeColor": {
+      "light": "#556043",
+      "dark": "#C8D4BC"
+    },
+    "inProgress": false,
+    "title": "Le Haut des Pins",
+    "year": 2025,
+    "coverSrc": "/images/projects/lehautdespins/cover/lehautdespins-cover.jpg",
+    "pictures": "/images/projects/lehautdespins/pictures/lehautdespins-pictures.png",
+    "lightHouseSrcLight": "/images/projects/lehautdespins/lighthouse-scores/light/lehautdespins-lighthouse.png",
+    "lightHouseSrcDark": "/images/projects/lehautdespins/lighthouse-scores/dark/lehautdespins-lighthouse-dark.png",
+    "missionResume": "Création d’un site one-page immersif pour valoriser une résidence touristique située à Pontarlier, en alliant storytelling, esthétique et performance technique.",
+    "cinematicResume": "Création d’un site <strong>one-page immersif</strong> pour valoriser la résidence touristique <strong>Le Haut des Pins</strong>, à Pontarlier.<br>Développé sous <strong>WordPress</strong> avec <strong>animations JavaScript</strong>, <strong>thème personnalisable</strong> par couleurs et interface <strong>100 % administrable</strong>.<br>Premier site <strong>mis en ligne en autonomie</strong> (hébergement Infomaniak, configuration DNS, certificat SSL…).",
+    "mission": "Développement d’un site one-page immersif pour valoriser une résidence touristique située à Pontarlier. Le site offre une navigation fluide, un design sur mesure et une interface administrable, permettant au client de modifier les contenus et de personnaliser le thème selon l’appartement mis en avant.",
+    "strongPoints": [
+      "Navigation immersive :  animations de scroll et effets visuels soignés pour renforcer la découverte des lieux.",
+      "Interface adaptable : design responsive, personnalisable selon l’univers de chaque appartement (La Distillerie, Le Rétro, Le Haut Saugeais…).",
+      "Site 100% administrable : gestion autonome des textes, images et du thème via un back-office optimisé.",
+      "Code structuré & performant : intégration claire et rapide, respectant les standards actuels du web."
+    ],
+    "technosUsed": [
+      "WordPress",
+      "JavaScript",
+      "CSS Animation",
+      "Pixel perfect",
+      "PHP"
+    ],
+    "gitHubLink": "",
+    "websiteLink": "https://lehautdespins.com/"
+  },
+  {
+    "project_id": 14,
+    "inProgress": false,
+    "title": "CTBIO Énergie",
+    "themeColor": {
+      "light": "#463215",
+      "dark": "#B59B77"
+    },
+    "year": 2025,
+    "coverSrc": "/images/projects/ctbio-energie/cover/ctbio-energie-cover.jpg",
+    "pictures": "/images/projects/ctbio-energie/pictures/ctbio-pictures.svg",
+    "lightHouseSrcLight": "/images/projects/ctbio-energie/lighthouse-scores/light/ctbio-lighthouse.png",
+    "lightHouseSrcDark": "/images/projects/ctbio-energie/lighthouse-scores/dark/ctbio-lighthouse-dark.png",
+    "missionResume": "Création d’un site vitrine et e-commerce pour un acteur local de la transition énergétique, valorisant les produits du bois...",
+    "cinematicResume": "Passage d’un site vitrine à une plateforme <strong>e-commerce</strong> pour <strong>CTBIO Énergie</strong>, acteur local de la transition énergétique.<br>Développement sous <strong>WordPress</strong> avec <strong>WooCommerce</strong>, <strong>ACF</strong> et un thème <strong>PHP personnalisé</strong>.<br>Intégration de <strong>règles d’achat conditionnelles</strong><br>(quantité, disponibilité) pour s’adapter aux logiques de commande spécifiques.",
+    "mission": "Conception d’un site vitrine et d’une plateforme e-commerce pour CTBIO Énergie, entreprise engagée dans la valorisation du bois et la gestion durable des ressources forestières. L’objectif était de créer une interface à double vocation : informer les visiteurs sur le métier et les engagements de l’entreprise, tout en leur offrant un espace d’achat en ligne clair, ergonomique et fluide. Le site a été développé sous WordPress avec ACF, et pensé pour allier pédagogie, proximité et transition numérique.",
+    "strongPoints": [
+      "Double fonctionnalité : vitrine & e-commerce : Le site propose à la fois un contenu éditorial structuré (engagements, savoir-faire, circuits courts…) et une boutique en ligne fonctionnelle, pensée pour les particuliers comme pour les pros.",
+      "UX claire et pédagogique : Chaque section met en valeur les produits, les types de bois, les techniques utilisées et l’approche durable de CTBIO. Le parcours utilisateur est fluide, rassurant et centré sur la compréhension des enjeux métiers.",
+      "Design naturel et identitaire : Utilisation de textures bois, pictogrammes illustratifs, couleurs organiques (bruns, verts, beiges) pour ancrer visuellement l’univers forestier et affirmer l’identité locale.",
+      "Vision à long terme : Le site est évolutif, responsive, optimisé pour le SEO et conçu pour accompagner la stratégie digitale globale de l’entreprise. Il reflète à la fois le sérieux professionnel et la proximité territoriale de CTBIO."
+    ],
+    "technosUsed": ["WooCommerce", "PHP", "Conditions d'achat", "ACF", "UX"],
+    "gitHubLink": "",
+    "websiteLink": "https://ctbio-energie.com"
+  },
+  {
+    "project_id": 15,
+    "inProgress": false,
+    "title": "Bourse aux Matériaux",
+    "themeColor": {
+      "light": "#27bade",
+      "dark": "#50D8F6"
+    },
+    "year": 2025,
+    "coverSrc": "/images/projects/bourse-materiaux/cover/bourse-materiaux-cover.jpg",
+    "pictures": "/images/projects/bourse-materiaux/pictures/bourse-materiaux-pictures.png",
+    "lightHouseSrcLight": "/images/projects/bourse-materiaux/lighthouse-scores/light/bourse-materiaux-lighthouse.png",
+    "lightHouseSrcDark": "/images/projects/bourse-materiaux/lighthouse-scores/dark/bourse-materiaux-lighthouse-dark.png",
+    "missionResume": "Construction du site national de la Bourse aux matériaux, valorisant le réemploi local avec une plateforme évolutive, des filtres dynamiques et une UX pédagogique.",
+    "cinematicResume": "Conception du site national de la <strong>Bourse aux Matériaux</strong>, événement engagé en faveur du <strong>réemploi dans le bâtiment</strong>.<br>Développement sous <strong>WordPress</strong> avec une interface <strong>entièrement administrable</strong>, un système de <strong>filtres dynamiques</strong> (Pays, Département, Date) et une <strong>cartographie interactive</strong> connectée aux événements ajoutés par l’équipe organisatrice.",
+    "mission": "Développement du site national de la Bourse aux Matériaux, une plateforme destinée à promouvoir le réemploi local dans le secteur du bâtiment. L’objectif : concevoir un site WordPress administrable, pédagogique et fluide, avec des outils dynamiques pour faciliter l’accès aux bourses passées ou à venir.",
+    "strongPoints": [
+      "Blocs flexibles & CMS modulaire : gestion simplifiée des contenus (fiches, événements, partenaires) via ACF.",
+      "Animations JS sur mesure : galerie auto-scroll, compteur dynamique administrable (valeurs, durée, rythme).",
+      "UI personnalisée : faux select stylés, transitions douces, formulaire à champs conditionnels selon le profil utilisateur.",
+      "Filtres dynamiques Ajax : navigation fluide entre les bourses passées et à venir avec tri intuitif."
+    ],
+    "technosUsed": [
+      "PHP",
+      "Administrable",
+      "CSS Animation",
+      "Ajax/Fetch",
+      "Filtres dynamiques"
+    ],
+    "gitHubLink": "",
+    "websiteLink": "https://bourse-materiaux.com"
+  },
+  {
+    "project_id": 16,
+    "inProgress": true,
+    "themeColor": {
+      "light": "#1F1F1F",
+      "dark": "#F2F2F2"
+    },
+    "title": "NEW AF",
+    "year": 2025,
+    "coverSrc": "/images/projects/new-af/cover/new-af-cover.jpg",
+    "pictures": "/images/projects/new-af/pictures/new-af-pictures.png",
+    "lightHouseSrcLight": "",
+    "lightHouseSrcDark": "",
+    "missionResume": "Conception en cours de la boutique NEW AF, marque artisanale de coques, accessoires et objets de décoration en Wax. Projet mené de A à Z : UX design, gestion de projet, développement sous WooCommerce avec interactions Ajax et stratégie SEO intégrée.",
+    "cinematicResume": "Design, conception et développement de la boutique en ligne <strong>NEW AF</strong>, marque artisanale mettant en valeur le Wax et tissus africains à travers une collection de <strong>coques, accessoires et objets de décoration</strong>.<br>Actuellement en cours de développement,<br> le projet est mené de A à Z : <strong>UX, maquette, gestion de projet, développement sous WordPress/WooCommerce</strong> et intégration d’<strong>interactions Ajax/Fetch</strong> pour une expérience d’achat fluide et intuitive.",
+    "mission": "Conception en cours de la boutique NEW AF, marque artisanale de coques, accessoires et objets de décoration en Wax. <br>Le client souhaitait une boutique sobre, responsive, facile à administrer et optimisée pour la vente. Le projet inclut : UX, maquette, développement WooCommerce, Ajax pour une navigation fluide, et un back-office sur-mesure.",
+    "strongPoints": [
+      "CMS WooCommerce structuré : architecture modulaire pour une gestion fluide des variantes, stocks et promotions.",
+      "Interactions Ajax natives : ajout au panier, mises à jour dynamiques sans rechargement de page.",
+      "Design responsive & épuré : navigation fluide pensée pour le mobile, avec une esthétique subtilement inspirée du Wax.",
+      "Interface d’administration optimisée : blocs personnalisés pour une prise en main simplifiée par le client."
+    ],
+    "technosUsed": ["WooCommerce", "PHP", "JavaScript", "Ajax", "UX", "SEO"],
+    "gitHubLink": "https://github.com/charlesabj/new-af",
+    "websiteLink": ""
+  },
+  {
+    "project_id": 17,
+    "inProgress": true,
+    "themeColor": {
+      "light": "#2a3a75",
+      "dark": "#8FAEFF"
+    },
+    "title": "TryTogether",
+    "year": 2025,
+    "coverSrc": "/images/projects/trytogether/cover/trytogether-cover.jpg",
+    "pictures": "/images/projects/trytogether/pictures/trytogether-pictures.png",
+    "lightHouseSrcLight": "/images/projects/trytogether/lighthouse-scores/light/trytogether-lighthouse.png",
+    "lightHouseSrcDark": "/images/projects/trytogether/lighthouse-scores/dark/trytogether-lighthouse-dark.png",
+    "missionResume": "Développement d'une application de mise en relation entre mentors et mentorés, avec une messagerie enrichie et un système freemium.",
+    "cinematicResume": "<strong>Développement en cours de l’application TryTogether</strong>, un projet personnel de plateforme web de mentoring, conçu pour faciliter les échanges entre mentors et mentorés.<br> L'application est réalisé avec <strong>Next.js</strong> et <strong>TypeScript</strong>, et l’authentification sécurisée est gérée via <strong>NextAuth</strong>.<br>Le projet repose sur une <strong>architecture moderne et évolutive</strong>, pensée pour accueillir prochainement des fonctionnalités avancées telles que la messagerie, la prise de rendez-vous ou encore une boutique intégrée.",
+    "mission": "Développement en cours d'une application de mise en relation entre mentors et mentorés, avec un focus sur la simplicité d’usage et l’évolutivité.<br> L’authentification (Google et email) est opérationnelle, de même que l’architecture globale du front. Le projet vise à intégrer progressivement une messagerie, une boutique et des rôles différenciés.",
+    "strongPoints": [
+      "Structure front solide : composants réutilisables, architecture modulaire et scalable.",
+      "Design sur-mesure : interface conçue de A à Z, épurée et intuitive.",
+      "Authentification sécurisée : vérification des schémas avec Zod, multi authentification (Google, email/mot de passe) avec gestion des accès.",
+      "Technos modernes : Next.js, Prisma, PostgreSQL pour un socle fiable et évolutif."
+    ],
+    "technosUsed": [
+      "Next.js",
+      "TypeScript",
+      "Redux",
+      "Prisma",
+      "PostgreSQL",
+      "NextAuth"
+    ],
+    "gitHubLink": "https://github.com/CharlesABJ/trytogether",
+    "websiteLink": "https://trytogether.vercel.app"
   }
 ]

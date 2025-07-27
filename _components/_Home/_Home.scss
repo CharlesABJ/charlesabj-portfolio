@@ -18,33 +18,29 @@
           // text-shadow: 1px 1px 1px var(--couleur-texte);
           // animation: changing-color 40s infinite;
           color: var(--couleur-texte);
-          .hand {
-            position: relative;
-            display: block;
+          padding-right: $tenpx;
+          &::selection {
+            background: transparent;
+            color: var(--couleur-span);
+          }
+
+          i {
+            font-style: normal;
+            position: absolute;
+            bottom: 0;
+            left: 100%;
+            // transition: 0.3s ease;
+            transition: transform 1.3s;
+            user-select: none;
+            cursor: pointer;
             &.title-is-active {
               pointer-events: none;
             }
-            i {
-              font-style: normal;
-              position: absolute;
-              bottom: 0;
-
-              right: -10px;
-              // transition: 0.3s ease;
-              transition: transform 1.3s;
-              user-select: none;
-              cursor: pointer;
-
-              @media screen and (min-width: 1670px) {
-                // right: $twentypx;
-              }
-            }
             &.shake {
-              i {
-                animation: shake 0.5s;
-              }
+              animation: shake 0.5s;
             }
           }
+
           .hand-title {
             border-radius: $fivepx;
             padding: $fivepx;
@@ -151,10 +147,6 @@
           margin: auto;
           .specification {
             margin: auto;
-
-            .hand {
-              right: 0;
-            }
           }
         }
         .description {
@@ -206,7 +198,7 @@
 
           .specification {
             .hand {
-              position: unset;
+              left: 97%;
             }
             .hand-title {
               left: 50%;

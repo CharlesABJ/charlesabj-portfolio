@@ -77,11 +77,59 @@
 
 @keyframes run {
   0% {
-    transform: translateX(-30vw);
+    transform: translateX(-10vw);
   }
 
   100% {
-    transform: translateX(150vw);
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes run-rectangle {
+  0% {
+    left: 0;
+    bottom: 0;
+    transform: rotate(0deg) scaleX(1); /* vers la droite */
+  }
+  24% {
+    left: calc(100% - 100px);
+    bottom: 0;
+    transform: rotate(0deg) scaleX(1); /* droite droite */
+  }
+  25% {
+    left: calc(100% - 100px);
+    bottom: 0;
+    transform: rotate(-90deg) scaleY(-1); /* virage, on garde l'orientation */
+  }
+  49% {
+    left: calc(100% - 100px);
+    bottom: calc(100% - 300px);
+    transform: rotate(-90deg) scaleY(-1); /* montée */
+  }
+  50% {
+    left: calc(100% - 100px);
+    bottom: calc(100% - 300px);
+    transform: rotate(0deg) scaleX(-1); /* demi-tour pour repartir vers la gauche */
+  }
+  74% {
+    left: 0;
+    bottom: calc(100% - 300px);
+    transform: rotate(0deg) scaleX(-1); /* ligne vers la gauche */
+  }
+  75% {
+    left: 0;
+    bottom: calc(100% - 300px);
+    transform: rotate(90deg) scaleY(-1); /* virage en bas */
+  }
+  99% {
+    left: 0;
+    bottom: 0;
+    transform: rotate(90deg) scaleY(-1); /* descente */
+  }
+  100% {
+    left: 0;
+    bottom: 0;
+    transform: rotate(0deg) scaleX(1); /* retour au départ */
   }
 }
 
@@ -191,5 +239,59 @@
   }
   100% {
     transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes in-progress {
+  0% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomEffect {
+  from {
+    transform: scale(1); /* État initial sans zoom */
+    padding: 0; /* Sans padding */
+  }
+  to {
+    transform: scale(1.2); /* Zoom léger */
+    padding: 20px; /* Ajout de padding pendant le zoom */
+  }
+}
+
+@keyframes cinematicEnd {
+  0% {
+    background: initial;
+  }
+  100% {
+    background: #000;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-40px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

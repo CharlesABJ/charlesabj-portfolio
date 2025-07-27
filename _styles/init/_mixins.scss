@@ -544,6 +544,19 @@
   }
 }
 
+@mixin alternative-h2-font-size {
+  font-size: $thirty-eightpx;
+  @media screen and (max-width: 1640px) {
+    font-size: $thirty-eightpx;
+  }
+  @media screen and (max-width: 1250px) {
+    font-size: $thirty-eightpx;
+  }
+  @media screen and (max-width: 678px) {
+    font-size: $twenty-fourpx;
+  }
+}
+
 // H3
 @mixin classic-h3-font-size {
   font-size: $twenty-twopx;

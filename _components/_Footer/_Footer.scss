@@ -13,8 +13,12 @@ footer.Footer {
         margin-block: $thirtypx;
       }
       li {
+        transition: opacity 0.2s ease-in-out;
         a {
           @include classic-nav-menu;
+        }
+        &:hover {
+          opacity: 0.7;
         }
       }
     }

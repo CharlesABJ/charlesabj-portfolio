@@ -1,4 +1,5 @@
 .Portfolio {
+  position: relative;
   background: var(--couleur-fond2);
   .container {
     &.secret-mode-game-active {
@@ -11,10 +12,13 @@
     }
 
     .secret-mode-game {
+      padding: 0 !important;
+      background: #fff;
+      background: #000;
       position: relative;
       border-radius: $twopx;
       border-radius: $fivepx;
-      border: $fourtypx solid var(--couleur-texte);
+      border: $fourtypx solid #2d2e32;
       height: calc(100vh - $fourtypx * 4);
       min-height: calc(4 * $hundredpx);
       width: 90%;
@@ -24,6 +28,33 @@
       align-items: center;
       text-align: center;
       line-height: 1.4;
+      .cinematic-announcement {
+        position: absolute;
+        width: max-content;
+        background: #000;
+        color: #fff;
+        position: absolute;
+        top: $fiftypx;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: $tenpx $twentypx;
+        border-radius: $sevenpx;
+        box-shadow: 0 2px 10px var(--couleur-box-shadow);
+        z-index: 1000;
+      }
+      &.projects-are-displayed {
+        border: none;
+      }
+      &.secret-mode-game-zoom {
+        animation: zoomEffect 0.5s ease-in-out forwards;
+      }
+      &.cinematic-end {
+        background: #000;
+        transition: 4s;
+        .buttons-zone {
+          display: none !important;
+        }
+      }
 
       .car {
         position: absolute;
@@ -43,8 +74,11 @@
 
         gap: $twentypx;
         button {
-          width: calc($hundredpx + $fourtypx + $fivepx);
+          width: max-content;
+          padding: $twopx $twentypx;
+          letter-spacing: 1.5px;
           border-radius: $fiftypx;
+          font-weight: $weight-medium;
           color: var(--couleur-scroll-to-top-button);
           cursor: pointer;
           transition: 0.3s;
@@ -57,25 +91,24 @@
             filter: brightness(0.8);
           }
           &.no {
-            padding: $tenpx $twentypx;
             background-color: var(--couleur-texte);
           }
           &.yes {
             height: $fourtypx;
-            width: $fourtypx;
+
             background-color: var(--couleur-span);
             position: relative;
-            &::before {
-              position: absolute;
-              content: "";
-              background-color: var(--couleur-fond);
-              height: 40%;
-              width: 40%;
-              left: calc(50% + 10%);
-              top: 50%;
-              transform: translate(-50%, -50%);
-              clip-path: polygon(0% 0%, 80% 50%, 0% 100%);
-            }
+            // &::before {
+            //   position: absolute;
+            //   content: "";
+            //   background-color: var(--couleur-fond);
+            //   height: 40%;
+            //   width: 40%;
+            //   left: calc(50% + 10%);
+            //   top: 50%;
+            //   transform: translate(-50%, -50%);
+            //   clip-path: polygon(0% 0%, 80% 50%, 0% 100%);
+            // }
           }
         }
       }
@@ -84,7 +117,7 @@
         content: "";
         position: absolute;
         top: 100%;
-        background-color: var(--couleur-texte);
+        background-color: #2d2e32;
         height: $eightypx;
         width: $thirtypx;
       }
@@ -92,7 +125,7 @@
         content: "";
         position: absolute;
         top: calc(100% + $eightypx);
-        background-color: var(--couleur-texte);
+        background-color: #2d2e32;
         height: $sevenpx;
         width: calc(2 * $hundredpx);
       }
@@ -114,14 +147,33 @@
     }
   }
   .car-toogle {
+    // // Pour faire rouler sous forme de rectangle
+    // position: absolute;
+    // object-fit: contain;
+    // display: block;
+    // width: calc($hundredpx + $tenpx);
+    // height: max-content;
+    // margin-top: $fiftypx;
+    // left: 0;
+    // bottom: 0;
+    // transition: 1s opacity ease;
+    // animation: run-rectangle 40s linear infinite;
+    // cursor: pointer;
+
+    // // Pour faire rouler en ligne droite
+
+    object-fit: contain;
     display: block;
     width: calc($hundredpx + $tenpx);
+    height: max-content;
     margin-top: $fiftypx;
-    animation: run 20s linear infinite;
-    cursor: pointer;
+
     transition: 1s opacity ease;
+    animation: run 17s linear infinite;
+    cursor: pointer;
+
     &:hover {
-      // animation-play-state: paused;
+      //animation-play-state: paused;
     }
     &.car-hidden {
       // opacity: 0;
@@ -134,6 +186,12 @@
 
 @media screen and (max-width: 1250px) {
   .Portfolio {
+    .container {
+      .secret-mode-game {
+        height: calc(4 * $hundredpx);
+        border-width: $twentypx;
+      }
+    }
     .projects-zone {
       .cards-zone {
         grid-template-columns: 1fr;
@@ -187,11 +245,40 @@
         }
       }
     }
+    .car-toogle {
+      position: unset;
+      left: unset;
+      bottom: unset;
+      animation: run 20s linear infinite;
+    }
   }
 }
 
 @media screen and (max-width: 678px) {
   .Portfolio {
+    padding-bottom: $sixteenpx;
+    .container {
+      margin-bottom: $fiftypx;
+      .secret-mode-game {
+        height: 30vh;
+        min-height: calc(2 * $hundredpx + $tenpx);
+        border-width: $sevenpx;
+        margin-inline: 0;
+        width: 100%;
+        &:before {
+          height: $thirtypx;
+        }
+        &:after {
+          top: calc(100% + $thirtypx);
+          width: $seventypx;
+        }
+        .buttons-zone {
+          top: 52%;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
     .projects-zone {
       .cards-zone {
         width: 100%;
@@ -242,20 +329,9 @@
         }
       }
     }
+    .car-toogle {
+      width: 25%;
+      animation: run 10s linear infinite;
+    }
   }
-}
-
-@keyframes zoomEffect {
-  from {
-    transform: scale(1); /* État initial sans zoom */
-    padding: 0; /* Sans padding */
-  }
-  to {
-    transform: scale(1.2); /* Zoom léger */
-    padding: 20px; /* Ajout de padding pendant le zoom */
-  }
-}
-
-.secret-mode-game-zoom {
-  animation: zoomEffect 0.5s ease-in-out forwards;
 }
