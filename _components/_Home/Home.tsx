@@ -89,6 +89,7 @@ function Home({ dataHome }: HomeProps) {
                                 )}
                             </span>
                         </h1>
+
                         <p className='description'>
                             {/* Bienvenue sur ma page ! Je suis Charles ABJ. <br />
                             Passionné depuis toujours par la création, je suis un développeur constamment animé par le désir de concrétiser et partager des réalisations avec le monde ! */}
@@ -126,7 +127,7 @@ function Home({ dataHome }: HomeProps) {
                                     <FontAwesomeIcon icon={faFacebookMessenger} />
                                 </a>
                             </li>
-                            <li >
+                            {/* <li >
                                 <a title="Mon CV"
                                     rel="noopener noreferrer"
                                     target="_blank"
@@ -134,7 +135,7 @@ function Home({ dataHome }: HomeProps) {
                                     href="https://www.linkedin.com/in/charlesabj-78753b182/details/experience/">
                                     <FontAwesomeIcon icon={faFilePdf} />
                                 </a>
-                            </li>
+                            </li> */}
                         </ul>
 
                     </div>

@@ -260,7 +260,7 @@
     .container {
       margin-bottom: $fiftypx;
       .secret-mode-game {
-        height: 30vh;
+        height: 25vh;
         min-height: calc(2 * $hundredpx + $tenpx);
         border-width: $sevenpx;
         margin-inline: 0;
@@ -330,7 +330,7 @@
       }
     }
     .car-toogle {
-      width: 10%;
+      width: 20% !important;
       animation: run 7s linear infinite;
     }
   }
