@@ -65,6 +65,12 @@
           padding-block: $fifteenpx $tenpx;
           padding-right: calc(3 * $sixteenpx);
         }
+        .display-for-mobile {
+          display: none;
+          @media screen and (max-width: 678px) {
+            display: block;
+          }
+        }
       }
       .social-networks {
         display: flex;

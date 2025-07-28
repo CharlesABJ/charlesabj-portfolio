@@ -39,6 +39,7 @@ interface CinematicProjectDisplayProps {
 }
 function CinematicProjectDisplay({ actionLeave }: CinematicProjectDisplayProps) {
     const { theme } = useThemeContext();
+    const [loaded, setLoaded] = useState(false);
     const [currentProject, setCurrentProject] = useState(1);
     const [isFolderOpen, setIsFolderOpen] = useState(false);
     const [isClicked, setIsClicked] = useState(false);
@@ -174,7 +175,7 @@ function CinematicProjectDisplay({ actionLeave }: CinematicProjectDisplayProps) 
                     </div>
                 )}
 
-                {!isEndOfCinematic && (
+                {(!isEndOfCinematic && loaded) && (
                     <div onClick={handleFullScreen} key={currentProjectData?.project_id}
                         className={`CardOfProject ${currentProjectData?.inProgress ? "in-progress" : ""}`}>
                         {currentProjectData?.coverSrc && currentProjectData?.title && (
@@ -195,6 +196,7 @@ function CinematicProjectDisplay({ actionLeave }: CinematicProjectDisplayProps) 
                                     alt={currentProjectData.title}
                                     width={500}
                                     height={500}
+                                    onLoadingComplete={() => setLoaded(true)}
                                 />
                             </div>
                         )}
