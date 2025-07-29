@@ -12,6 +12,7 @@ function Page() {
         redirectToHome();
     }, []);
 
+    // Piste ROUTAGE DYNAMIQUE
     return (
         <main className='merci'>
             <h1><span>Merci</span> pour votre message</h1>

@@ -188,10 +188,23 @@
                 }
               }
             }
+            &.website-link {
+              svg {
+                transition: 0.3s ease;
+              }
+              &:hover {
+                background-color: color-mix(
+                  in srgb,
+                  var(--project-color),
+                  var(--couleur-texte) 20%
+                );
+                svg {
+                  transform: translate(1px, -1px);
+                }
+              }
+            }
             svg {
               margin-left: $fivepx;
-            }
-            &:hover {
             }
           }
         }

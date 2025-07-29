@@ -267,7 +267,7 @@ function CinematicProjectDisplay({ actionLeave }: CinematicProjectDisplayProps) 
                                         return (
                                             <div
                                                 style={{
-                                                    '--files-color': project.themeColor,
+                                                    '--files-color': project.themeColor?.light,
                                                 } as React.CSSProperties}
                                                 key={index}
                                                 className={`icon-file ${isActive ? "active" : ""} ${isClicked ? "clicked" : ""}`}
