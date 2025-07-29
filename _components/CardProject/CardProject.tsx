@@ -57,7 +57,14 @@ function CardProject({ dataCardProject, onModalOpen }: PropsCardProject) {
                         </div>
                     )}
                     <div className="overlay"></div>
-                    <Image src={dataCardProject.coverSrc} width={580} height={400} alt={dataCardProject.title} />
+                    <Image
+                        src={dataCardProject.coverSrc}
+                        width={580}
+                        height={400}
+                        alt={dataCardProject.title}
+                        priority
+                        onLoad={() => setIsLoaded(true)}
+                    />
                 </a>
             ) : (
                 <div className="cover">
@@ -74,10 +81,12 @@ function CardProject({ dataCardProject, onModalOpen }: PropsCardProject) {
                     )}
                     <div className="overlay"></div>
                     <Image
-                        onLoadingComplete={() => setIsLoaded(true)}
+                        onLoad={() => setIsLoaded(true)}
                         src={dataCardProject.coverSrc}
                         width={580} height={400}
-                        alt={dataCardProject.title} />
+                        alt={dataCardProject.title}
+                        priority
+                    />
                 </div>
             )}
 

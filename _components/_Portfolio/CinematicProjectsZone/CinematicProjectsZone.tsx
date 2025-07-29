@@ -198,7 +198,7 @@ function CinematicProjectDisplay({ actionLeave }: CinematicProjectDisplayProps) 
                                     alt={currentProjectData.title}
                                     width={500}
                                     height={500}
-                                    onLoadingComplete={() => setIsLoaded(true)}
+                                    onLoad={() => setIsLoaded(true)}
                                 />
                             </div>
                         )}
@@ -349,6 +349,7 @@ function CinematicProjectDisplay({ actionLeave }: CinematicProjectDisplayProps) 
                         alt="Voiture pouet pouet"
                         width={110}
                         height={35}
+                        priority
                     />
 
                 </div>
