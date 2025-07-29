@@ -212,6 +212,11 @@
       width: 40%;
       text-align: left;
       color: #000;
+      opacity: 1;
+      transition: 0.3s ease;
+      &.not-loaded {
+        opacity: 0;
+      }
 
       h3 {
         @include alternative-h2-font-size;

@@ -2,7 +2,7 @@ import { useThemeContext } from '@/_contexts/ThemeContext';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 
 interface PropsCardProject {
     dataCardProject: {
@@ -32,9 +32,10 @@ interface PropsCardProject {
 function CardProject({ dataCardProject, onModalOpen }: PropsCardProject) {
     const themeContext = useThemeContext();
     const isDarkMode = themeContext.theme === 'dark-mode';
+    const [isLoaded, setIsLoaded] = useState(false);
     return (
         <li key={dataCardProject.project_id}
-            className={`CardProject ${dataCardProject.isProjectSelected ? "project-selected" : ""} id-${dataCardProject.project_id} ${dataCardProject.inProgress ? "in-progress" : ""}`}
+            className={`CardProject ${dataCardProject.isProjectSelected ? "project-selected" : ""} id-${dataCardProject.project_id} ${dataCardProject.inProgress ? "in-progress" : ""} ${isLoaded ? "loaded" : "not-loaded"} `}
             style={{
                 '--project-color': isDarkMode
                     ? dataCardProject.themeColor?.dark
@@ -72,7 +73,11 @@ function CardProject({ dataCardProject, onModalOpen }: PropsCardProject) {
                         </div>
                     )}
                     <div className="overlay"></div>
-                    <Image src={dataCardProject.coverSrc} width={580} height={400} alt={dataCardProject.title} />
+                    <Image
+                        onLoadingComplete={() => setIsLoaded(true)}
+                        src={dataCardProject.coverSrc}
+                        width={580} height={400}
+                        alt={dataCardProject.title} />
                 </div>
             )}
 

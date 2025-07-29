@@ -5,6 +5,11 @@
   box-shadow: 0 2px 10px var(--couleur-box-shadow);
   height: calc(5 * $hundredpx + $ninetypx);
   background: var(--couleur-fond);
+  opacity: 1;
+  transition: 0.3s ease;
+  &.not-loaded {
+    opacity: 0;
+  }
   &.id-17 {
     .button-in-progress {
       display: none;

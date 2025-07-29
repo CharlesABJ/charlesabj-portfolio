@@ -39,7 +39,7 @@ interface CinematicProjectDisplayProps {
 }
 function CinematicProjectDisplay({ actionLeave }: CinematicProjectDisplayProps) {
     const { theme } = useThemeContext();
-    const [loaded, setLoaded] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false);
     const [currentProject, setCurrentProject] = useState(1);
     const [isFolderOpen, setIsFolderOpen] = useState(false);
     const [isClicked, setIsClicked] = useState(false);
@@ -87,7 +87,9 @@ function CinematicProjectDisplay({ actionLeave }: CinematicProjectDisplayProps) 
         }
     }, [isCarLeave])
 
-
+    useEffect(() => {
+        setIsLoaded(false); // reset à chaque changement de projet
+    }, [currentProject]);
     const handleFolderClick = () => {
         setIsFolderOpen(!isFolderOpen)
     }
@@ -177,7 +179,7 @@ function CinematicProjectDisplay({ actionLeave }: CinematicProjectDisplayProps) 
 
                 {(!isEndOfCinematic) && (
                     <div onClick={handleFullScreen} key={currentProjectData?.project_id}
-                        className={`CardOfProject ${currentProjectData?.inProgress ? "in-progress" : ""}`}>
+                        className={`CardOfProject ${currentProjectData?.inProgress ? "in-progress" : ""} ${isLoaded ? "loaded" : "not-loaded"}`}>
                         {currentProjectData?.coverSrc && currentProjectData?.title && (
                             <div className="cover">
                                 {currentProjectData.inProgress && (
@@ -196,7 +198,7 @@ function CinematicProjectDisplay({ actionLeave }: CinematicProjectDisplayProps) 
                                     alt={currentProjectData.title}
                                     width={500}
                                     height={500}
-                                    onLoadingComplete={() => setLoaded(true)}
+                                    onLoadingComplete={() => setIsLoaded(true)}
                                 />
                             </div>
                         )}
@@ -292,7 +294,7 @@ function CinematicProjectDisplay({ actionLeave }: CinematicProjectDisplayProps) 
                         </>
                     )}
                     {!isEndOfCinematic && (
-                        <div className="description">
+                        <div className={isLoaded ? "description loaded" : "description not-loaded"}>
                             <h3 className='title'>{currentProjectData!.title}</h3>
                             <div
                                 className="mission"
