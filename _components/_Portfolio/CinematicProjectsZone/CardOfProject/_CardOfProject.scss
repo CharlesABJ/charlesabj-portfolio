@@ -16,7 +16,7 @@
     .cover {
       img {
         opacity: 0;
-        transition: opacity 0.2s ease;
+        transition: opacity 0.05s ease;
       }
     }
   }
@@ -33,7 +33,7 @@
     img {
       height: unset;
       transform: translateY(0);
-      transition: 15s ease, opacity 0.2s ease;
+      transition: 15s ease, opacity 0.05s ease;
       opacity: 1;
     }
     &:hover {
