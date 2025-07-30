@@ -47,6 +47,9 @@ function CinematicProjectDisplay({ actionLeave }: CinematicProjectDisplayProps) 
     const currentProjectData = datasProjects.find(project => project.project_id === currentProject);
     const [carPosition, setCarPosition] = useState("");
     const [isCarLeave, setIsCarLeave] = useState(false);
+    const [isPortrait, setIsPortrait] = useState(
+        window.matchMedia("(orientation: portrait)").matches
+    );
     const carRef = useRef<HTMLImageElement>(null)
     const cinematicRef = useRef<HTMLDivElement>(null)
 
@@ -152,9 +155,22 @@ function CinematicProjectDisplay({ actionLeave }: CinematicProjectDisplayProps) 
     }, [currentProject]);
 
 
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(orientation: portrait)");
+
+        const handleOrientationChange = () => {
+            setIsPortrait(mediaQuery.matches);
+        };
+
+        mediaQuery.addEventListener("change", handleOrientationChange);
+
+        return () => {
+            mediaQuery.removeEventListener("change", handleOrientationChange);
+        };
+    }, []);
     return (
 
-        window.matchMedia("(orientation: portrait)").matches ? (
+        isPortrait ? (
             <div className="CinematicProjectDisplay not-available">
                 Veuillez passer en mode paysage !
             </div>
@@ -198,7 +214,7 @@ function CinematicProjectDisplay({ actionLeave }: CinematicProjectDisplayProps) 
                                     alt={currentProjectData.title}
                                     width={500}
                                     height={500}
-                                    onLoad={() => setIsLoaded(true)}
+                                    onLoadingComplete={() => setIsLoaded(true)}
                                 />
                             </div>
                         )}
@@ -294,7 +310,7 @@ function CinematicProjectDisplay({ actionLeave }: CinematicProjectDisplayProps) 
                         </>
                     )}
                     {!isEndOfCinematic && (
-                        <div className={isLoaded ? "description loaded" : "description not-loaded"}>
+                        <div className={"description "}>
                             <h3 className='title'>{currentProjectData!.title}</h3>
                             <div
                                 className="mission"
