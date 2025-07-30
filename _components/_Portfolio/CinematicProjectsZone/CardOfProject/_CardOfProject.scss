@@ -12,16 +12,16 @@
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   z-index: 1;
 
-  &.not-loaded {
-    .cover {
-      img {
-        opacity: 0;
-        transition: opacity 0.05s ease;
-      }
-    }
-  }
+  // &.not-loaded {
+  //   .cover {
+  //     img {
+  //       opacity: 0;
+  //       transition: opacity 0.05s ease;
+  //     }
+  //   }
+  // }
   .cover {
-    height: calc(3 * $hundredpx + $eightypx);
+    height: calc($hundredpx + $thirty-fivepx);
     border-radius: 10px;
     background: color-mix(in srgb, var(--project-color), #fff 90%);
     overflow: hidden;
@@ -33,12 +33,11 @@
     img {
       height: unset;
       transform: translateY(0);
-      transition: 15s ease, opacity 0.05s ease;
-      opacity: 1;
+      transition: 15s ease;
     }
     &:hover {
       img {
-        transform: translateY(calc(-100% + calc(3 * $hundredpx + $eightypx)));
+        transform: translateY(calc(-100% + calc($hundredpx + $thirty-fivepx)));
       }
     }
     &:active {
