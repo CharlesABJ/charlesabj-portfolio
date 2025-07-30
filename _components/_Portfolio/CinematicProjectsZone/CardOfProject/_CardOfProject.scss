@@ -11,15 +11,19 @@
   flex-direction: column;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   z-index: 1;
-  opacity: 1;
+
   &.not-loaded {
-    opacity: 0;
-    transition: 0.3s ease;
+    .cover {
+      img {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+    }
   }
   .cover {
     height: calc(3 * $hundredpx + $eightypx);
     border-radius: 10px;
-    background: #f3f4f6;
+    background: var(--project-color);
     overflow: hidden;
     box-shadow: 0 2px 10px var(--couleur-box-shadow);
     .button-in-progress {
@@ -30,6 +34,7 @@
       height: unset;
       transform: translateY(0);
       transition: 15s ease;
+      opacity: 1;
     }
     &:hover {
       img {
