@@ -195,7 +195,7 @@ function CinematicProjectDisplay({ actionLeave }: CinematicProjectDisplayProps) 
 
                 {(!isEndOfCinematic) && (
                     <div onClick={handleFullScreen} key={currentProjectData?.project_id}
-                        className={`CardOfProject ${currentProjectData?.inProgress ? "in-progress" : ""} ${isLoaded ? "loaded" : "not-loaded"}`}>
+                        className={`CardOfProject ${currentProjectData?.inProgress ? "in-progress" : ""} `}>
                         {currentProjectData?.coverSrc && currentProjectData?.title && (
                             <div className="cover">
                                 {currentProjectData.inProgress && (
