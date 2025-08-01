@@ -21,7 +21,8 @@
   //   }
   // }
   .cover {
-    height: calc($hundredpx + $thirty-fivepx);
+    height: calc(3 * $hundredpx + $eightypx);
+
     border-radius: 10px;
     background: color-mix(in srgb, var(--project-color), #fff 90%);
     overflow: hidden;
@@ -150,7 +151,8 @@
     gap: $tenpx;
     max-height: calc(2 * $hundredpx + $twentypx);
     .cover {
-      height: calc(7 * $sixteenpx);
+      height: calc($hundredpx + $thirty-fivepx);
+
       .button-in-progress {
         top: calc(0.5rem + 7px);
         right: calc(0.5rem + 7px);
