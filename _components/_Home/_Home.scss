@@ -54,6 +54,9 @@
             font-weight: $weight-medium;
             background-color: var(--couleur-p);
             box-shadow: 0 2px 4px var(--couleur-box-shadow);
+            &.is-last {
+              left: 0;
+            }
           }
         }
       }

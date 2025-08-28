@@ -71,11 +71,11 @@ function Home({ dataHome }: HomeProps) {
                                 {specifications}&nbsp;
                                 <i onClick={handleShake}
                                     title={clickCount < 10 ? "Salut !" : "Ça suffit !! \nContactez-moi 😠"}
-                                    className={`hand ${shake ? 'shake' : ''} ${titleHandIsActive ? 'title-is-active' : ''} `}
+                                    className={`hand ${shake ? 'shake' : ''} ${titleHandIsActive ? 'title-is-active' : ''}`}
                                     role="img"
                                     aria-label="hand">👋🏽</i>
                                 {titleHandIsActive && clickCount < 13 && (
-                                    <span className='hand-title'
+                                    <span className={clickCount === 12 ? 'hand-title is-last' : 'hand-title'}
                                         dangerouslySetInnerHTML={{
                                             __html: clickCount >= 2 && clickCount <= 4
                                                 ? "Doucement ! <br /> C'est juste un clic !!"

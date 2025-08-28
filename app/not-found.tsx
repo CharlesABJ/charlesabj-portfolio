@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SnakeCanvas from '../_components/Canvas/SnakeCanvas';
 import datasTools from "../datas/toolsList.json";
 import datasLanguages from "../datas/devLanguagesList.json";
@@ -9,9 +9,17 @@ function NotFound404() {
     const [buttonIsNo, setButtonIsNo] = useState(false);
     const [buttonIsYes, setButtonIsYes] = useState(false);
     const [startGame, setStartGame] = useState(false);
+    const [isCompagnyLoved, setIsCompagnyLoved] = useState("");
     const nbOfSkillsToolsAndLanguages: number = datasTools.length + datasLanguages.length;
     const url = usePathname().slice(1);
 
+
+    const companies: Record<string, string> = {
+        coteries: "https://www.coteries.com/",
+        imedia: "https://www.imedia.ch/",
+    };
+
+    const linkOfCompagnyLoved = companies[url] || "";
 
     const redirection = () => {
         localStorage.removeItem('Mode secret 404');
@@ -34,13 +42,22 @@ function NotFound404() {
 
 
 
+
     return (
         <main className="not-found page404">
             <div className={`container ${buttonIsYes ? "secret-mode-active" : ""}`}>
                 <h1>Oups... <br className='displayed-for-tablet' /> La page que vous cherchez <span>n'existe pas !</span>
                     <span className="element404">404</span>
                 </h1>
-                <p className='troll'>Quelle idée de taper <span>« {`${url}`} »</span> dans la barre de recherche<i>🤦🏾‍♂️</i> <br />Mais bon, maintenant que vous êtes là autant en profiter non ? </p>
+                <p className='troll'>Quelle idée de taper <span>« {`${url}`} »</span> dans la barre de recherche<i>🤦🏾‍♂️</i> <br />
+                    {linkOfCompagnyLoved ? (
+                        <>
+                            Mais bon, je sais que c'est <a href={linkOfCompagnyLoved}><span>vous...</span></a> donc je vous pardonne pour cette fois ! <br /><br />
+                            Allez, puisque vous êtes là, autant en profiter, non ?
+                        </>
+                    ) : (
+                        "Mais bon, maintenant que vous êtes là autant en profiter non ?"
+                    )}</p>
                 <div className="buttons-zone">
                     <button onClick={handleYes} className="yes">Oui en profiter !</button>
                     <button onClick={handleNo} className="no">
