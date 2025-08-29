@@ -1,15 +1,15 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import SnakeCanvas from '../_components/Canvas/SnakeCanvas';
 import datasTools from "../datas/toolsList.json";
 import datasLanguages from "../datas/devLanguagesList.json";
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 function NotFound404() {
     const [buttonIsNo, setButtonIsNo] = useState(false);
     const [buttonIsYes, setButtonIsYes] = useState(false);
     const [startGame, setStartGame] = useState(false);
-    const [isCompagnyLoved, setIsCompagnyLoved] = useState("");
     const nbOfSkillsToolsAndLanguages: number = datasTools.length + datasLanguages.length;
     const url = usePathname().slice(1);
 
@@ -17,6 +17,10 @@ function NotFound404() {
     const companies: Record<string, string> = {
         coteries: "https://www.coteries.com/",
         imedia: "https://www.imedia.ch/",
+        troisdeuxun: "https://www.troisdeuxun.ch/",
+        wng: "https://www.wng.ch/",
+        marvelous: "https://marvelous.digital/fr",
+        trisinformatique: "https://www.trisinformatique.com/"
     };
 
     const linkOfCompagnyLoved = companies[url] || "";
@@ -52,7 +56,7 @@ function NotFound404() {
                 <p className='troll'>Quelle idée de taper <span>« {`${url}`} »</span> dans la barre de recherche<i>🤦🏾‍♂️</i> <br />
                     {linkOfCompagnyLoved ? (
                         <>
-                            Mais bon, je sais que c'est <a href={linkOfCompagnyLoved}><span>vous...</span></a> donc je vous pardonne pour cette fois ! <br /><br />
+                            Mais bon, je sais que c'est <Link target="_blank" href={linkOfCompagnyLoved}><span>vous...</span></Link> donc je vous pardonne pour cette fois ! <br /><br />
                             Allez, puisque vous êtes là, autant en profiter, non ?
                         </>
                     ) : (
