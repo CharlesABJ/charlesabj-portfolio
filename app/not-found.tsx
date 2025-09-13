@@ -6,6 +6,7 @@ import datasLanguages from "../datas/devLanguagesList.json";
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
+
 function NotFound404() {
     const [buttonIsNo, setButtonIsNo] = useState(false);
     const [buttonIsYes, setButtonIsYes] = useState(false);
@@ -15,12 +16,21 @@ function NotFound404() {
 
 
     const companies: Record<string, string> = {
-        coteries: "https://www.coteries.com/",
+        coteries: "https://www.coteries.com/agence/",
         imedia: "https://www.imedia.ch/",
-        troisdeuxun: "https://www.troisdeuxun.ch/",
-        wng: "https://www.wng.ch/",
-        marvelous: "https://marvelous.digital/fr",
-        trisinformatique: "https://www.trisinformatique.com/"
+        troisdeuxun: "https://www.troisdeuxun.ch/agence/",
+        wng: "https://www.wng.ch/agence/",
+        marvelous: "https://marvelous.digital/fr/l-agence",
+        trisinformatique: "https://www.trisinformatique.com/",
+        diabolo: "https://www.diabolo.com/agence/",
+        buxumlunic: "https://buxumlunic.ch/agence/",
+        antistatique: "https://antistatique.net/agence",
+        flashdesign: "https://flashdesign.ch/nos-experts/",
+        sabina: "https://sabina.ch/a-propos/",
+        "taz-communication": "https://taz-communication.ch/agence/#brxe-nnlpnm",
+        trio: "https://trio.ch/team",
+        trivialmass: "https://trivialmass.ch/nous-sommes/",
+
     };
 
     const linkOfCompagnyLoved = companies[url] || "";
@@ -56,7 +66,7 @@ function NotFound404() {
                 <p className='troll'>Quelle idée de taper <span>« {`${url}`} »</span> dans la barre de recherche<i>🤦🏾‍♂️</i> <br />
                     {linkOfCompagnyLoved ? (
                         <>
-                            Mais bon, je sais que c'est <Link target="_blank" href={linkOfCompagnyLoved}><span>vous...</span></Link> donc je vous pardonne pour cette fois ! <br /><br />
+                            Mais bon, comme c'est <Link target="_blank" href={linkOfCompagnyLoved}><span>vous...</span></Link> je ferme les yeux pour cette fois ! <br /><br />
                             Allez, puisque vous êtes là, autant en profiter, non ?
                         </>
                     ) : (
