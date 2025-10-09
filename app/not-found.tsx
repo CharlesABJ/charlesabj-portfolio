@@ -16,21 +16,23 @@ function NotFound404() {
 
 
     const companies: Record<string, string> = {
-        coteries: "https://www.coteries.com/agence/",
-        imedia: "https://www.imedia.ch/",
-        troisdeuxun: "https://www.troisdeuxun.ch/agence/",
-        wng: "https://www.wng.ch/agence/",
+        coteries: "https://www.coteries.com/jobs",
+        imedia: "https://www.imedia.ch/postuler",
+        troisdeuxun: "https://www.troisdeuxun.ch/jobs/candidature-spontanee/",
+        wng: "https://www.wng.ch/agence/candidature-spontanee",
         marvelous: "https://marvelous.digital/fr/l-agence",
-        trisinformatique: "https://www.trisinformatique.com/",
-        diabolo: "https://www.diabolo.com/agence/",
+        trisinformatique: "https://www.trisinformatique.com/entreprise/emplois/emploi-developpeur-web-full-stack-lausanne-suisse/",
+        diabolo: "https://www.diabolo.com/contact/#jobs",
         buxumlunic: "https://buxumlunic.ch/agence/",
         antistatique: "https://antistatique.net/agence",
         flashdesign: "https://flashdesign.ch/nos-experts/",
-        sabina: "https://sabina.ch/a-propos/",
-        "taz-communication": "https://taz-communication.ch/agence/#brxe-nnlpnm",
+        sabina: "https://sabina.ch/offres-emploi/",
+        "taz-communication": "https://taz-communication.ch/contact/",
         trio: "https://trio.ch/team",
         trivialmass: "https://trivialmass.ch/nous-sommes/",
-
+        generalmedia: "https://www.generalmedia.ch/fr/jobs/jobs",
+        mediago: "https://www.mediago.ch/",
+        firstpoint: "https://www.firstpoint.ch/"
     };
 
     const linkOfCompagnyLoved = companies[url] || "";

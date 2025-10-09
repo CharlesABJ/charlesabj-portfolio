@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 interface AboutProps {
     dataAbout: {
@@ -71,7 +72,8 @@ function About({ dataAbout }: AboutProps) {
                     <div className="presentation">
                         <h3>Un Développeur Front-End</h3>
                         <p>
-                            {grettings} à vous qui lisez cette description !<br />
+                            {grettings} à vous qui lisez ces lignes !
+                            <br />
                             Je m'appelle <span><strong>Charles ABJ,</strong></span> j'ai
                             <span
                                 className="age"
@@ -85,41 +87,27 @@ function About({ dataAbout }: AboutProps) {
                                 <br />
                                 Aussi loin que je m'en souvienne, j'ai toujours été attiré par la
                                 création.<br />
-                                Que ce soit par l'écriture de scénario, par la
-                                conception de jeu de rôle ou encore par la programmation.
+                                Que ce soit par l'écriture de scénario, la
+                                conception de jeu de rôle ou encore la programmation.
                             </p>
                             <p className="share-with-world">
-                                Vous l'aurez compris j'aime créer.
+                                Vous l'aurez compris : j'aime créer. <br />
                                 Mais ce qui me fascine particulièrement dans la programmation,
-                                c'est la capacité de voir rapidement les résultats de notre travail et de pouvoir les <span>
-                                    <strong>partager en un clic avec le reste du monde !</strong>
+                                c'est la capacité à transformer une idée en expérience concrète, et de pouvoir la <span>
+                                    <strong>partager avec le reste du monde !</strong>
                                 </span>
                             </p>
                         </div>
                         <details>
                             <summary onClick={handleSeeMore}>{seeMore}</summary>
-
                             <div>
-                                Je suis actuellement{/* <span>à la recherche d'une alternance</span> en tant que&nbsp; */} en apprentissage chez
-                                <div className="signature">
-                                    <p>
-                                        <a href="https://sequane.fr" target="_blank">
-                                            <span className="site"></span>S
-                                            <span className="relever">é</span>q
-                                            <span className="relever">uaNe</span>
-                                        </a>
-                                    </p>
-                                </div>
-                                en tant que <span>
-                                    <strong>Développeur WordPress !</strong>
-                                </span>
+                                Je suis actuellement <span>à la recherche d’une opportunité </span>(stage ou poste) en tant que <span><strong>Développeur Web.</strong></span>
                             </div>
                             <p>
-                                {/* Si vous recherchez
-                            <span>un développeur enthousiaste, curieux et dédié,</span>
-                            n'hésitez pas à me contacter !<br /> 
-                            Jetez un œil à mon portfolio pour découvrir mes réalisations et en apprendre davantage sur mes compétences et mon expérience. */}
+                                J’aime raconter des histoires à travers le code, créer des expériences immersives <br /> et donner vie aux idées. <br /> <br />
+                                Si vous cherchez un profil à la fois créatif et technique, <Link href="/#contact"><span>contactez-moi !</span></Link>
                             </p>
+
                         </details>
                     </div>
                 </div >
