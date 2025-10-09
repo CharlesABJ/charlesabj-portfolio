@@ -19,20 +19,20 @@ function NotFound404() {
         coteries: "https://www.coteries.com/agence#section-team",
         imedia: "https://www.imedia.ch/agence#teamMate0",
         troisdeuxun: "https://www.troisdeuxun.ch/agence/",
-        wng: "https://www.wng.ch/agence/candidature-spontanee",
-        marvelous: "https://marvelous.digital/fr/l-agence",
-        trisinformatique: "https://www.trisinformatique.com/entreprise/emplois/emploi-developpeur-web-full-stack-lausanne-suisse/",
-        diabolo: "https://www.diabolo.com/contact/#jobs",
-        buxumlunic: "https://buxumlunic.ch/agence/",
-        antistatique: "https://antistatique.net/agence",
+        wng: "https://www.wng.ch/agence",
+        marvelous: "https://marvelous.digital/fr/l-agence#:~:text=de%20nouveaux%20d%C3%A9fis.-,L%27%C3%A9quipe,-Mathieu%20Croset",
+        trisinformatique: "https://www.trisinformatique.com/entreprise/philosophie/",
+        diabolo: "https://www.diabolo.com/agence/#:~:text=et%20bien%20d%E2%80%99autres.-,L%E2%80%99%C3%A9quipe%0ADiabolo,-Lumi%C3%A8re%20sur%20les",
+        buxumlunic: "https://buxumlunic.ch/agence#",
+        antistatique: "https://antistatique.net/agence#:~:text=Lisez%20notre%20manifeste-,Notre%20%C3%A9quipe,-Tous%C2%B7tes",
         flashdesign: "https://flashdesign.ch/nos-experts/",
-        sabina: "https://sabina.ch/offres-emploi/",
+        sabina: "https://sabina.ch/a-propos/",
         "taz-communication": "https://taz-communication.ch/agence#brxe-nnlpnm",
         trio: "https://trio.ch/team",
-        trivialmass: "https://trivialmass.ch/nous-sommes/",
-        generalmedia: "https://www.generalmedia.ch/fr/jobs/jobs",
-        mediago: "https://www.mediago.ch/",
-        firstpoint: "https://www.firstpoint.ch/"
+        trivialmass: "https://trivialmass.ch/nous-sommes#block-block_d4f9a7a89325556efc061b77037c94a4",
+        generalmedia: "https://www.generalmedia.ch/fr/societe/lequipe",
+        mediago: "https://mediago.ch/equipe/",
+        firstpoint: "https://www.firstpoint.ch/agence-digitale-lausanne#:~:text=Des%20collaborateurs%20passionn%C3%A9s%20et%20engag%C3%A9s"
     };
 
     const linkOfCompagnyLoved = companies[url] || "";
