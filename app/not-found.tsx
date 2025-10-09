@@ -16,9 +16,9 @@ function NotFound404() {
 
 
     const companies: Record<string, string> = {
-        coteries: "https://www.coteries.com/jobs",
-        imedia: "https://www.imedia.ch/postuler",
-        troisdeuxun: "https://www.troisdeuxun.ch/jobs/candidature-spontanee/",
+        coteries: "https://www.coteries.com/agence#section-team",
+        imedia: "https://www.imedia.ch/agence#teamMate0",
+        troisdeuxun: "https://www.troisdeuxun.ch/agence/",
         wng: "https://www.wng.ch/agence/candidature-spontanee",
         marvelous: "https://marvelous.digital/fr/l-agence",
         trisinformatique: "https://www.trisinformatique.com/entreprise/emplois/emploi-developpeur-web-full-stack-lausanne-suisse/",
@@ -27,7 +27,7 @@ function NotFound404() {
         antistatique: "https://antistatique.net/agence",
         flashdesign: "https://flashdesign.ch/nos-experts/",
         sabina: "https://sabina.ch/offres-emploi/",
-        "taz-communication": "https://taz-communication.ch/contact/",
+        "taz-communication": "https://taz-communication.ch/agence#brxe-nnlpnm",
         trio: "https://trio.ch/team",
         trivialmass: "https://trivialmass.ch/nous-sommes/",
         generalmedia: "https://www.generalmedia.ch/fr/jobs/jobs",
