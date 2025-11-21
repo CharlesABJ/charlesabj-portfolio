@@ -32,7 +32,8 @@ function NotFound404() {
         trivialmass: "https://trivialmass.ch/nous-sommes#block-block_d4f9a7a89325556efc061b77037c94a4",
         generalmedia: "https://www.generalmedia.ch/fr/societe/lequipe",
         mediago: "https://mediago.ch/equipe/",
-        firstpoint: "https://www.firstpoint.ch/agence-digitale-lausanne#:~:text=Des%20collaborateurs%20passionn%C3%A9s%20et%20engag%C3%A9s"
+        firstpoint: "https://www.firstpoint.ch/agence-digitale-lausanne#:~:text=Des%20collaborateurs%20passionn%C3%A9s%20et%20engag%C3%A9s",
+        pomzed: "https://pomzed.ch/"
     };
 
     const linkOfCompagnyLoved = companies[url] || "";
