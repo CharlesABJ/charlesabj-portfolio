@@ -182,6 +182,21 @@
       display: none;
     }
   }
+  .car-toogle-text {
+    text-align: center;
+    @keyframes clignotement {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    animation: clignotement 2s ease-in-out infinite;
+  }
 }
 
 @media screen and (max-width: 1250px) {

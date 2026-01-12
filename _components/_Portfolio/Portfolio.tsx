@@ -235,16 +235,22 @@ function Portfolio() {
 
             </div>
 
-            <Image
-                onClick={handleBrokenWebsite} className={`car-toogle ${brokenWebsite ? "website-broken" : ""} ${displayCar ? "" : "car-hidden"}`}
-                src={`/images/games/${theme === "dark-mode" ? "voiture" : "voiture-light"}.png`}
+            <div
+                onClick={handleBrokenWebsite}
+                className={`car-toogle ${brokenWebsite ? "website-broken" : ""} ${displayCar ? "" : "car-hidden"}`}
                 title='tut tut !'
-                alt="Voiture pouet pouet"
-                width={110}
-                height={35}
-                style={{ width: "auto", height: "auto" }}
+            >
 
-            />
+                <Image
+                    src={`/images/games/${theme === "dark-mode" ? "voiture" : "voiture-light"}.png`}
+                    alt="Voiture pouet pouet"
+                    width={110}
+                    height={35}
+                    style={{ width: "auto", height: "auto" }}
+
+                />
+                <div className="car-toogle-text">Voir plus !</div>
+            </div>
 
 
 
