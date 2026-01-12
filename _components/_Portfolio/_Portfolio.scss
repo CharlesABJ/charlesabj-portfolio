@@ -183,6 +183,7 @@
     }
   }
   .car-toogle-text {
+    align-items: center;
     text-align: center;
     @keyframes clignotement {
       0% {
@@ -195,7 +196,7 @@
         opacity: 1;
       }
     }
-    animation: clignotement 2s ease-in-out infinite;
+    animation: clignotement 3s ease-in-out infinite;
   }
 }
 
