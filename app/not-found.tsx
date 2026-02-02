@@ -127,11 +127,13 @@ function NotFound404() {
     useEffect(() => {
         if (!company) return;
 
+        const defaultMessage = "Oui, je sais que vous avez cliqué par curiosité professionnelle !";
         const consoleMessage = company.message
             ? `%c${company.message}`
-            : `%cOui, je sais que vous avez cliqué par curiosité professionnelle !`
+            : `%c${defaultMessage}`
             ;
 
+        console.clear();
         console.log(
             consoleMessage,
             `color:${company.color}; font-weight:600;  font-size:12px;`
