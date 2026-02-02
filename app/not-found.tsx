@@ -117,7 +117,7 @@ function NotFound404() {
             name: "Pomzed",
             link: "https://pomzed.ch/",
             color: "#D41527",
-            message: "Promis, on pourra parler de pommes 🍏 toute la journée (non)."
+            message: "Promis, on pourra parler de pommes 🍏 toute la journée (non.)"
         }
     };
 
