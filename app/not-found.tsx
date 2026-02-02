@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SnakeCanvas from '../_components/Canvas/SnakeCanvas';
 import datasTools from "../datas/toolsList.json";
 import datasLanguages from "../datas/devLanguagesList.json";
@@ -14,29 +14,130 @@ function NotFound404() {
     const nbOfSkillsToolsAndLanguages: number = datasTools.length + datasLanguages.length;
     const url = usePathname().slice(1);
 
+    interface CompanyMeta {
+        name: string;
+        link: string;
+        color: string;
+        message?: string;
+    }
 
-    const companies: Record<string, string> = {
-        coteries: "https://www.coteries.com/agence#section-team",
-        imedia: "https://www.imedia.ch/agence#teamMate0",
-        troisdeuxun: "https://www.troisdeuxun.ch/agence/",
-        wng: "https://www.wng.ch/agence",
-        marvelous: "https://marvelous.digital/fr/l-agence#:~:text=de%20nouveaux%20d%C3%A9fis.-,L%27%C3%A9quipe,-Mathieu%20Croset",
-        trisinformatique: "https://www.trisinformatique.com/entreprise/philosophie/",
-        diabolo: "https://www.diabolo.com/agence/#:~:text=et%20bien%20d%E2%80%99autres.-,L%E2%80%99%C3%A9quipe%0ADiabolo,-Lumi%C3%A8re%20sur%20les",
-        buxumlunic: "https://buxumlunic.ch/agence#",
-        antistatique: "https://antistatique.net/agence#:~:text=Lisez%20notre%20manifeste-,Notre%20%C3%A9quipe,-Tous%C2%B7tes",
-        flashdesign: "https://flashdesign.ch/nos-experts/",
-        sabina: "https://sabina.ch/a-propos/",
-        "taz-communication": "https://taz-communication.ch/agence#brxe-nnlpnm",
-        trio: "https://trio.ch/team",
-        trivialmass: "https://trivialmass.ch/nous-sommes#block-block_d4f9a7a89325556efc061b77037c94a4",
-        generalmedia: "https://www.generalmedia.ch/fr/societe/lequipe",
-        mediago: "https://mediago.ch/equipe/",
-        firstpoint: "https://www.firstpoint.ch/agence-digitale-lausanne#:~:text=Des%20collaborateurs%20passionn%C3%A9s%20et%20engag%C3%A9s",
-        pomzed: "https://pomzed.ch/"
+    const companies: Record<string, CompanyMeta> = {
+        coteries: {
+            name: "Coteries",
+            link: "https://www.coteries.com/agence#section-team",
+            color: "#FEF380",
+        },
+        imedia: {
+            name: "iMedia",
+            link: "https://www.imedia.ch/agence#teamMate0",
+            color: "#5005CD",
+            message: "Je pense qu’ensemble on pourra aller encore plus vite."
+        },
+        troisdeuxun: {
+            name: "TroiDeuxUn",
+            link: "https://www.troisdeuxun.ch/agence/",
+            color: "#FFD94A",
+            message: "On compte jusqu’à trois et on y va",
+        },
+        wng: {
+            name: "WNG",
+            link: "https://www.wng.ch/agence",
+            color: "#E9004C",
+        },
+        marvelous: {
+            name: "Marvelous",
+            link: "https://marvelous.digital/fr/l-agence#:~:text=de%20nouveaux%20d%C3%A9fis.-,L%27%C3%A9quipe,-Mathieu%20Croset",
+            color: "#FFAB05",
+        },
+        trisinformatique: {
+            name: "Tris Informatique",
+            link: "https://www.trisinformatique.com/entreprise/philosophie/",
+            color: "#1C4998",
+        },
+        diabolo: {
+            name: "Diabolo",
+            link: "https://www.diabolo.com/agence/#:~:text=et%20bien%20d%E2%80%99autres.-,L%E2%80%99%C3%A9quipe%0ADiabolo,-Lumi%C3%A8re%20sur%20les",
+            color: "#FF3801",
+        },
+        buxumlunic: {
+            name: "Buxum Lunic",
+            link: "https://buxumlunic.ch/agence",
+            color: "#C2C5E1",
+        },
+        antistatique: {
+            name: "Antistatique",
+            link: "https://antistatique.net/agence#:~:text=Lisez%20notre%20manifeste-,Notre%20%C3%A9quipe,-Tous%C2%B7tes",
+            color: "#FF0099",
+            message: "Rester statique..? Très peu pour nous 🚀"
+        },
+        flashdesign: {
+            name: "Flash Design",
+            link: "https://flashdesign.ch/nos-experts/",
+            color: "#F00201",
+        },
+        sabina: {
+            name: "Sabina",
+            link: "https://sabina.ch/a-propos/",
+            color: "#2B2C2F",
+        },
+        "taz-communication": {
+            name: "Taz Communication",
+            link: "https://taz-communication.ch/agence#brxe-nnlpnm",
+            color: "#009AF7",
+
+        },
+        trio: {
+            name: "Trio",
+            link: "https://trio.ch/team",
+            color: "#C31721",
+            message: "On compte jusqu’à trois et on y va",
+        },
+        trivialmass: {
+            name: "Trivial Mass",
+            link: "https://trivialmass.ch/nous-sommes#block-block_d4f9a7a89325556efc061b77037c94a4",
+            color: "#CBFF00",
+        },
+        generalmedia: {
+            name: "General Media",
+            link: "https://www.generalmedia.ch/fr/societe/lequipe",
+            color: "#B70137",
+        },
+        mediago: {
+            name: "Media Go",
+            link: "https://mediago.ch/equipe/",
+            color: "#F74242",
+        },
+        firstpoint: {
+            name: "First Point",
+            link: "https://www.firstpoint.ch/agence-digitale-lausanne#:~:text=Des%20collaborateurs%20passionn%C3%A9s%20et%20engag%C3%A9s",
+            color: "#ED7A26",
+            message: "On commence par le point un, et on verra où ça mène."
+        },
+        pomzed: {
+            name: "Pomzed",
+            link: "https://pomzed.ch/",
+            color: "#D41527",
+            message: "Promis, on pourra parler de pommes 🍏 toute la journée (non)."
+        }
     };
 
-    const linkOfCompagnyLoved = companies[url] || "";
+    const company = companies[url];
+    const companyLink = company?.link || null;
+
+    useEffect(() => {
+        if (!company) return;
+
+        const consoleMessage = company.message
+            ? `%c${company.message}`
+            : `%cOui, je sais que vous avez cliqué par curiosité professionnelle !`
+            ;
+
+        console.log(
+            consoleMessage,
+            `color:${company.color}; font-weight:600;  font-size:12px;`
+        );
+    }, [company]);
+
 
     const redirection = () => {
         localStorage.removeItem('Mode secret 404');
@@ -67,9 +168,9 @@ function NotFound404() {
                     <span className="element404">404</span>
                 </h1>
                 <p className='troll'>Quelle idée de taper <span>« {`${url}`} »</span> dans la barre de recherche<i>🤦🏾‍♂️</i> <br />
-                    {linkOfCompagnyLoved ? (
+                    {companyLink ? (
                         <>
-                            Mais bon, comme c'est <Link target="_blank" href={linkOfCompagnyLoved}><span>vous...</span></Link> je ferme les yeux pour cette fois ! <br /><br />
+                            Mais bon, comme c'est <Link target="_blank" href={companyLink}><span>vous...</span></Link> je ferme les yeux pour cette fois ! <br /><br />
                             Allez, puisque vous êtes là, autant en profiter, non ?
                         </>
                     ) : (
