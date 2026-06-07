@@ -99,7 +99,7 @@ function Home({ dataHome }: HomeProps) {
                         <p className='description'>
                             {/* Bienvenue sur ma page ! Je suis Charles ABJ. <br />
                             Passionné depuis toujours par la création, je suis un développeur constamment animé par le désir de concrétiser et partager des réalisations avec le monde ! */}
-                            Bienvenue sur ma page !<br className='display-for-mobile' />Je suis Charles ABJ.<br />
+                            Bienvenue sur ma page ! <br className='display-for-mobile' />Je suis Charles ABJ.<br />
                             Développeur React & WordPress passionné par la création <br />
                             sous toutes ses formes.
                             <br /><br />

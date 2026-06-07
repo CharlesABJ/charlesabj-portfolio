@@ -319,7 +319,14 @@
       "Design local et identitaire : Le visuel du site reprend les codes graphiques de la nature jurassienne (lynx, végétation, animaux du territoire), créant une continuité entre le magazine papier et son interface numérique.",
       "Accessibilité et responsive design : Le site est adapté à tous les supports (desktop, tablette, mobile) avec une structure légère, rapide et respectueuse des standards d’accessibilité."
     ],
-    "technosUsed": ["Refonte", "WordPress", "PHP", "ACF", "Pixel perfect"],
+    "technosUsed": [
+      "Refonte",
+      "WordPress",
+      "PHP",
+      "ACF",
+      "Webmaster",
+      "Pixel perfect"
+    ],
     "gitHubLink": "",
     "websiteLink": "https://o-doo.fr"
   },

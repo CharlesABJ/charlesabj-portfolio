@@ -111,7 +111,7 @@ function NotFound404() {
             name: "First Point",
             link: "https://www.firstpoint.ch/agence-digitale-lausanne#:~:text=Des%20collaborateurs%20passionn%C3%A9s%20et%20engag%C3%A9s",
             color: "#ED7A26",
-            message: "On commence par le point un, et on verra où ça mène."
+            message: "On commence par le premier point, et on verra où ça mène."
         },
         pomzed: {
             name: "Pomzed",
