@@ -1,0 +1,44 @@
+.CardFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  hr {
+    border-width: 1px;
+    width: calc(2 * $seventypx);
+    border-color: $orange;
+  }
+  .words {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: $orange;
+    font-size: $twelvepx;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-block: $twenty-onepx $twentypx;
+  }
+  .link {
+    font-size: $twelvepx;
+    letter-spacing: 2.5px;
+    font-weight: 200;
+    opacity: 0.7;
+    transition: 0.3s ease;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .CardFooter {
+    .words {
+      font-size: $tenpx;
+      margin-block: $fifteenpx $tenpx;
+    }
+    .link {
+      font-size: $eightpx;
+    }
+  }
+}

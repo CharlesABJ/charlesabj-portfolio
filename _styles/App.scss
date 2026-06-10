@@ -16,7 +16,10 @@
 @import "../_components/_Header/_Header";
 @import "../_components/_Footer/_Footer";
 
-// (2) Importation des fichiers de composants
+// Importation des styles des pages
+@import "../_styles/card/card";
+
+// (3) Importation des fichiers de composants
 /* Les sections de la page */
 @import "../_components/_Home/_Home";
 @import "../_components/_About/_About";

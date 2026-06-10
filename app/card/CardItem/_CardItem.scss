@@ -1,0 +1,173 @@
+.CardItem {
+  .item-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: $twentypx;
+    padding: $twentypx;
+    border: 1px solid $item-border;
+    border-radius: $fivepx;
+    text-decoration: none;
+    background-color: $item-background;
+    color: $beige;
+    transition: all 0.5s ease;
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      border: 1px solid $item-border;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $orange;
+
+      img {
+        width: 50%;
+        object-fit: contain;
+        user-select: none;
+      }
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .title {
+        color: $beige;
+        font-weight: 500;
+      }
+
+      .description {
+        font-size: $fourteenpx;
+        font-weight: 100;
+        opacity: 0.7;
+      }
+    }
+
+    .arrow {
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      transition: all 0.3s ease;
+      svg {
+        transition: all 0.3s ease;
+        * {
+          stroke: $item-border;
+          transition: stroke 0.3s ease;
+        }
+      }
+    }
+    &:hover {
+      background-color: $item-background-hover;
+      border-color: $item-border-hover;
+      .arrow {
+        svg * {
+          stroke: $item-border-hover !important;
+        }
+      }
+    }
+    &:active {
+      border-color: $orange;
+      .arrow {
+        svg {
+          transform: translateX(5px);
+          * {
+            stroke: $orange !important;
+          }
+        }
+      }
+    }
+  }
+  &.special {
+    .item-content {
+      padding-block: $thirtypx;
+      background-color: color-mix(in srgb, $orange 5%, transparent);
+
+      border-color: color-mix(in srgb, $orange 30%, transparent);
+      .icon {
+        border-radius: 50%;
+        width: 70px;
+        height: auto;
+        aspect-ratio: 1;
+      }
+
+      .text {
+        .title {
+          font-size: $twenty-fourpx;
+          margin-bottom: $tenpx;
+        }
+      }
+      .arrow {
+        width: $fourtypx;
+        height: $fourtypx;
+        border: 1px solid $item-border-hover;
+        margin-top: auto;
+        transition: 0.2s ease;
+        svg * {
+          stroke: $item-border-hover !important;
+        }
+      }
+      &:hover {
+        border-color: color-mix(in srgb, $orange 70%, transparent);
+        background-color: color-mix(in srgb, $orange 7%, transparent);
+        .arrow {
+          background-color: color-mix(in srgb, $orange 70%, transparent);
+          svg * {
+            stroke: $black !important;
+          }
+        }
+      }
+      &:active {
+        .arrow {
+          transform: scale(0.98);
+          background-color: $orange;
+          svg {
+            transform: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .CardItem {
+    .item-content {
+      .icon {
+        width: $fourtypx;
+        height: $fourtypx;
+      }
+      .text {
+        .description {
+          white-space: pre-line;
+          font-size: $twelvepx;
+        }
+      }
+      .arrow {
+        width: $thirtypx;
+        height: $thirtypx;
+      }
+    }
+    &.special {
+      .item-content {
+        .icon {
+          width: 50px;
+          height: 50px;
+        }
+        .text {
+          .title {
+            font-size: $eighteenpx;
+          }
+        }
+        .arrow {
+          height: auto;
+          aspect-ratio: 1;
+        }
+      }
+    }
+  }
+}

@@ -1,11 +1,11 @@
 "use client";
-import About from "../_components/_About/About";
-import Contact from "../_components/_Contact/Contact";
-import Home from "../_components/_Home/Home";
-import Portfolio from "../_components/_Portfolio/Portfolio";
-import Recommendations from "../_components/_Recommendations/Recommendations";
-import Skills from "../_components/_Skills/Skills";
-import { useThemeContext } from "../_contexts/ThemeContext";
+import About from "../../_components/_About/About";
+import Contact from "../../_components/_Contact/Contact";
+import Home from "../../_components/_Home/Home";
+import Portfolio from "../../_components/_Portfolio/Portfolio";
+import Recommendations from "../../_components/_Recommendations/Recommendations";
+import Skills from "../../_components/_Skills/Skills";
+import { useThemeContext } from "../../_contexts/ThemeContext";
 
 export default function App() {
   // Home

@@ -1,0 +1,60 @@
+$black: #111;
+$beige: #f8f5f0;
+$orange: #c0a37e;
+
+$font-primary: "EB Garamond", serif;
+$font-secondary: "Roboto", sans-serif;
+
+$item-border: color-mix(in srgb, $beige 10%, transparent);
+$item-border-hover: color-mix(in srgb, $orange 50%, transparent);
+$item-background: color-mix(in srgb, $beige 1.5%, transparent);
+$item-background-hover: color-mix(in srgb, $beige 3%, transparent);
+
+@import "../../app/card/CardHero/_CardHero.scss";
+@import "../../app/card/CardItem/_CardItem.scss";
+@import "../../app/card/CardFooter/_CardFooter.scss";
+@import "../../app/card/PhoneModal/_PhoneModal.scss";
+
+.Card {
+  background: $black;
+  color: $beige;
+  min-height: 100vh;
+  padding: $fiftypx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-secondary;
+  gap: $fiftypx;
+  span {
+    color: $orange;
+  }
+
+  .card-zone {
+    padding: 0;
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: $tenpx;
+      width: 600px;
+    }
+  }
+
+  ::selection {
+    background-color: $orange !important;
+    color: $black !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Card {
+    padding-inline: $thirty-twopx;
+    gap: $twenty-fourpx;
+    .card-zone {
+      ul {
+        width: 100%;
+      }
+    }
+  }
+}

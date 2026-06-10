@@ -1,0 +1,86 @@
+.CardHero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
+
+  .logo {
+    width: 40%;
+    margin-bottom: $twentypx;
+    img {
+      user-select: none;
+      object-fit: contain;
+    }
+  }
+
+  h1 {
+    font-family: $font-primary;
+    text-transform: uppercase;
+    font-size: $fiftypx;
+    font-weight: 400;
+    letter-spacing: calc($fiftypx * 0.3);
+
+    span {
+      font-style: italic;
+    }
+  }
+
+  hr {
+    width: $seventypx;
+    height: 1px;
+    background: $orange;
+    border: none;
+    margin: 20px auto;
+  }
+
+  .function,
+  .features {
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: 0.7;
+    font-size: $fourteenpx;
+    letter-spacing: calc($fourteenpx * 0.3);
+  }
+
+  .slogan {
+    color: $beige;
+    font-style: italic;
+    margin-block: $thirtypx;
+    font-size: $twentypx;
+    line-height: 1.2;
+    font-family: Georgia;
+    font-weight: 200;
+  }
+
+  .features {
+    line-height: 1.7;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .CardHero {
+    h1 {
+      font-size: $thirtypx;
+      letter-spacing: calc($thirtypx * 0.3);
+    }
+    .function,
+    .features {
+      font-size: $twelvepx;
+    }
+    .features {
+      display: none;
+    }
+    .slogan {
+      font-size: $sixteenpx;
+      max-width: 80%;
+      line-height: 1.3;
+      margin-block: $sixteenpx;
+      br {
+        display: none;
+      }
+    }
+  }
+}

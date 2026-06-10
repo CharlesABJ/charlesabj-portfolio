@@ -1,0 +1,143 @@
+.PhoneModal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(6px);
+  }
+
+  .modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+    width: calc(100% - 32px);
+    max-width: 420px;
+    padding: 22px;
+    border: 1px solid rgba(233, 218, 206, 0.18);
+    border-radius: $fivepx;
+    background-color: color-mix(in srgb, $beige 3%, $black);
+    color: $beige;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  }
+
+  .label-and-close {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .label {
+      font-size: $twelvepx;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: $orange;
+      margin-bottom: $tenpx;
+    }
+
+    .close {
+      color: $beige;
+      opacity: 0.7;
+      cursor: pointer;
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  .modal-title {
+    margin-block: $fourteenpx $twentypx;
+    line-height: 1.2;
+    font-family: $font-primary;
+    font-size: 24px;
+    span {
+      font-style: italic;
+    }
+  }
+  hr {
+    margin: 18px 0;
+    border: none;
+    border-top: 1px solid rgba(233, 218, 206, 0.12);
+  }
+  .country {
+    padding: 18px 0;
+  }
+
+  .country-label {
+    display: flex;
+    margin-bottom: 12px;
+    font-size: $twelvepx;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+
+    .flag {
+      font-size: $twentypx;
+    }
+  }
+
+  .choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $fivepx;
+    width: 100%;
+    height: $fiftypx;
+    font-size: $fourteenpx;
+    border: 1px solid $item-border;
+    border-radius: $twopx;
+    transition: all 0.3s ease;
+    .icon {
+      display: flex;
+    }
+
+    &.phone {
+      &:hover {
+        background-color: $item-background-hover;
+        border-color: $orange;
+        color: $orange;
+      }
+    }
+
+    &.whatsapp {
+      background-color: color-mix(in srgb, $orange 5%, transparent);
+      border-color: color-mix(in srgb, $orange 30%, transparent);
+      color: $orange;
+      &:hover {
+        border-color: color-mix(in srgb, $orange 70%, transparent);
+        background-color: $orange;
+        color: $black;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .PhoneModal {
+    .modal {
+      left: 0;
+      top: unset;
+      bottom: 0;
+      transform: translate(0);
+      padding: 16px;
+      width: 100%;
+    }
+    .modal-title {
+      font-size: 20px;
+    }
+    hr {
+      margin: 0;
+    }
+    .choice {
+      font-size: $twelvepx;
+    }
+  }
+}
