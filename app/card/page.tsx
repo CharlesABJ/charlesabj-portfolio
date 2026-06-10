@@ -45,7 +45,7 @@ const cardItems = [
     },
     {
         icon: "calendar",
-        href: "https://cal.com/charlesabj",
+        href: "https://cal.eu/charles-abj/discutons-projet",
         title: "Prendre RDV",
         description: "Discutons de votre projet",
         isSpecial: false,

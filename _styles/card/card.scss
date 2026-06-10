@@ -52,6 +52,7 @@ $item-background-hover: color-mix(in srgb, $beige 3%, transparent);
     padding-inline: $thirty-twopx;
     gap: $twenty-fourpx;
     .card-zone {
+      width: 100%;
       ul {
         width: 100%;
       }
