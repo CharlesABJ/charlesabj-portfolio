@@ -8,10 +8,12 @@ const icons = {
     linkedin: "/icons/linkedin.svg",
     github: "/icons/github.svg",
     calendar: "/icons/calendar.svg",
-};
+} as const;
+export type CardIcon = keyof typeof icons;
 
 type CardItemProps = {
-    icon: keyof typeof icons;
+    icon: CardIcon;
+    avatar?: string;
     title: string;
     description: string;
     isSpecial?: boolean;
@@ -22,6 +24,7 @@ type CardItemProps = {
 
 export default function CardItem({
     icon,
+    avatar,
     title,
     description,
     isSpecial,
@@ -33,12 +36,22 @@ export default function CardItem({
     const content = (
         <>
             <div className="icon">
-                <Image
-                    src={iconSrc}
-                    alt={title}
-                    width={24}
-                    height={24}
-                />
+                {avatar ? (
+                    <Image
+                        src={avatar}
+                        alt={title}
+                        width={70}
+                        height={70}
+                        className="avatar"
+                    />
+                ) : (
+                    <Image
+                        src={iconSrc}
+                        alt={title}
+                        width={24}
+                        height={24}
+                    />
+                )}
             </div>
 
             <div className="text">

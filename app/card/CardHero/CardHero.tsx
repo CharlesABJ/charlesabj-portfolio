@@ -1,24 +1,46 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
-function CardHero() {
+type CardHeroProps = {
+    name: string;
+    role: string;
+};
+
+function CardHero({ name, role }: CardHeroProps) {
     return (
         <div className="CardHero">
             <div className="logo">
-                <Image src="/images/logos/logo-abj.svg" alt="Logo Charles ABJ" width={50} height={50} />
-            </div>
-            <div>
-                <h1>Charles <span>ABJ</span></h1>
-                <hr />
-                <p className="function">Développement web & mobile</p>
-            </div>
-            <div className='slogan'>
-                Des <span>expériences</span> numériques simples,<br /> utiles et <span>humaines</span>.
-            </div>
-            <div className="features">
-                Sites internet • Applications web & mobiles <br /> SEO / Référencement • UX/UI Design
+                <Image
+                    src="/images/logos/logo-abj.svg"
+                    alt="Logo Central ABJ"
+                    width={50}
+                    height={50}
+                />
             </div>
 
+            <div>
+                <h1>
+                    Central <span>ABJ</span>
+                </h1>
+
+                <hr />
+
+                <p className="function">
+                    Développement web & mobile
+                </p>
+            </div>
+
+            {role !== "Studio numérique" && (
+                <div className="employee">
+                    <h2 className="name">
+                        {name}
+                    </h2>
+
+                    <span className="role">
+                        {role}
+                    </span>
+                </div>
+            )}
         </div>
     );
 }

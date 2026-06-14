@@ -9,7 +9,7 @@ const CardFooter = () => {
                 <span>Clarté</span> • <span>Expérience</span>  • <span>Impact</span>
             </div>
 
-            <Link className="link" href="/">charlesabj.com</Link>
+            <Link className="link" href="https://centralabj.com" target="_blank">centralabj.com</Link>
         </div>
     )
 }

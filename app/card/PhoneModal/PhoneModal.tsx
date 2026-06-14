@@ -1,11 +1,5 @@
 "use client"
 import React, { useEffect } from 'react';
-
-type PhoneModalProps = {
-    isOpen: boolean;
-    onClose: () => void;
-};
-
 const phoneIcon = (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -42,7 +36,24 @@ const whatsappIcon = (
     </svg>
 )
 
-function PhoneModal({ isOpen, onClose }: PhoneModalProps) {
+type PhoneModalProps = {
+    isOpen: boolean;
+    onClose: () => void;
+    phones: {
+        fr?: {
+            phone: string;
+            whatsapp: string;
+        };
+        ch?: {
+            phone: string;
+            whatsapp: string;
+        };
+
+    };
+};
+
+
+function PhoneModal({ isOpen, onClose, phones }: PhoneModalProps) {
 
     useEffect(() => {
         if (!isOpen) return;
@@ -60,17 +71,10 @@ function PhoneModal({ isOpen, onClose }: PhoneModalProps) {
 
     return (
         <div className="PhoneModal">
-            <div
-                className="overlay"
-                onClick={onClose}
-            />
-
+            <div className="overlay" onClick={onClose} />
             <div className="modal">
                 <div className="label-and-close">
-                    <div className="label">
-                        Téléphone
-                    </div>
-
+                    <div className="label">Téléphone</div>
                     <button
                         className="close"
                         onClick={onClose}
@@ -78,72 +82,70 @@ function PhoneModal({ isOpen, onClose }: PhoneModalProps) {
                     >
                         ✕
                     </button>
-                </div>
 
+                </div>
                 <div className="content">
                     <div className="modal-title">
                         Choisir un <span>numéro</span>
                     </div>
+                    {phones.ch && (
+                        <div className="country">
+                            <div className="country-label">
+                                <div className="flag">🇨🇭</div> Suisse
 
-                    <div className="country">
-                        <div className="country-label">
-                            <div className="flag">🇨🇭</div> Suisse
+                            </div>
+                            <div className="choices">
+                                <a
+                                    className="choice phone"
+                                    href={`tel:${phones.ch.phone}`}
+                                >
+                                    <div className="icon">{phoneIcon}</div>
+                                    Appeler
+                                </a>
+
+                                <a
+                                    className="choice whatsapp"
+                                    href={phones.ch.whatsapp}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <div className="icon">{whatsappIcon}</div>
+                                    WhatsApp
+                                </a>
+                            </div>
+
                         </div>
 
-                        <div className="choices">
-                            <a
-                                className="choice phone"
-                                href="tel:+41763694154"
-                            >
-                                <div className="icon">
-                                    {phoneIcon}
-                                </div>
-                                Appeler
-                            </a>
+                    )}
+                    {phones.ch && phones.fr && <hr />}
+                    {phones.fr && (
+                        <div className="country">
+                            <div className="country-label">
+                                <div className="flag">🇫🇷</div> France
+                            </div>
+                            <div className="choices">
+                                <a
+                                    className="choice phone"
+                                    href={`tel:${phones.fr.phone}`}
+                                >
+                                    <div className="icon">{phoneIcon}</div>
+                                    Appeler
+                                </a>
+                                <a
+                                    className="choice whatsapp"
+                                    href={phones.fr.whatsapp}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
 
-                            <a
-                                className="choice whatsapp"
-                                href="https://wa.me/41763694154"
-                                target="_blank"
-                            >
-                                <div className="icon">
-                                    {whatsappIcon}
-                                </div>
-                                WhatsApp
-                            </a>
-                        </div>
-                    </div>
-
-                    <hr />
-
-                    <div className="country">
-                        <div className="country-label">
-                            🇫🇷 France
+                                    <div className="icon">{whatsappIcon}</div>
+                                    WhatsApp
+                                </a>
+                            </div>
                         </div>
 
-                        <div className="choices">
-                            <a
-                                className="choice phone"
-                                href="tel:+33630086592"
-                            >
-                                <div className="icon">
-                                    {phoneIcon}
-                                </div>
-                                Appeler
-                            </a>
+                    )}
 
-                            <a
-                                className="choice whatsapp"
-                                href="https://wa.me/33630086592"
-                                target="_blank"
-                            >
-                                <div className="icon">
-                                    {whatsappIcon}
-                                </div>
-                                WhatsApp
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
