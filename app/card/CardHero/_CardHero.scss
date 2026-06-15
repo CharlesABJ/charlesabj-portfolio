@@ -7,13 +7,9 @@
   width: max-content;
   max-width: 100%;
 
-  .logo {
+  .Logo {
     width: 40%;
     margin-bottom: $twentypx;
-    img {
-      user-select: none;
-      object-fit: contain;
-    }
   }
 
   h1 {

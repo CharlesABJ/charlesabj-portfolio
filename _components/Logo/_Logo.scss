@@ -1,0 +1,113 @@
+$π: 3.14159;
+$circleRayon: 73.5565;
+$circleLength: calc(2 * $π * $circleRayon);
+
+.Logo {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+
+  .brk {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    font-weight: 100;
+
+    &.brk-left {
+      left: -10%;
+    }
+
+    &.brk-right {
+      right: -10%;
+    }
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .left-bracket,
+  .right-bracket {
+    opacity: 0;
+  }
+
+  .left-bracket {
+    transform: translateX(-20px);
+  }
+
+  .right-bracket {
+    transform: translateX(20px);
+  }
+
+  .main-circle {
+    stroke-dasharray: $circleLength;
+    stroke-dashoffset: $circleLength;
+  }
+
+  .center-dot {
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: 130.598px 75.0577px;
+  }
+
+  &.is-playing {
+    .left-bracket {
+      opacity: 1;
+      transform: translateX(0);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .right-bracket {
+      opacity: 1;
+      transform: translateX(0);
+      transition: opacity 0.4s ease 0.05s, transform 0.4s ease 0.05s;
+    }
+
+    .main-circle {
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 0.72s ease 0.45s;
+    }
+
+    .center-dot {
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.2s ease 1.15s,
+        transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) 1.15s;
+    }
+  }
+
+  &.has-played,
+  &.is-hack-mode {
+    .main-circle {
+      stroke-dashoffset: 0;
+    }
+
+    .center-dot {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &.has-played {
+    .left-bracket,
+    .right-bracket {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &.is-hack-mode {
+    .brk {
+      opacity: 1;
+    }
+
+    .left-bracket,
+    .right-bracket {
+      opacity: 0;
+    }
+  }
+}
