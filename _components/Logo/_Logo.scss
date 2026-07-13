@@ -55,6 +55,7 @@ $circleLength: calc(2 * $π * $circleRayon);
   }
 
   &.is-playing {
+    cursor: default;
     .left-bracket {
       opacity: 1;
       transform: translateX(0);
@@ -101,6 +102,7 @@ $circleLength: calc(2 * $π * $circleRayon);
   }
 
   &.is-hack-mode {
+    cursor: default;
     .brk {
       opacity: 1;
     }

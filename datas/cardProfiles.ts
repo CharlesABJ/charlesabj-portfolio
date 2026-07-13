@@ -39,7 +39,7 @@ export const cardProfiles: CardProfile[] = [
                 whatsapp: "https://wa.me/41763694154",
             },
         },
-        linkedin: "https://www.linkedin.com/company/central-abj/",
+        linkedin: "https://www.linkedin.com/in/charlesabj-78753b182/",
         calendarUrl: "https://cal.eu/central-abj/discutons-projet",
     },
     {

@@ -24,8 +24,8 @@ function Contact() {
                                     <span>Email</span>
                                 </li>
                                 <li>
-                                    <a className="email" href="mailto:charlesabj.dev@gmail.com">
-                                        charlesabj.dev@gmail.com
+                                    <a className="email" href="mailto:contact@charlesabj.com">
+                                        contact@charlesabj.com
                                     </a>
                                 </li>
                             </ul>

@@ -1,99 +1,95 @@
 "use client";
-
-import React, { useEffect, useState } from "react";
-
+import { useEffect, useState } from "react";
+const ANIMATION_DURATION = 1700;
+const HACK_DURATION = 1000;
+const SYMBOL_INTERVAL = 120;
+const HACK_TRIGGER_INTERVAL = 4;
+const SYMBOLS = [
+    ["<", ">"],
+    ["{", "}"],
+    ["(", ")"],
+    ["$", "$"],
+    ["#", "#"],
+    ["@", "@"],
+    ["%", "%"],
+    ["*", "*"],
+    ["/", "\\"],
+] as const;
 function Logo() {
     const [isPlaying, setIsPlaying] = useState(false);
     const [hasPlayed, setHasPlayed] = useState(false);
     const [isHackMode, setIsHackMode] = useState(false);
     const [clickCount, setClickCount] = useState(0);
-
-    const symbols = [
-        ["<", ">"],
-        ["{", "}"],
-        ["(", ")"],
-        ["$", "$"],
-        ["#", "#"],
-        ["@", "@"],
-        ["%", "%"],
-        ["*", "*"],
-        ["/", "\\"],
-    ];
-
     const [symbolIndex, setSymbolIndex] = useState(0);
-
+    const isLocked = isPlaying || isHackMode;
+    const logoClasses = [
+        "Logo",
+        isPlaying && "is-playing",
+        hasPlayed && "has-played",
+        isHackMode && "is-hack-mode",
+    ]
+        .filter(Boolean)
+        .join(" ");
     const handleClick = () => {
-        if (isPlaying || isHackMode) return;
-        setClickCount((prev) => {
-            const next = prev + 1;
-
+        if (isLocked) return;
+        setClickCount((previousCount) => {
+            const nextCount = previousCount + 1;
             setHasPlayed(false);
-
-            if (next % 3 === 0) {
+            if (nextCount % HACK_TRIGGER_INTERVAL === 0) {
                 setIsHackMode(true);
             } else {
                 requestAnimationFrame(() => {
                     setIsPlaying(true);
                 });
             }
-
-            return next;
+            return nextCount;
         });
     };
-
+    // Lance l’animation automatiquement au chargement.
     useEffect(() => {
         setIsPlaying(true);
     }, []);
-
+    // Gère la fin de l’animation principale.
     useEffect(() => {
         if (!isPlaying) return;
-
-        const timer = setTimeout(() => {
+        const timer = window.setTimeout(() => {
             setIsPlaying(false);
             setHasPlayed(true);
-        }, 1700);
-
-        return () => clearTimeout(timer);
+        }, ANIMATION_DURATION);
+        return () => window.clearTimeout(timer);
     }, [isPlaying]);
-
+    // Gère le mode hack : défilement des symboles + retour à l’état final.
     useEffect(() => {
         if (!isHackMode) {
             setSymbolIndex(0);
             return;
         }
-
-        const interval = setInterval(() => {
-            setSymbolIndex((prev) => (prev + 1) % symbols.length);
-        }, 120);
-
-        const timer = setTimeout(() => {
+        const interval = window.setInterval(() => {
+            setSymbolIndex((previousIndex) => (
+                previousIndex + 1
+            ) % SYMBOLS.length);
+        }, SYMBOL_INTERVAL);
+        const timer = window.setTimeout(() => {
             setIsHackMode(false);
             setHasPlayed(true);
-        }, 1000);
-
+        }, HACK_DURATION);
         return () => {
-            clearInterval(interval);
-            clearTimeout(timer);
+            window.clearInterval(interval);
+            window.clearTimeout(timer);
         };
     }, [isHackMode]);
-
     return (
-        <div
-            onClick={handleClick}
-            className={`Logo ${isPlaying ? "is-playing" : ""
-                } ${hasPlayed ? "has-played" : ""} ${isHackMode ? "is-hack-mode" : ""
-                }`}
-        >
+        <div onClick={handleClick} className={logoClasses}>
             <span className="brk brk-left">
-                {symbols[symbolIndex][0]}
+                {SYMBOLS[symbolIndex][0]}
             </span>
-
             <svg
                 width="263"
                 height="151"
                 viewBox="0 0 263 151"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
             >
                 <path
                     className="left-bracket"
@@ -101,7 +97,6 @@ function Logo() {
                     stroke="#C0A37E"
                     strokeWidth="3"
                 />
-
                 <circle
                     className="main-circle"
                     cx="130.597"
@@ -110,14 +105,12 @@ function Logo() {
                     stroke="#C0A37E"
                     strokeWidth="3"
                 />
-
                 <path
                     className="right-bracket"
                     d="M231.066 135.272L261.087 134.923L259.693 14.841L229.672 15.1895"
                     stroke="#C0A37E"
                     strokeWidth="3"
                 />
-
                 <circle
                     className="center-dot"
                     cx="130.598"
@@ -127,12 +120,10 @@ function Logo() {
                     stroke="#C0A37E"
                 />
             </svg>
-
             <span className="brk brk-right">
-                {symbols[symbolIndex][1]}
+                {SYMBOLS[symbolIndex][1]}
             </span>
         </div>
     );
 }
-
 export default Logo;

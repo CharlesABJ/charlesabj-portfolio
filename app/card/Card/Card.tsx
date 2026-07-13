@@ -54,15 +54,15 @@ export default function Card({ profile, isCompanyCard = false }: CardProps) {
             description: isCompanyCard ? "Suivez notre actualité" : "Profil professionnel",
             isSpecial: false,
         },
-        profile.calendarUrl
-            ? {
-                icon: "calendar",
-                href: profile.calendarUrl,
-                title: "Prendre RDV",
-                description: "Discutons de votre projet",
-                isSpecial: false,
-            }
-            : null
+        // profile.calendarUrl
+        //     ? {
+        //         icon: "calendar",
+        //         href: profile.calendarUrl,
+        //         title: "Prendre RDV",
+        //         description: "Discutons de votre projet",
+        //         isSpecial: false,
+        //     }
+        //     : null
     ].filter(Boolean);
 
     return (
