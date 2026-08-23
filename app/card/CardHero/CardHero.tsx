@@ -16,7 +16,7 @@ function CardHero({ name, role }: CardHeroProps) {
                 </h1>
                 <hr />
                 <p className="function">
-                    Développement web & mobile
+                    Création web & mobile
                 </p>
             </div>
 
